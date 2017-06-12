@@ -1,3 +1,9 @@
+# Sinri Version Aliyun Open API SDK
+
+`composer require sinri/aliyun-openapi-php-sdk`
+
+Make it available with Composer/Packagist.
+
 # Open API SDK for php developers
 
 ## Requirements
