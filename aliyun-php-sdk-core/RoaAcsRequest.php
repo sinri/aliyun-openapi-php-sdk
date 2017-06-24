@@ -75,6 +75,10 @@ abstract class RoaAcsRequest extends AcsRequest
     
     private function prepareHeader($iSigner)
     {
+	// modified by Sinri 20170624 for test
+        $original_timezone=date_default_timezone_get();
+
+	// here Aliyun SDK changed timezone
         date_default_timezone_set("GMT");
         $this->headers["Date"] = date($this->dateTimeFormat);
         if (null == $this->acceptFormat) {
@@ -89,6 +93,9 @@ abstract class RoaAcsRequest extends AcsRequest
             $this->headers["Content-MD5"] = base64_encode(md5(json_encode($content), true));
         }
         $this->headers["Content-Type"] = "application/octet-stream;charset=utf-8";
+
+	// recover the original timezone
+	date_default_timezone_set($original_timezone);
     }
     
     private function replaceOccupiedParameters()
