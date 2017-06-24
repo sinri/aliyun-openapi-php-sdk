@@ -30,7 +30,10 @@ class Credential
     {
         $this->accessKeyId = $accessKeyId;
         $this->accessSecret = $accessSecret;
-        $this->refreshDate = date($this->dateTimeFormat);
+        // this is original
+        //$this->refreshDate = date($this->dateTimeFormat);
+        // this is gmdate plan by sinri
+        $this->refreshDate = gmdate($this->dateTimeFormat);
     }
     
     public function isExpired()
@@ -38,7 +41,12 @@ class Credential
         if ($this->expiredDate == null) {
             return false;
         }
-        if (strtotime($this->expiredDate)>date($this->dateTimeFormat)) {
+        // this is original
+        //if (strtotime($this->expiredDate)>date($this->dateTimeFormat)) {
+        //    return false;
+        //}
+        // this is gmdate plan by sinri
+        if (strtotime($this->expiredDate)>gmdate($this->dateTimeFormat)) {
             return false;
         }
         return true;
@@ -57,7 +65,10 @@ class Credential
     public function setExpiredDate($expiredHours)
     {
         if ($expiredHours>0) {
-            return $this->expiredDate = date($this->dateTimeFormat, strtotime("+".$expiredHours." hour"));
+            //orginal
+            //return $this->expiredDate = date($this->dateTimeFormat, strtotime("+".$expiredHours." hour"));
+            //by sinri gmdate plan
+            return $this->expiredDate = gmdate($this->dateTimeFormat, strtotime("+".$expiredHours." hour"));
         }
     }
     

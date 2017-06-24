@@ -75,8 +75,11 @@ abstract class RoaAcsRequest extends AcsRequest
     
     private function prepareHeader($iSigner)
     {
-	    date_default_timezone_set("GMT");
-        $this->headers["Date"] = date($this->dateTimeFormat);
+//        This is original
+//	    date_default_timezone_set("GMT");
+//        $this->headers["Date"] = date($this->dateTimeFormat);
+//        This is sinri style in GMDate Plan
+        $this->headers["Date"] = gmdate($this->dateTimeFormat);
         if (null == $this->acceptFormat) {
             $this->acceptFormat = "RAW";
         }
@@ -135,6 +138,7 @@ abstract class RoaAcsRequest extends AcsRequest
     {
         $uriParts = $this->splitSubResource($uri);
         $sortMap  = $this->queryParameters;
+        $querySeprator="&";
         if (isset($uriParts[1])) {
             $sortMap[$uriParts[1]] = null;
         }
