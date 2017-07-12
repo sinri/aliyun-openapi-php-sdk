@@ -4,6 +4,10 @@
 
 Make it available with Composer/Packagist.
 
+这是一个经过魔改的阿里云公开接口，支援在composer上安装。
+消灭了对时区的恶心修改。
+加上了对AliDNS的autoload.
+
 # Open API SDK for php developers
 
 ## Requirements
