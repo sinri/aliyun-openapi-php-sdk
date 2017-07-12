@@ -40,6 +40,9 @@ Autoloader::addAutoloadPath("aliyun-php-sdk-rds");
 Autoloader::addAutoloadPath("aliyun-php-sdk-slb");
 Autoloader::addAutoloadPath("aliyun-php-sdk-cms");
 
+// added by Sinri 20170712
+Autoloader::addAutoloadPath("aliyun-php-sdk-alidns");
+
 //config http proxy
 define('ENABLE_HTTP_PROXY', false);
 define('HTTP_PROXY_IP', '127.0.0.1');
