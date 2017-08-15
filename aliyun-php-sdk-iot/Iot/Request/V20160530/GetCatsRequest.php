@@ -24,6 +24,7 @@ class GetCatsRequest extends \RpcAcsRequest
 	function  __construct()
 	{
 		parent::__construct("Iot", "2016-05-30", "GetCats");
+		$this->setMethod("POST");
 	}
 
 	private  $rootId;

@@ -24,35 +24,18 @@ class CreateProductRequest extends \RpcAcsRequest
 	function  __construct()
 	{
 		parent::__construct("Iot", "2016-05-30", "CreateProduct");
+		$this->setMethod("POST");
 	}
 
-	private  $name;
-
-	private  $desc;
-
 	private  $catId;
+
+	private  $name;
 
 	private  $extProps;
 
 	private  $securityPolicy;
 
-	public function getName() {
-		return $this->name;
-	}
-
-	public function setName($name) {
-		$this->name = $name;
-		$this->queryParameters["Name"]=$name;
-	}
-
-	public function getDesc() {
-		return $this->desc;
-	}
-
-	public function setDesc($desc) {
-		$this->desc = $desc;
-		$this->queryParameters["Desc"]=$desc;
-	}
+	private  $desc;
 
 	public function getCatId() {
 		return $this->catId;
@@ -61,6 +44,15 @@ class CreateProductRequest extends \RpcAcsRequest
 	public function setCatId($catId) {
 		$this->catId = $catId;
 		$this->queryParameters["CatId"]=$catId;
+	}
+
+	public function getName() {
+		return $this->name;
+	}
+
+	public function setName($name) {
+		$this->name = $name;
+		$this->queryParameters["Name"]=$name;
 	}
 
 	public function getExtProps() {
@@ -79,6 +71,15 @@ class CreateProductRequest extends \RpcAcsRequest
 	public function setSecurityPolicy($securityPolicy) {
 		$this->securityPolicy = $securityPolicy;
 		$this->queryParameters["SecurityPolicy"]=$securityPolicy;
+	}
+
+	public function getDesc() {
+		return $this->desc;
+	}
+
+	public function setDesc($desc) {
+		$this->desc = $desc;
+		$this->queryParameters["Desc"]=$desc;
 	}
 	
 }
