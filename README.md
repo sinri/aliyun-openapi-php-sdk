@@ -5,7 +5,7 @@
 Make it available with Composer/Packagist.
 
 这是一个经过魔改的阿里云公开接口，支援在composer上安装。
-消灭了对时区的恶心修改。
+消灭了对时区的恶心修改。这部分鉴于阿里云当局的毫不关心，只能自力更生做魔改版了。
 加上了对AliDNS的autoload.
 
 # Open API SDK for php developers
