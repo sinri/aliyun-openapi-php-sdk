@@ -17,40 +17,40 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-namespace vod\Request\V20170321;
+namespace Cdn\Request\V20141111;
 
-class DeleteVideoRequest extends \RpcAcsRequest
+class SetL2OssKeyConfigRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("vod", "2017-03-21", "DeleteVideo", "vod", "openAPI");
+		parent::__construct("Cdn", "2014-11-11", "SetL2OssKeyConfig");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+	private  $securityToken;
 
-	private  $resourceOwnerAccount;
+	private  $domainName;
 
 	private  $ownerId;
 
-	private  $videoIds;
+	private  $privateOssAuth;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
+	public function getSecurityToken() {
+		return $this->securityToken;
 	}
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	public function setSecurityToken($securityToken) {
+		$this->securityToken = $securityToken;
+		$this->queryParameters["SecurityToken"]=$securityToken;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
+	public function getDomainName() {
+		return $this->domainName;
 	}
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+	public function setDomainName($domainName) {
+		$this->domainName = $domainName;
+		$this->queryParameters["DomainName"]=$domainName;
 	}
 
 	public function getOwnerId() {
@@ -62,13 +62,13 @@ class DeleteVideoRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getVideoIds() {
-		return $this->videoIds;
+	public function getPrivateOssAuth() {
+		return $this->privateOssAuth;
 	}
 
-	public function setVideoIds($videoIds) {
-		$this->videoIds = $videoIds;
-		$this->queryParameters["VideoIds"]=$videoIds;
+	public function setPrivateOssAuth($privateOssAuth) {
+		$this->privateOssAuth = $privateOssAuth;
+		$this->queryParameters["PrivateOssAuth"]=$privateOssAuth;
 	}
 	
 }
