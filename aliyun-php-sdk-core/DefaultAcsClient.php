@@ -58,7 +58,9 @@ class DefaultAcsClient implements IAcsClient
         if (null != $request->getLocationServiceCode())
         {
             $domain = $this->locationService->findProductDomain($request->getRegionId(), $request->getLocationServiceCode(), $request->getLocationEndpointType(), $request->getProduct());
-        }       
+        }else{
+            $domain=null;
+        }
         if ($domain == null)
         {
             $domain = EndpointProvider::findProductDomain($request->getRegionId(), $request->getProduct());
@@ -121,6 +123,7 @@ class DefaultAcsClient implements IAcsClient
     
     private function parseAcsResponse($body, $format)
     {
+        $respObject=null;
         if ("JSON" == $format) {
             $respObject = json_decode($body);
         } elseif ("XML" == $format) {
