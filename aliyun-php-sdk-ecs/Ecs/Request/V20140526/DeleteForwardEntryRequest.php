@@ -23,21 +23,30 @@ class DeleteForwardEntryRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteForwardEntry");
+		parent::__construct("Ecs", "2014-05-26", "DeleteForwardEntry", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerAccount;
+	private  $resourceOwnerId;
 
-	private  $forwardTableId;
+	private  $resourceOwnerAccount;
 
 	private  $forwardEntryId;
 
-	private  $resourceOwnerId;
-
 	private  $ownerAccount;
 
+	private  $forwardTableId;
+
 	private  $ownerId;
+
+	public function getResourceOwnerId() {
+		return $this->resourceOwnerId;
+	}
+
+	public function setResourceOwnerId($resourceOwnerId) {
+		$this->resourceOwnerId = $resourceOwnerId;
+		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
 
 	public function getResourceOwnerAccount() {
 		return $this->resourceOwnerAccount;
@@ -46,15 +55,6 @@ class DeleteForwardEntryRequest extends \RpcAcsRequest
 	public function setResourceOwnerAccount($resourceOwnerAccount) {
 		$this->resourceOwnerAccount = $resourceOwnerAccount;
 		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
-
-	public function getForwardTableId() {
-		return $this->forwardTableId;
-	}
-
-	public function setForwardTableId($forwardTableId) {
-		$this->forwardTableId = $forwardTableId;
-		$this->queryParameters["ForwardTableId"]=$forwardTableId;
 	}
 
 	public function getForwardEntryId() {
@@ -66,15 +66,6 @@ class DeleteForwardEntryRequest extends \RpcAcsRequest
 		$this->queryParameters["ForwardEntryId"]=$forwardEntryId;
 	}
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
-
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
 	}
@@ -82,6 +73,15 @@ class DeleteForwardEntryRequest extends \RpcAcsRequest
 	public function setOwnerAccount($ownerAccount) {
 		$this->ownerAccount = $ownerAccount;
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
+	}
+
+	public function getForwardTableId() {
+		return $this->forwardTableId;
+	}
+
+	public function setForwardTableId($forwardTableId) {
+		$this->forwardTableId = $forwardTableId;
+		$this->queryParameters["ForwardTableId"]=$forwardTableId;
 	}
 
 	public function getOwnerId() {
