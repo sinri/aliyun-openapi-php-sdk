@@ -23,9 +23,11 @@ class AttachKeyPairRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "AttachKeyPair");
+		parent::__construct("Ecs", "2014-05-26", "AttachKeyPair", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
+
+	private  $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
@@ -33,9 +35,16 @@ class AttachKeyPairRequest extends \RpcAcsRequest
 
 	private  $keyPairName;
 
-	private  $resourceOwnerId;
-
 	private  $ownerId;
+
+	public function getResourceOwnerId() {
+		return $this->resourceOwnerId;
+	}
+
+	public function setResourceOwnerId($resourceOwnerId) {
+		$this->resourceOwnerId = $resourceOwnerId;
+		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
 
 	public function getResourceOwnerAccount() {
 		return $this->resourceOwnerAccount;
@@ -62,15 +71,6 @@ class AttachKeyPairRequest extends \RpcAcsRequest
 	public function setKeyPairName($keyPairName) {
 		$this->keyPairName = $keyPairName;
 		$this->queryParameters["KeyPairName"]=$keyPairName;
-	}
-
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
 	public function getOwnerId() {

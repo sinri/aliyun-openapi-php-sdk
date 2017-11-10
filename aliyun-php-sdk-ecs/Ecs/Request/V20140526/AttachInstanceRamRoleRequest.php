@@ -23,9 +23,11 @@ class AttachInstanceRamRoleRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "AttachInstanceRamRole");
+		parent::__construct("Ecs", "2014-05-26", "AttachInstanceRamRole", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
+
+	private  $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
@@ -33,9 +35,16 @@ class AttachInstanceRamRoleRequest extends \RpcAcsRequest
 
 	private  $ramRoleName;
 
-	private  $resourceOwnerId;
-
 	private  $ownerId;
+
+	public function getResourceOwnerId() {
+		return $this->resourceOwnerId;
+	}
+
+	public function setResourceOwnerId($resourceOwnerId) {
+		$this->resourceOwnerId = $resourceOwnerId;
+		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
 
 	public function getResourceOwnerAccount() {
 		return $this->resourceOwnerAccount;
@@ -62,15 +71,6 @@ class AttachInstanceRamRoleRequest extends \RpcAcsRequest
 	public function setRamRoleName($ramRoleName) {
 		$this->ramRoleName = $ramRoleName;
 		$this->queryParameters["RamRoleName"]=$ramRoleName;
-	}
-
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
 	public function getOwnerId() {

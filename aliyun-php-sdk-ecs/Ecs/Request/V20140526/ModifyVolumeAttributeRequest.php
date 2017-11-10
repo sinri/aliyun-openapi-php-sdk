@@ -23,50 +23,23 @@ class ModifyVolumeAttributeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyVolumeAttribute");
+		parent::__construct("Ecs", "2014-05-26", "ModifyVolumeAttribute", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerAccount;
-
-	private  $description;
-
-	private  $volumeId;
-
 	private  $resourceOwnerId;
-
-	private  $ownerAccount;
 
 	private  $volumeName;
 
+	private  $resourceOwnerAccount;
+
+	private  $ownerAccount;
+
+	private  $volumeId;
+
+	private  $description;
+
 	private  $ownerId;
-
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
-
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
-
-	public function getDescription() {
-		return $this->description;
-	}
-
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
-
-	public function getVolumeId() {
-		return $this->volumeId;
-	}
-
-	public function setVolumeId($volumeId) {
-		$this->volumeId = $volumeId;
-		$this->queryParameters["VolumeId"]=$volumeId;
-	}
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -75,6 +48,24 @@ class ModifyVolumeAttributeRequest extends \RpcAcsRequest
 	public function setResourceOwnerId($resourceOwnerId) {
 		$this->resourceOwnerId = $resourceOwnerId;
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
+
+	public function getVolumeName() {
+		return $this->volumeName;
+	}
+
+	public function setVolumeName($volumeName) {
+		$this->volumeName = $volumeName;
+		$this->queryParameters["VolumeName"]=$volumeName;
+	}
+
+	public function getResourceOwnerAccount() {
+		return $this->resourceOwnerAccount;
+	}
+
+	public function setResourceOwnerAccount($resourceOwnerAccount) {
+		$this->resourceOwnerAccount = $resourceOwnerAccount;
+		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -86,13 +77,22 @@ class ModifyVolumeAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getVolumeName() {
-		return $this->volumeName;
+	public function getVolumeId() {
+		return $this->volumeId;
 	}
 
-	public function setVolumeName($volumeName) {
-		$this->volumeName = $volumeName;
-		$this->queryParameters["VolumeName"]=$volumeName;
+	public function setVolumeId($volumeId) {
+		$this->volumeId = $volumeId;
+		$this->queryParameters["VolumeId"]=$volumeId;
+	}
+
+	public function getDescription() {
+		return $this->description;
+	}
+
+	public function setDescription($description) {
+		$this->description = $description;
+		$this->queryParameters["Description"]=$description;
 	}
 
 	public function getOwnerId() {

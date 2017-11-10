@@ -23,17 +23,26 @@ class DescribeInstanceRamRoleRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeInstanceRamRole");
+		parent::__construct("Ecs", "2014-05-26", "DescribeInstanceRamRole", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
+
+	private  $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
 	private  $instanceIds;
 
-	private  $resourceOwnerId;
-
 	private  $ownerId;
+
+	public function getResourceOwnerId() {
+		return $this->resourceOwnerId;
+	}
+
+	public function setResourceOwnerId($resourceOwnerId) {
+		$this->resourceOwnerId = $resourceOwnerId;
+		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
 
 	public function getResourceOwnerAccount() {
 		return $this->resourceOwnerAccount;
@@ -51,15 +60,6 @@ class DescribeInstanceRamRoleRequest extends \RpcAcsRequest
 	public function setInstanceIds($instanceIds) {
 		$this->instanceIds = $instanceIds;
 		$this->queryParameters["InstanceIds"]=$instanceIds;
-	}
-
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
 	public function getOwnerId() {

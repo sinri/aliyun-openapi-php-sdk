@@ -23,15 +23,15 @@ class DeleteVSwitchRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteVSwitch");
+		parent::__construct("Ecs", "2014-05-26", "DeleteVSwitch", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $vSwitchId;
 
-	private  $resourceOwnerAccount;
-
 	private  $resourceOwnerId;
+
+	private  $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
@@ -46,15 +46,6 @@ class DeleteVSwitchRequest extends \RpcAcsRequest
 		$this->queryParameters["VSwitchId"]=$vSwitchId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
-
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
-
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
 	}
@@ -62,6 +53,15 @@ class DeleteVSwitchRequest extends \RpcAcsRequest
 	public function setResourceOwnerId($resourceOwnerId) {
 		$this->resourceOwnerId = $resourceOwnerId;
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
+
+	public function getResourceOwnerAccount() {
+		return $this->resourceOwnerAccount;
+	}
+
+	public function setResourceOwnerAccount($resourceOwnerAccount) {
+		$this->resourceOwnerAccount = $resourceOwnerAccount;
+		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {

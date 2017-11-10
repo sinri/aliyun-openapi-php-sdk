@@ -23,39 +23,21 @@ class RebootInstanceRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "RebootInstance");
+		parent::__construct("Ecs", "2014-05-26", "RebootInstance", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerAccount;
-
-	private  $forceStop;
-
 	private  $resourceOwnerId;
+
+	private  $instanceId;
+
+	private  $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
 
-	private  $instanceId;
-
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
-
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
-
-	public function getForceStop() {
-		return $this->forceStop;
-	}
-
-	public function setForceStop($forceStop) {
-		$this->forceStop = $forceStop;
-		$this->queryParameters["ForceStop"]=$forceStop;
-	}
+	private  $forceStop;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -64,6 +46,24 @@ class RebootInstanceRequest extends \RpcAcsRequest
 	public function setResourceOwnerId($resourceOwnerId) {
 		$this->resourceOwnerId = $resourceOwnerId;
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
+
+	public function getInstanceId() {
+		return $this->instanceId;
+	}
+
+	public function setInstanceId($instanceId) {
+		$this->instanceId = $instanceId;
+		$this->queryParameters["InstanceId"]=$instanceId;
+	}
+
+	public function getResourceOwnerAccount() {
+		return $this->resourceOwnerAccount;
+	}
+
+	public function setResourceOwnerAccount($resourceOwnerAccount) {
+		$this->resourceOwnerAccount = $resourceOwnerAccount;
+		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -84,13 +84,13 @@ class RebootInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
+	public function getForceStop() {
+		return $this->forceStop;
 	}
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
+	public function setForceStop($forceStop) {
+		$this->forceStop = $forceStop;
+		$this->queryParameters["ForceStop"]=$forceStop;
 	}
 	
 }

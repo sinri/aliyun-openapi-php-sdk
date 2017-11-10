@@ -35,6 +35,8 @@ class PushRequest extends \RpcAcsRequest
 
 	private  $iOSBadge;
 
+	private  $iOSBadgeAutoIncrement;
+
 	private  $androidOpenType;
 
 	private  $title;
@@ -46,6 +48,8 @@ class PushRequest extends \RpcAcsRequest
 	private  $pushTime;
 
 	private  $smsDelaySecs;
+
+	private  $sendSpeed;
 
 	private  $androidPopupActivity;
 
@@ -147,6 +151,15 @@ class PushRequest extends \RpcAcsRequest
 		$this->queryParameters["iOSBadge"]=$iOSBadge;
 	}
 
+	public function getiOSBadgeAutoIncrement() {
+		return $this->iOSBadgeAutoIncrement;
+	}
+
+	public function setiOSBadgeAutoIncrement($iOSBadgeAutoIncrement) {
+		$this->iOSBadgeAutoIncrement = $iOSBadgeAutoIncrement;
+		$this->queryParameters["iOSBadgeAutoIncrement"]=$iOSBadgeAutoIncrement;
+	}
+
 	public function getAndroidOpenType() {
 		return $this->androidOpenType;
 	}
@@ -199,6 +212,15 @@ class PushRequest extends \RpcAcsRequest
 	public function setSmsDelaySecs($smsDelaySecs) {
 		$this->smsDelaySecs = $smsDelaySecs;
 		$this->queryParameters["SmsDelaySecs"]=$smsDelaySecs;
+	}
+
+	public function getSendSpeed() {
+		return $this->sendSpeed;
+	}
+
+	public function setSendSpeed($sendSpeed) {
+		$this->sendSpeed = $sendSpeed;
+		$this->queryParameters["SendSpeed"]=$sendSpeed;
 	}
 
 	public function getAndroidPopupActivity() {
