@@ -23,27 +23,27 @@ class DescribeInstanceTypesRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeInstanceTypes");
+		parent::__construct("Ecs", "2014-05-26", "DescribeInstanceTypes", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $instanceTypeFamily;
+	private  $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
-	private  $resourceOwnerId;
-
 	private  $ownerAccount;
+
+	private  $instanceTypeFamily;
 
 	private  $ownerId;
 
-	public function getInstanceTypeFamily() {
-		return $this->instanceTypeFamily;
+	public function getResourceOwnerId() {
+		return $this->resourceOwnerId;
 	}
 
-	public function setInstanceTypeFamily($instanceTypeFamily) {
-		$this->instanceTypeFamily = $instanceTypeFamily;
-		$this->queryParameters["InstanceTypeFamily"]=$instanceTypeFamily;
+	public function setResourceOwnerId($resourceOwnerId) {
+		$this->resourceOwnerId = $resourceOwnerId;
+		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -55,15 +55,6 @@ class DescribeInstanceTypesRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
-
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
 	}
@@ -71,6 +62,15 @@ class DescribeInstanceTypesRequest extends \RpcAcsRequest
 	public function setOwnerAccount($ownerAccount) {
 		$this->ownerAccount = $ownerAccount;
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
+	}
+
+	public function getInstanceTypeFamily() {
+		return $this->instanceTypeFamily;
+	}
+
+	public function setInstanceTypeFamily($instanceTypeFamily) {
+		$this->instanceTypeFamily = $instanceTypeFamily;
+		$this->queryParameters["InstanceTypeFamily"]=$instanceTypeFamily;
 	}
 
 	public function getOwnerId() {

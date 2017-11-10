@@ -30,6 +30,10 @@ class CreatePhotoRequest extends \RpcAcsRequest
 
 	private  $photoTitle;
 
+	private  $libraryId;
+
+	private  $shareExpireTime;
+
 	private  $storeName;
 
 	private  $uploadType;
@@ -37,6 +41,8 @@ class CreatePhotoRequest extends \RpcAcsRequest
 	private  $remark;
 
 	private  $sessionId;
+
+	private  $staging;
 
 	private  $fileId;
 
@@ -47,6 +53,24 @@ class CreatePhotoRequest extends \RpcAcsRequest
 	public function setPhotoTitle($photoTitle) {
 		$this->photoTitle = $photoTitle;
 		$this->queryParameters["PhotoTitle"]=$photoTitle;
+	}
+
+	public function getLibraryId() {
+		return $this->libraryId;
+	}
+
+	public function setLibraryId($libraryId) {
+		$this->libraryId = $libraryId;
+		$this->queryParameters["LibraryId"]=$libraryId;
+	}
+
+	public function getShareExpireTime() {
+		return $this->shareExpireTime;
+	}
+
+	public function setShareExpireTime($shareExpireTime) {
+		$this->shareExpireTime = $shareExpireTime;
+		$this->queryParameters["ShareExpireTime"]=$shareExpireTime;
 	}
 
 	public function getStoreName() {
@@ -83,6 +107,15 @@ class CreatePhotoRequest extends \RpcAcsRequest
 	public function setSessionId($sessionId) {
 		$this->sessionId = $sessionId;
 		$this->queryParameters["SessionId"]=$sessionId;
+	}
+
+	public function getStaging() {
+		return $this->staging;
+	}
+
+	public function setStaging($staging) {
+		$this->staging = $staging;
+		$this->queryParameters["Staging"]=$staging;
 	}
 
 	public function getFileId() {

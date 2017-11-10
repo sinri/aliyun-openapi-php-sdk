@@ -23,17 +23,26 @@ class DeleteAutoSnapshotPolicyRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteAutoSnapshotPolicy");
+		parent::__construct("Ecs", "2014-05-26", "DeleteAutoSnapshotPolicy", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
+
+	private  $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
 	private  $autoSnapshotPolicyId;
 
-	private  $resourceOwnerId;
-
 	private  $ownerId;
+
+	public function getResourceOwnerId() {
+		return $this->resourceOwnerId;
+	}
+
+	public function setResourceOwnerId($resourceOwnerId) {
+		$this->resourceOwnerId = $resourceOwnerId;
+		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
 
 	public function getResourceOwnerAccount() {
 		return $this->resourceOwnerAccount;
@@ -51,15 +60,6 @@ class DeleteAutoSnapshotPolicyRequest extends \RpcAcsRequest
 	public function setautoSnapshotPolicyId($autoSnapshotPolicyId) {
 		$this->autoSnapshotPolicyId = $autoSnapshotPolicyId;
 		$this->queryParameters["autoSnapshotPolicyId"]=$autoSnapshotPolicyId;
-	}
-
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
-
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
 	public function getOwnerId() {

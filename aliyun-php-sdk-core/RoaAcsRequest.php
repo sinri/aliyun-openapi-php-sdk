@@ -24,7 +24,7 @@ abstract class RoaAcsRequest extends AcsRequest
     private $domainParameters = array();
     private $dateTimeFormat ="D, d M Y H:i:s \G\M\T";
     private static $headerSeparator = "\n";
-    private static $querySeprator = "&";
+    private static $querySeparator = "&";
     
     function  __construct($product, $version, $actionName, $locationServiceCode = null, $locationEndpointType = "openAPI")
     {
@@ -79,6 +79,7 @@ abstract class RoaAcsRequest extends AcsRequest
 //	    date_default_timezone_set("GMT");
 //        $this->headers["Date"] = date($this->dateTimeFormat);
 //        This is sinri style in GMDate Plan
+// Aliyun changed as my plan, wa ha ha ha
         $this->headers["Date"] = gmdate($this->dateTimeFormat);
         if (null == $this->acceptFormat) {
             $this->acceptFormat = "RAW";
@@ -138,7 +139,6 @@ abstract class RoaAcsRequest extends AcsRequest
     {
         $uriParts = $this->splitSubResource($uri);
         $sortMap  = $this->queryParameters;
-        $querySeprator="&";
         if (isset($uriParts[1])) {
             $sortMap[$uriParts[1]] = null;
         }
@@ -152,7 +152,7 @@ abstract class RoaAcsRequest extends AcsRequest
             if (isset($sortMapValue)) {
                 $queryString = $queryString."=".$sortMapValue;
             }
-            $queryString = $queryString.$querySeprator;
+            $queryString = $queryString.self::$querySeparator;
         }
         if (null==count($sortMap)) {
             $queryString = substr($queryString, 0, strlen($queryString)-1);

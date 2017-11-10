@@ -58,11 +58,7 @@ abstract class RpcAcsRequest extends AcsRequest
         $apiParams["Format"] = $this->getAcceptFormat();
         $apiParams["SignatureMethod"] = $iSigner->getSignatureMethod();
         $apiParams["SignatureVersion"] = $iSigner->getSignatureVersion();
-        $apiParams["SignatureNonce"] = uniqid();
-        //original
-        //date_default_timezone_set("GMT");
-        //$apiParams["Timestamp"] = date($this->dateTimeFormat);
-        //sinri gmdate plan
+        $apiParams["SignatureNonce"] = md5(uniqid(mt_rand(), true));
         $apiParams["Timestamp"] = gmdate($this->dateTimeFormat);
         $apiParams["Action"] = $this->getActionName();
         $apiParams["Version"] = $this->getVersion();

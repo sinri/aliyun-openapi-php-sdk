@@ -40,7 +40,6 @@ Autoloader::addAutoloadPath("aliyun-php-sdk-kms");
 Autoloader::addAutoloadPath("aliyun-php-sdk-rds");
 Autoloader::addAutoloadPath("aliyun-php-sdk-slb");
 Autoloader::addAutoloadPath("aliyun-php-sdk-cms");
-Autoloader::addAutoloadPath("aliyun-php-sdk-cloudapi");
 
 // added by Sinri 20170712
 Autoloader::addAutoloadPath("aliyun-php-sdk-alidns");
