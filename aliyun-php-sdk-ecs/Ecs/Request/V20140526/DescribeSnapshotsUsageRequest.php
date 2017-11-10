@@ -17,23 +17,24 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ecs\Request\V20140526;
 
 class DescribeSnapshotsUsageRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeSnapshotsUsage", "ecs", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Ecs", "2014-05-26", "DescribeSnapshotsUsage", "ecs", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -44,13 +45,15 @@ class DescribeSnapshotsUsageRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -62,13 +65,15 @@ class DescribeSnapshotsUsageRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

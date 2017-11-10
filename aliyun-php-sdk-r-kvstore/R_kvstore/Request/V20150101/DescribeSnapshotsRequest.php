@@ -17,102 +17,119 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace R_kvstore\Request\V20150101;
 
 class DescribeSnapshotsRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("R-kvstore", "2015-01-01", "DescribeSnapshots", "redisa", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("R-kvstore", "2015-01-01", "DescribeSnapshots", "redisa", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $snapshotIds;
+    private $snapshotIds;
 
-	private  $endTime;
+    private $endTime;
 
-	private  $beginTime;
+    private $beginTime;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->domainParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->domainParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getSnapshotIds() {
-		return $this->snapshotIds;
-	}
+    public function getSnapshotIds()
+    {
+        return $this->snapshotIds;
+    }
 
-	public function setSnapshotIds($snapshotIds) {
-		$this->snapshotIds = $snapshotIds;
-		$this->domainParameters["SnapshotIds"]=$snapshotIds;
-	}
+    public function setSnapshotIds($snapshotIds)
+    {
+        $this->snapshotIds = $snapshotIds;
+        $this->domainParameters["SnapshotIds"] = $snapshotIds;
+    }
 
-	public function getEndTime() {
-		return $this->endTime;
-	}
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+        $this->queryParameters["EndTime"] = $endTime;
+    }
 
-	public function getBeginTime() {
-		return $this->beginTime;
-	}
+    public function getBeginTime()
+    {
+        return $this->beginTime;
+    }
 
-	public function setBeginTime($beginTime) {
-		$this->beginTime = $beginTime;
-		$this->queryParameters["BeginTime"]=$beginTime;
-	}
+    public function setBeginTime($beginTime)
+    {
+        $this->beginTime = $beginTime;
+        $this->queryParameters["BeginTime"] = $beginTime;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-	
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
+
 }

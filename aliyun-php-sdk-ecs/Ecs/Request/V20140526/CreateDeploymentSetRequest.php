@@ -23,19 +23,19 @@ class CreateDeploymentSetRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "CreateDeploymentSet", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "CreateDeploymentSet", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $clientToken;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $description;
+    private $description;
 
 	private  $deploymentSetName;
 
@@ -45,27 +45,31 @@ class CreateDeploymentSetRequest extends \RpcAcsRequest
 
 	private  $domain;
 
-	private  $zoneId;
+    private $zoneId;
 
-	private  $strategy;
+    private $strategy;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;
@@ -76,22 +80,26 @@ class CreateDeploymentSetRequest extends \RpcAcsRequest
 		$this->queryParameters["ClientToken"]=$clientToken;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
 	}
 
 	public function getDeploymentSetName() {
@@ -130,22 +138,26 @@ class CreateDeploymentSetRequest extends \RpcAcsRequest
 		$this->queryParameters["Domain"]=$domain;
 	}
 
-	public function getZoneId() {
-		return $this->zoneId;
-	}
+    public function getZoneId()
+    {
+        return $this->zoneId;
+    }
 
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
+    public function setZoneId($zoneId)
+    {
+        $this->zoneId = $zoneId;
+        $this->queryParameters["ZoneId"] = $zoneId;
+    }
 
-	public function getStrategy() {
-		return $this->strategy;
-	}
+    public function getStrategy()
+    {
+        return $this->strategy;
+    }
 
-	public function setStrategy($strategy) {
-		$this->strategy = $strategy;
-		$this->queryParameters["Strategy"]=$strategy;
+    public function setStrategy($strategy)
+    {
+        $this->strategy = $strategy;
+        $this->queryParameters["Strategy"] = $strategy;
 	}
 	
 }

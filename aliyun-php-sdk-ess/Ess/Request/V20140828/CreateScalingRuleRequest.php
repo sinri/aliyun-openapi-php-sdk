@@ -17,102 +17,119 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ess\Request\V20140828;
 
 class CreateScalingRuleRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ess", "2014-08-28", "CreateScalingRule", "ess", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ess", "2014-08-28", "CreateScalingRule", "ess", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $scalingRuleName;
+    private $scalingRuleName;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $adjustmentValue;
+    private $adjustmentValue;
 
-	private  $scalingGroupId;
+    private $scalingGroupId;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $cooldown;
+    private $cooldown;
 
-	private  $adjustmentType;
+    private $adjustmentType;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getScalingRuleName() {
-		return $this->scalingRuleName;
-	}
+    public function getScalingRuleName()
+    {
+        return $this->scalingRuleName;
+    }
 
-	public function setScalingRuleName($scalingRuleName) {
-		$this->scalingRuleName = $scalingRuleName;
-		$this->queryParameters["ScalingRuleName"]=$scalingRuleName;
-	}
+    public function setScalingRuleName($scalingRuleName)
+    {
+        $this->scalingRuleName = $scalingRuleName;
+        $this->queryParameters["ScalingRuleName"] = $scalingRuleName;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getAdjustmentValue() {
-		return $this->adjustmentValue;
-	}
+    public function getAdjustmentValue()
+    {
+        return $this->adjustmentValue;
+    }
 
-	public function setAdjustmentValue($adjustmentValue) {
-		$this->adjustmentValue = $adjustmentValue;
-		$this->queryParameters["AdjustmentValue"]=$adjustmentValue;
-	}
+    public function setAdjustmentValue($adjustmentValue)
+    {
+        $this->adjustmentValue = $adjustmentValue;
+        $this->queryParameters["AdjustmentValue"] = $adjustmentValue;
+    }
 
-	public function getScalingGroupId() {
-		return $this->scalingGroupId;
-	}
+    public function getScalingGroupId()
+    {
+        return $this->scalingGroupId;
+    }
 
-	public function setScalingGroupId($scalingGroupId) {
-		$this->scalingGroupId = $scalingGroupId;
-		$this->queryParameters["ScalingGroupId"]=$scalingGroupId;
-	}
+    public function setScalingGroupId($scalingGroupId)
+    {
+        $this->scalingGroupId = $scalingGroupId;
+        $this->queryParameters["ScalingGroupId"] = $scalingGroupId;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getCooldown() {
-		return $this->cooldown;
-	}
+    public function getCooldown()
+    {
+        return $this->cooldown;
+    }
 
-	public function setCooldown($cooldown) {
-		$this->cooldown = $cooldown;
-		$this->queryParameters["Cooldown"]=$cooldown;
-	}
+    public function setCooldown($cooldown)
+    {
+        $this->cooldown = $cooldown;
+        $this->queryParameters["Cooldown"] = $cooldown;
+    }
 
-	public function getAdjustmentType() {
-		return $this->adjustmentType;
-	}
+    public function getAdjustmentType()
+    {
+        return $this->adjustmentType;
+    }
 
-	public function setAdjustmentType($adjustmentType) {
-		$this->adjustmentType = $adjustmentType;
-		$this->queryParameters["AdjustmentType"]=$adjustmentType;
-	}
+    public function setAdjustmentType($adjustmentType)
+    {
+        $this->adjustmentType = $adjustmentType;
+        $this->queryParameters["AdjustmentType"] = $adjustmentType;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-	
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
+
 }

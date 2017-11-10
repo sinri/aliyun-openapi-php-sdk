@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class UpdateAccessKeyRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "UpdateAccessKey");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "UpdateAccessKey");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $userAccessKeyId;
+    private $userAccessKeyId;
 
-	private  $userName;
+    private $userName;
 
-	private  $status;
+    private $status;
 
-	public function getUserAccessKeyId() {
-		return $this->userAccessKeyId;
-	}
+    public function getUserAccessKeyId()
+    {
+        return $this->userAccessKeyId;
+    }
 
-	public function setUserAccessKeyId($userAccessKeyId) {
-		$this->userAccessKeyId = $userAccessKeyId;
-		$this->queryParameters["UserAccessKeyId"]=$userAccessKeyId;
-	}
+    public function setUserAccessKeyId($userAccessKeyId)
+    {
+        $this->userAccessKeyId = $userAccessKeyId;
+        $this->queryParameters["UserAccessKeyId"] = $userAccessKeyId;
+    }
 
-	public function getUserName() {
-		return $this->userName;
-	}
+    public function getUserName()
+    {
+        return $this->userName;
+    }
 
-	public function setUserName($userName) {
-		$this->userName = $userName;
-		$this->queryParameters["UserName"]=$userName;
-	}
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        $this->queryParameters["UserName"] = $userName;
+    }
 
-	public function getStatus() {
-		return $this->status;
-	}
+    public function getStatus()
+    {
+        return $this->status;
+    }
 
-	public function setStatus($status) {
-		$this->status = $status;
-		$this->queryParameters["Status"]=$status;
-	}
-	
+    public function setStatus($status)
+    {
+        $this->status = $status;
+        $this->queryParameters["Status"] = $status;
+    }
+
 }

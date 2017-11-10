@@ -23,11 +23,11 @@ class DescribeAutoSnapshotPolicyExRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeAutoSnapshotPolicyEx", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeAutoSnapshotPolicyEx", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
@@ -35,19 +35,21 @@ class DescribeAutoSnapshotPolicyExRequest extends \RpcAcsRequest
 
 	private  $ownerAccount;
 
-	private  $pageSize;
+    private $pageSize;
 
 	private  $ownerId;
 
-	private  $pageNumber;
+    private $pageNumber;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -77,14 +79,16 @@ class DescribeAutoSnapshotPolicyExRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -95,13 +99,15 @@ class DescribeAutoSnapshotPolicyExRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
+    }
 	
 }

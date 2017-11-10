@@ -23,27 +23,27 @@ class SwitchDBInstanceNetTypeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "SwitchDBInstanceNetType", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "SwitchDBInstanceNetType", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
 	private  $connectionStringPrefix;
 
-	private  $connectionStringType;
+    private $connectionStringType;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $port;
 
 	private  $ownerAccount;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $ownerId;
+    private $ownerId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -63,32 +63,38 @@ class SwitchDBInstanceNetTypeRequest extends \RpcAcsRequest
 		$this->queryParameters["ConnectionStringPrefix"]=$connectionStringPrefix;
 	}
 
-	public function getConnectionStringType() {
-		return $this->connectionStringType;
-	}
+    public function getConnectionStringType()
+    {
+        return $this->connectionStringType;
+    }
 
-	public function setConnectionStringType($connectionStringType) {
-		$this->connectionStringType = $connectionStringType;
-		$this->queryParameters["ConnectionStringType"]=$connectionStringType;
-	}
+    public function setConnectionStringType($connectionStringType)
+    {
+        $this->connectionStringType = $connectionStringType;
+        $this->queryParameters["ConnectionStringType"] = $connectionStringType;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getPort() {
 		return $this->port;
@@ -108,22 +114,26 @@ class SwitchDBInstanceNetTypeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

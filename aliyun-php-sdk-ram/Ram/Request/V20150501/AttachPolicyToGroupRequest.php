@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class AttachPolicyToGroupRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "AttachPolicyToGroup");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "AttachPolicyToGroup");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $policyType;
+    private $policyType;
 
-	private  $policyName;
+    private $policyName;
 
-	private  $groupName;
+    private $groupName;
 
-	public function getPolicyType() {
-		return $this->policyType;
-	}
+    public function getPolicyType()
+    {
+        return $this->policyType;
+    }
 
-	public function setPolicyType($policyType) {
-		$this->policyType = $policyType;
-		$this->queryParameters["PolicyType"]=$policyType;
-	}
+    public function setPolicyType($policyType)
+    {
+        $this->policyType = $policyType;
+        $this->queryParameters["PolicyType"] = $policyType;
+    }
 
-	public function getPolicyName() {
-		return $this->policyName;
-	}
+    public function getPolicyName()
+    {
+        return $this->policyName;
+    }
 
-	public function setPolicyName($policyName) {
-		$this->policyName = $policyName;
-		$this->queryParameters["PolicyName"]=$policyName;
-	}
+    public function setPolicyName($policyName)
+    {
+        $this->policyName = $policyName;
+        $this->queryParameters["PolicyName"] = $policyName;
+    }
 
-	public function getGroupName() {
-		return $this->groupName;
-	}
+    public function getGroupName()
+    {
+        return $this->groupName;
+    }
 
-	public function setGroupName($groupName) {
-		$this->groupName = $groupName;
-		$this->queryParameters["GroupName"]=$groupName;
-	}
-	
+    public function setGroupName($groupName)
+    {
+        $this->groupName = $groupName;
+        $this->queryParameters["GroupName"] = $groupName;
+    }
+
 }

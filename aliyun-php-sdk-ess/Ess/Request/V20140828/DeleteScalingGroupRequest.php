@@ -17,69 +17,80 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ess\Request\V20140828;
 
 class DeleteScalingGroupRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ess", "2014-08-28", "DeleteScalingGroup", "ess", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ess", "2014-08-28", "DeleteScalingGroup", "ess", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $scalingGroupId;
+    private $scalingGroupId;
 
-	private  $forceDelete;
+    private $forceDelete;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getScalingGroupId() {
-		return $this->scalingGroupId;
-	}
+    public function getScalingGroupId()
+    {
+        return $this->scalingGroupId;
+    }
 
-	public function setScalingGroupId($scalingGroupId) {
-		$this->scalingGroupId = $scalingGroupId;
-		$this->queryParameters["ScalingGroupId"]=$scalingGroupId;
-	}
+    public function setScalingGroupId($scalingGroupId)
+    {
+        $this->scalingGroupId = $scalingGroupId;
+        $this->queryParameters["ScalingGroupId"] = $scalingGroupId;
+    }
 
-	public function getForceDelete() {
-		return $this->forceDelete;
-	}
+    public function getForceDelete()
+    {
+        return $this->forceDelete;
+    }
 
-	public function setForceDelete($forceDelete) {
-		$this->forceDelete = $forceDelete;
-		$this->queryParameters["ForceDelete"]=$forceDelete;
-	}
+    public function setForceDelete($forceDelete)
+    {
+        $this->forceDelete = $forceDelete;
+        $this->queryParameters["ForceDelete"] = $forceDelete;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-	
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
+
 }

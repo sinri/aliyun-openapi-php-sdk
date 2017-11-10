@@ -23,17 +23,17 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "DescribeDBInstances", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+        parent::__construct("Rds", "2014-08-15", "DescribeDBInstances", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $connectionMode;
+    private $connectionMode;
 
-	private  $tag4value;
+    private $tag4value;
 
 	private  $resourceOwnerId;
 
-	private  $tag2key;
+    private $tag2key;
 
 	private  $clientToken;
 
@@ -41,64 +41,68 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 
 	private  $tag3key;
 
-	private  $pageNumber;
+    private $pageNumber;
 
 	private  $tag1value;
 
-	private  $engine;
+    private $engine;
 
-	private  $pageSize;
+    private $pageSize;
 
-	private  $dBInstanceStatus;
+    private $dBInstanceStatus;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
 	private  $tag3value;
 
-	private  $proxyId;
+    private $proxyId;
 
-	private  $tag5key;
+    private $tag5key;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
 	private  $tag5value;
 
-	private  $dBInstanceType;
+    private $dBInstanceType;
 
 	private  $tags;
 
-	private  $vSwitchId;
+    private $vSwitchId;
 
-	private  $tag1key;
+    private $tag1key;
 
-	private  $vpcId;
+    private $vpcId;
 
-	private  $tag2value;
+    private $tag2value;
 
-	private  $tag4key;
+    private $tag4key;
 
-	private  $instanceNetworkType;
+    private $instanceNetworkType;
 
-	public function getConnectionMode() {
-		return $this->connectionMode;
-	}
+    public function getConnectionMode()
+    {
+        return $this->connectionMode;
+    }
 
-	public function setConnectionMode($connectionMode) {
-		$this->connectionMode = $connectionMode;
-		$this->queryParameters["ConnectionMode"]=$connectionMode;
-	}
+    public function setConnectionMode($connectionMode)
+    {
+        $this->connectionMode = $connectionMode;
+        $this->queryParameters["ConnectionMode"] = $connectionMode;
+    }
 
-	public function getTag4value() {
-		return $this->tag4value;
-	}
+    public function getTag4value()
+    {
+        return $this->tag4value;
+    }
 
-	public function setTag4value($tag4value) {
-		$this->tag4value = $tag4value;
-		$this->queryParameters["Tag.4.value"]=$tag4value;
+    public function setTag4value($tag4value)
+    {
+        $this->tag4value = $tag4value;
+        $this->queryParameters["Tag.4.value"] = $tag4value;
 	}
 
 	public function getResourceOwnerId() {
@@ -110,14 +114,16 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getTag2key() {
-		return $this->tag2key;
-	}
+    public function getTag2key()
+    {
+        return $this->tag2key;
+    }
 
-	public function setTag2key($tag2key) {
-		$this->tag2key = $tag2key;
-		$this->queryParameters["Tag.2.key"]=$tag2key;
-	}
+    public function setTag2key($tag2key)
+    {
+        $this->tag2key = $tag2key;
+        $this->queryParameters["Tag.2.key"] = $tag2key;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;
@@ -146,13 +152,15 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.3.key"]=$tag3key;
 	}
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
 	}
 
 	public function getTag1value() {
@@ -164,40 +172,48 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.1.value"]=$tag1value;
 	}
 
-	public function getEngine() {
-		return $this->engine;
-	}
+    public function getEngine()
+    {
+        return $this->engine;
+    }
 
-	public function setEngine($engine) {
-		$this->engine = $engine;
-		$this->queryParameters["Engine"]=$engine;
-	}
+    public function setEngine($engine)
+    {
+        $this->engine = $engine;
+        $this->queryParameters["Engine"] = $engine;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
-	public function getDBInstanceStatus() {
-		return $this->dBInstanceStatus;
-	}
+    public function getDBInstanceStatus()
+    {
+        return $this->dBInstanceStatus;
+    }
 
-	public function setDBInstanceStatus($dBInstanceStatus) {
-		$this->dBInstanceStatus = $dBInstanceStatus;
-		$this->queryParameters["DBInstanceStatus"]=$dBInstanceStatus;
-	}
+    public function setDBInstanceStatus($dBInstanceStatus)
+    {
+        $this->dBInstanceStatus = $dBInstanceStatus;
+        $this->queryParameters["DBInstanceStatus"] = $dBInstanceStatus;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
 	}
 
 	public function getTag3value() {
@@ -209,49 +225,59 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.3.value"]=$tag3value;
 	}
 
-	public function getproxyId() {
-		return $this->proxyId;
-	}
+    public function getproxyId()
+    {
+        return $this->proxyId;
+    }
 
-	public function setproxyId($proxyId) {
-		$this->proxyId = $proxyId;
-		$this->queryParameters["proxyId"]=$proxyId;
-	}
+    public function setproxyId($proxyId)
+    {
+        $this->proxyId = $proxyId;
+        $this->queryParameters["proxyId"] = $proxyId;
+    }
 
-	public function getTag5key() {
-		return $this->tag5key;
-	}
+    public function getTag5key()
+    {
+        return $this->tag5key;
+    }
 
-	public function setTag5key($tag5key) {
-		$this->tag5key = $tag5key;
-		$this->queryParameters["Tag.5.key"]=$tag5key;
-	}
+    public function setTag5key($tag5key)
+    {
+        $this->tag5key = $tag5key;
+        $this->queryParameters["Tag.5.key"] = $tag5key;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
 	}
 
 	public function getTag5value() {
@@ -263,14 +289,16 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.5.value"]=$tag5value;
 	}
 
-	public function getDBInstanceType() {
-		return $this->dBInstanceType;
-	}
+    public function getDBInstanceType()
+    {
+        return $this->dBInstanceType;
+    }
 
-	public function setDBInstanceType($dBInstanceType) {
-		$this->dBInstanceType = $dBInstanceType;
-		$this->queryParameters["DBInstanceType"]=$dBInstanceType;
-	}
+    public function setDBInstanceType($dBInstanceType)
+    {
+        $this->dBInstanceType = $dBInstanceType;
+        $this->queryParameters["DBInstanceType"] = $dBInstanceType;
+    }
 
 	public function getTags() {
 		return $this->tags;
@@ -281,58 +309,70 @@ class DescribeDBInstancesRequest extends \RpcAcsRequest
 		$this->queryParameters["Tags"]=$tags;
 	}
 
-	public function getVSwitchId() {
-		return $this->vSwitchId;
-	}
+    public function getVSwitchId()
+    {
+        return $this->vSwitchId;
+    }
 
-	public function setVSwitchId($vSwitchId) {
-		$this->vSwitchId = $vSwitchId;
-		$this->queryParameters["VSwitchId"]=$vSwitchId;
-	}
+    public function setVSwitchId($vSwitchId)
+    {
+        $this->vSwitchId = $vSwitchId;
+        $this->queryParameters["VSwitchId"] = $vSwitchId;
+    }
 
-	public function getTag1key() {
-		return $this->tag1key;
-	}
+    public function getTag1key()
+    {
+        return $this->tag1key;
+    }
 
-	public function setTag1key($tag1key) {
-		$this->tag1key = $tag1key;
-		$this->queryParameters["Tag.1.key"]=$tag1key;
-	}
+    public function setTag1key($tag1key)
+    {
+        $this->tag1key = $tag1key;
+        $this->queryParameters["Tag.1.key"] = $tag1key;
+    }
 
-	public function getVpcId() {
-		return $this->vpcId;
-	}
+    public function getVpcId()
+    {
+        return $this->vpcId;
+    }
 
-	public function setVpcId($vpcId) {
-		$this->vpcId = $vpcId;
-		$this->queryParameters["VpcId"]=$vpcId;
-	}
+    public function setVpcId($vpcId)
+    {
+        $this->vpcId = $vpcId;
+        $this->queryParameters["VpcId"] = $vpcId;
+    }
 
-	public function getTag2value() {
-		return $this->tag2value;
-	}
+    public function getTag2value()
+    {
+        return $this->tag2value;
+    }
 
-	public function setTag2value($tag2value) {
-		$this->tag2value = $tag2value;
-		$this->queryParameters["Tag.2.value"]=$tag2value;
-	}
+    public function setTag2value($tag2value)
+    {
+        $this->tag2value = $tag2value;
+        $this->queryParameters["Tag.2.value"] = $tag2value;
+    }
 
-	public function getTag4key() {
-		return $this->tag4key;
-	}
+    public function getTag4key()
+    {
+        return $this->tag4key;
+    }
 
-	public function setTag4key($tag4key) {
-		$this->tag4key = $tag4key;
-		$this->queryParameters["Tag.4.key"]=$tag4key;
-	}
+    public function setTag4key($tag4key)
+    {
+        $this->tag4key = $tag4key;
+        $this->queryParameters["Tag.4.key"] = $tag4key;
+    }
 
-	public function getInstanceNetworkType() {
-		return $this->instanceNetworkType;
-	}
+    public function getInstanceNetworkType()
+    {
+        return $this->instanceNetworkType;
+    }
 
-	public function setInstanceNetworkType($instanceNetworkType) {
-		$this->instanceNetworkType = $instanceNetworkType;
-		$this->queryParameters["InstanceNetworkType"]=$instanceNetworkType;
+    public function setInstanceNetworkType($instanceNetworkType)
+    {
+        $this->instanceNetworkType = $instanceNetworkType;
+        $this->queryParameters["InstanceNetworkType"] = $instanceNetworkType;
 	}
 	
 }

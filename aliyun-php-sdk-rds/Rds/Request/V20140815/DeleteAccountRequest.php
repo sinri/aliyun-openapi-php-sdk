@@ -23,21 +23,21 @@ class DeleteAccountRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "DeleteAccount", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "DeleteAccount", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
 	private  $accountName;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $ownerId;
+    private $ownerId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -57,14 +57,16 @@ class DeleteAccountRequest extends \RpcAcsRequest
 		$this->queryParameters["AccountName"]=$accountName;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -75,22 +77,26 @@ class DeleteAccountRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

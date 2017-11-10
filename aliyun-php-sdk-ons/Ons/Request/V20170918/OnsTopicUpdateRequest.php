@@ -17,69 +17,80 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ons\Request\V20170918;
 
 class OnsTopicUpdateRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ons", "2017-09-18", "OnsTopicUpdate");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ons", "2017-09-18", "OnsTopicUpdate");
+        $this->setMethod("POST");
+    }
 
-	private  $preventCache;
+    private $preventCache;
 
-	private  $onsRegionId;
+    private $onsRegionId;
 
-	private  $onsPlatform;
+    private $onsPlatform;
 
-	private  $perm;
+    private $perm;
 
-	private  $topic;
+    private $topic;
 
-	public function getPreventCache() {
-		return $this->preventCache;
-	}
+    public function getPreventCache()
+    {
+        return $this->preventCache;
+    }
 
-	public function setPreventCache($preventCache) {
-		$this->preventCache = $preventCache;
-		$this->queryParameters["PreventCache"]=$preventCache;
-	}
+    public function setPreventCache($preventCache)
+    {
+        $this->preventCache = $preventCache;
+        $this->queryParameters["PreventCache"] = $preventCache;
+    }
 
-	public function getOnsRegionId() {
-		return $this->onsRegionId;
-	}
+    public function getOnsRegionId()
+    {
+        return $this->onsRegionId;
+    }
 
-	public function setOnsRegionId($onsRegionId) {
-		$this->onsRegionId = $onsRegionId;
-		$this->queryParameters["OnsRegionId"]=$onsRegionId;
-	}
+    public function setOnsRegionId($onsRegionId)
+    {
+        $this->onsRegionId = $onsRegionId;
+        $this->queryParameters["OnsRegionId"] = $onsRegionId;
+    }
 
-	public function getOnsPlatform() {
-		return $this->onsPlatform;
-	}
+    public function getOnsPlatform()
+    {
+        return $this->onsPlatform;
+    }
 
-	public function setOnsPlatform($onsPlatform) {
-		$this->onsPlatform = $onsPlatform;
-		$this->queryParameters["OnsPlatform"]=$onsPlatform;
-	}
+    public function setOnsPlatform($onsPlatform)
+    {
+        $this->onsPlatform = $onsPlatform;
+        $this->queryParameters["OnsPlatform"] = $onsPlatform;
+    }
 
-	public function getPerm() {
-		return $this->perm;
-	}
+    public function getPerm()
+    {
+        return $this->perm;
+    }
 
-	public function setPerm($perm) {
-		$this->perm = $perm;
-		$this->queryParameters["Perm"]=$perm;
-	}
+    public function setPerm($perm)
+    {
+        $this->perm = $perm;
+        $this->queryParameters["Perm"] = $perm;
+    }
 
-	public function getTopic() {
-		return $this->topic;
-	}
+    public function getTopic()
+    {
+        return $this->topic;
+    }
 
-	public function setTopic($topic) {
-		$this->topic = $topic;
-		$this->queryParameters["Topic"]=$topic;
-	}
-	
+    public function setTopic($topic)
+    {
+        $this->topic = $topic;
+        $this->queryParameters["Topic"] = $topic;
+    }
+
 }

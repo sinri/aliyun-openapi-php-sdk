@@ -23,7 +23,7 @@ class CreateHaVipRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "CreateHaVip", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "CreateHaVip", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -31,15 +31,15 @@ class CreateHaVipRequest extends \RpcAcsRequest
 
 	private  $ipAddress;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
-	private  $description;
+    private $description;
 
 	private  $ownerId;
 
@@ -61,32 +61,38 @@ class CreateHaVipRequest extends \RpcAcsRequest
 		$this->queryParameters["IpAddress"]=$ipAddress;
 	}
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -97,14 +103,16 @@ class CreateHaVipRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

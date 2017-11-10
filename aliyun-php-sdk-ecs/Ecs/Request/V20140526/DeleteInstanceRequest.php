@@ -23,19 +23,19 @@ class DeleteInstanceRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteInstance", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DeleteInstance", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $force;
+    private $force;
 
 	private  $ownerId;
 
@@ -48,23 +48,27 @@ class DeleteInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -75,14 +79,16 @@ class DeleteInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getForce() {
-		return $this->force;
-	}
+    public function getForce()
+    {
+        return $this->force;
+    }
 
-	public function setForce($force) {
-		$this->force = $force;
-		$this->queryParameters["Force"]=$force;
-	}
+    public function setForce($force)
+    {
+        $this->force = $force;
+        $this->queryParameters["Force"] = $force;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

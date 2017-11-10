@@ -17,27 +17,28 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace vod\Request\V20170321;
 
 class GetEditingProjectMaterialsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("vod", "2017-03-21", "GetEditingProjectMaterials", "vod", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("vod", "2017-03-21", "GetEditingProjectMaterials", "vod", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $type;
+    private $type;
 
-	private  $projectId;
+    private $projectId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -48,13 +49,15 @@ class GetEditingProjectMaterialsRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -66,31 +69,37 @@ class GetEditingProjectMaterialsRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getType() {
-		return $this->type;
-	}
+    public function getType()
+    {
+        return $this->type;
+    }
 
-	public function setType($type) {
-		$this->type = $type;
-		$this->queryParameters["Type"]=$type;
-	}
+    public function setType($type)
+    {
+        $this->type = $type;
+        $this->queryParameters["Type"] = $type;
+    }
 
-	public function getProjectId() {
-		return $this->projectId;
-	}
+    public function getProjectId()
+    {
+        return $this->projectId;
+    }
 
-	public function setProjectId($projectId) {
-		$this->projectId = $projectId;
-		$this->queryParameters["ProjectId"]=$projectId;
-	}
+    public function setProjectId($projectId)
+    {
+        $this->projectId = $projectId;
+        $this->queryParameters["ProjectId"] = $projectId;
+    }
 	
 }

@@ -23,15 +23,15 @@ class DetachClassicLinkVpcRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DetachClassicLinkVpc", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DetachClassicLinkVpc", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $vpcId;
 
@@ -46,23 +46,27 @@ class DetachClassicLinkVpcRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getVpcId() {
 		return $this->vpcId;

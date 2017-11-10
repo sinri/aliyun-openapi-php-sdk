@@ -23,87 +23,93 @@ class CreateImageRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "CreateImage", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "CreateImage", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $DiskDeviceMappings;
+    private $DiskDeviceMappings;
 
-	private  $tag4Value;
+    private $tag4Value;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $snapshotId;
 
-	private  $tag2Key;
+    private $tag2Key;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $description;
 
-	private  $tag3Key;
+    private $tag3Key;
 
-	private  $platform;
+    private $platform;
 
 	private  $tag1Value;
 
-	private  $imageName;
+    private $imageName;
 
-	private  $tag3Value;
+    private $tag3Value;
 
-	private  $architecture;
+    private $architecture;
 
-	private  $tag5Key;
+    private $tag5Key;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
 
-	private  $tag5Value;
+    private $tag5Value;
 
-	private  $tag1Key;
+    private $tag1Key;
 
 	private  $instanceId;
 
 	private  $tag2Value;
 
-	private  $imageVersion;
+    private $imageVersion;
 
-	private  $tag4Key;
+    private $tag4Key;
 
-	public function getDiskDeviceMappings() {
-		return $this->DiskDeviceMappings;
-	}
+    public function getDiskDeviceMappings()
+    {
+        return $this->DiskDeviceMappings;
+    }
 
-	public function setDiskDeviceMappings($DiskDeviceMappings) {
-		$this->DiskDeviceMappings = $DiskDeviceMappings;
-		for ($i = 0; $i < count($DiskDeviceMappings); $i ++) {	
-			$this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.Size'] = $DiskDeviceMappings[$i]['Size'];
-			$this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.SnapshotId'] = $DiskDeviceMappings[$i]['SnapshotId'];
-			$this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.Device'] = $DiskDeviceMappings[$i]['Device'];
-			$this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.DiskType'] = $DiskDeviceMappings[$i]['DiskType'];
+    public function setDiskDeviceMappings($DiskDeviceMappings)
+    {
+        $this->DiskDeviceMappings = $DiskDeviceMappings;
+        for ($i = 0; $i < count($DiskDeviceMappings); $i++) {
+            $this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.Size'] = $DiskDeviceMappings[$i]['Size'];
+            $this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.SnapshotId'] = $DiskDeviceMappings[$i]['SnapshotId'];
+            $this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.Device'] = $DiskDeviceMappings[$i]['Device'];
+            $this->queryParameters['DiskDeviceMapping.' . ($i + 1) . '.DiskType'] = $DiskDeviceMappings[$i]['DiskType'];
 
-		}
-	}
+        }
+    }
 
-	public function getTag4Value() {
-		return $this->tag4Value;
-	}
+    public function getTag4Value()
+    {
+        return $this->tag4Value;
+    }
 
-	public function setTag4Value($tag4Value) {
-		$this->tag4Value = $tag4Value;
-		$this->queryParameters["Tag.4.Value"]=$tag4Value;
-	}
+    public function setTag4Value($tag4Value)
+    {
+        $this->tag4Value = $tag4Value;
+        $this->queryParameters["Tag.4.Value"] = $tag4Value;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
 	}
 
 	public function getSnapshotId() {
@@ -115,23 +121,27 @@ class CreateImageRequest extends \RpcAcsRequest
 		$this->queryParameters["SnapshotId"]=$snapshotId;
 	}
 
-	public function getTag2Key() {
-		return $this->tag2Key;
-	}
+    public function getTag2Key()
+    {
+        return $this->tag2Key;
+    }
 
-	public function setTag2Key($tag2Key) {
-		$this->tag2Key = $tag2Key;
-		$this->queryParameters["Tag.2.Key"]=$tag2Key;
-	}
+    public function setTag2Key($tag2Key)
+    {
+        $this->tag2Key = $tag2Key;
+        $this->queryParameters["Tag.2.Key"] = $tag2Key;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getDescription() {
 		return $this->description;
@@ -142,22 +152,26 @@ class CreateImageRequest extends \RpcAcsRequest
 		$this->queryParameters["Description"]=$description;
 	}
 
-	public function getTag3Key() {
-		return $this->tag3Key;
-	}
+    public function getTag3Key()
+    {
+        return $this->tag3Key;
+    }
 
-	public function setTag3Key($tag3Key) {
-		$this->tag3Key = $tag3Key;
-		$this->queryParameters["Tag.3.Key"]=$tag3Key;
-	}
+    public function setTag3Key($tag3Key)
+    {
+        $this->tag3Key = $tag3Key;
+        $this->queryParameters["Tag.3.Key"] = $tag3Key;
+    }
 
-	public function getPlatform() {
-		return $this->platform;
-	}
+    public function getPlatform()
+    {
+        return $this->platform;
+    }
 
-	public function setPlatform($platform) {
-		$this->platform = $platform;
-		$this->queryParameters["Platform"]=$platform;
+    public function setPlatform($platform)
+    {
+        $this->platform = $platform;
+        $this->queryParameters["Platform"] = $platform;
 	}
 
 	public function getTag1Value() {
@@ -169,49 +183,59 @@ class CreateImageRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.1.Value"]=$tag1Value;
 	}
 
-	public function getImageName() {
-		return $this->imageName;
-	}
+    public function getImageName()
+    {
+        return $this->imageName;
+    }
 
-	public function setImageName($imageName) {
-		$this->imageName = $imageName;
-		$this->queryParameters["ImageName"]=$imageName;
-	}
+    public function setImageName($imageName)
+    {
+        $this->imageName = $imageName;
+        $this->queryParameters["ImageName"] = $imageName;
+    }
 
-	public function getTag3Value() {
-		return $this->tag3Value;
-	}
+    public function getTag3Value()
+    {
+        return $this->tag3Value;
+    }
 
-	public function setTag3Value($tag3Value) {
-		$this->tag3Value = $tag3Value;
-		$this->queryParameters["Tag.3.Value"]=$tag3Value;
-	}
+    public function setTag3Value($tag3Value)
+    {
+        $this->tag3Value = $tag3Value;
+        $this->queryParameters["Tag.3.Value"] = $tag3Value;
+    }
 
-	public function getArchitecture() {
-		return $this->architecture;
-	}
+    public function getArchitecture()
+    {
+        return $this->architecture;
+    }
 
-	public function setArchitecture($architecture) {
-		$this->architecture = $architecture;
-		$this->queryParameters["Architecture"]=$architecture;
-	}
+    public function setArchitecture($architecture)
+    {
+        $this->architecture = $architecture;
+        $this->queryParameters["Architecture"] = $architecture;
+    }
 
-	public function getTag5Key() {
-		return $this->tag5Key;
-	}
+    public function getTag5Key()
+    {
+        return $this->tag5Key;
+    }
 
-	public function setTag5Key($tag5Key) {
-		$this->tag5Key = $tag5Key;
-		$this->queryParameters["Tag.5.Key"]=$tag5Key;
-	}
+    public function setTag5Key($tag5Key)
+    {
+        $this->tag5Key = $tag5Key;
+        $this->queryParameters["Tag.5.Key"] = $tag5Key;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -232,22 +256,26 @@ class CreateImageRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getTag5Value() {
-		return $this->tag5Value;
-	}
+    public function getTag5Value()
+    {
+        return $this->tag5Value;
+    }
 
-	public function setTag5Value($tag5Value) {
-		$this->tag5Value = $tag5Value;
-		$this->queryParameters["Tag.5.Value"]=$tag5Value;
-	}
+    public function setTag5Value($tag5Value)
+    {
+        $this->tag5Value = $tag5Value;
+        $this->queryParameters["Tag.5.Value"] = $tag5Value;
+    }
 
-	public function getTag1Key() {
-		return $this->tag1Key;
-	}
+    public function getTag1Key()
+    {
+        return $this->tag1Key;
+    }
 
-	public function setTag1Key($tag1Key) {
-		$this->tag1Key = $tag1Key;
-		$this->queryParameters["Tag.1.Key"]=$tag1Key;
+    public function setTag1Key($tag1Key)
+    {
+        $this->tag1Key = $tag1Key;
+        $this->queryParameters["Tag.1.Key"] = $tag1Key;
 	}
 
 	public function getInstanceId() {
@@ -268,22 +296,26 @@ class CreateImageRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.2.Value"]=$tag2Value;
 	}
 
-	public function getImageVersion() {
-		return $this->imageVersion;
-	}
+    public function getImageVersion()
+    {
+        return $this->imageVersion;
+    }
 
-	public function setImageVersion($imageVersion) {
-		$this->imageVersion = $imageVersion;
-		$this->queryParameters["ImageVersion"]=$imageVersion;
-	}
+    public function setImageVersion($imageVersion)
+    {
+        $this->imageVersion = $imageVersion;
+        $this->queryParameters["ImageVersion"] = $imageVersion;
+    }
 
-	public function getTag4Key() {
-		return $this->tag4Key;
-	}
+    public function getTag4Key()
+    {
+        return $this->tag4Key;
+    }
 
-	public function setTag4Key($tag4Key) {
-		$this->tag4Key = $tag4Key;
-		$this->queryParameters["Tag.4.Key"]=$tag4Key;
-	}
+    public function setTag4Key($tag4Key)
+    {
+        $this->tag4Key = $tag4Key;
+        $this->queryParameters["Tag.4.Key"] = $tag4Key;
+    }
 	
 }

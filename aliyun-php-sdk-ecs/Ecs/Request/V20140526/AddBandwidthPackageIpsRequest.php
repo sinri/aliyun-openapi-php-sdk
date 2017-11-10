@@ -23,23 +23,23 @@ class AddBandwidthPackageIpsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "AddBandwidthPackageIps", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "AddBandwidthPackageIps", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $bandwidthPackageId;
+    private $bandwidthPackageId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
 
-	private  $ipCount;
+    private $ipCount;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -50,32 +50,38 @@ class AddBandwidthPackageIpsRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getBandwidthPackageId() {
-		return $this->bandwidthPackageId;
-	}
+    public function getBandwidthPackageId()
+    {
+        return $this->bandwidthPackageId;
+    }
 
-	public function setBandwidthPackageId($bandwidthPackageId) {
-		$this->bandwidthPackageId = $bandwidthPackageId;
-		$this->queryParameters["BandwidthPackageId"]=$bandwidthPackageId;
-	}
+    public function setBandwidthPackageId($bandwidthPackageId)
+    {
+        $this->bandwidthPackageId = $bandwidthPackageId;
+        $this->queryParameters["BandwidthPackageId"] = $bandwidthPackageId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -95,13 +101,15 @@ class AddBandwidthPackageIpsRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getIpCount() {
-		return $this->ipCount;
-	}
+    public function getIpCount()
+    {
+        return $this->ipCount;
+    }
 
-	public function setIpCount($ipCount) {
-		$this->ipCount = $ipCount;
-		$this->queryParameters["IpCount"]=$ipCount;
+    public function setIpCount($ipCount)
+    {
+        $this->ipCount = $ipCount;
+        $this->queryParameters["IpCount"] = $ipCount;
 	}
 	
 }

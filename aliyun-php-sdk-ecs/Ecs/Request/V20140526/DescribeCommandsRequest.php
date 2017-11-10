@@ -17,124 +17,145 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ecs\Request\V20140526;
 
 class DescribeCommandsRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeCommands", "ecs", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ecs", "2014-05-26", "DescribeCommands", "ecs", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $description;
+    private $description;
 
-	private  $type;
+    private $type;
 
-	private  $commandId;
+    private $commandId;
 
-	private  $pageNumber;
+    private $pageNumber;
 
-	private  $pageSize;
+    private $pageSize;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $name;
+    private $name;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getType() {
-		return $this->type;
-	}
+    public function getType()
+    {
+        return $this->type;
+    }
 
-	public function setType($type) {
-		$this->type = $type;
-		$this->queryParameters["Type"]=$type;
-	}
+    public function setType($type)
+    {
+        $this->type = $type;
+        $this->queryParameters["Type"] = $type;
+    }
 
-	public function getCommandId() {
-		return $this->commandId;
-	}
+    public function getCommandId()
+    {
+        return $this->commandId;
+    }
 
-	public function setCommandId($commandId) {
-		$this->commandId = $commandId;
-		$this->queryParameters["CommandId"]=$commandId;
-	}
+    public function setCommandId($commandId)
+    {
+        $this->commandId = $commandId;
+        $this->queryParameters["CommandId"] = $commandId;
+    }
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getName() {
-		return $this->name;
-	}
+    public function getName()
+    {
+        return $this->name;
+    }
 
-	public function setName($name) {
-		$this->name = $name;
-		$this->queryParameters["Name"]=$name;
-	}
-	
+    public function setName($name)
+    {
+        $this->name = $name;
+        $this->queryParameters["Name"] = $name;
+    }
+
 }

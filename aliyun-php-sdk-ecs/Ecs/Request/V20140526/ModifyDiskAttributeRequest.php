@@ -23,21 +23,21 @@ class ModifyDiskAttributeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyDiskAttribute", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyDiskAttribute", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $diskName;
 
-	private  $deleteAutoSnapshot;
+    private $deleteAutoSnapshot;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $enableAutoSnapshot;
 
 	private  $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
 	private  $description;
 
@@ -45,7 +45,7 @@ class ModifyDiskAttributeRequest extends \RpcAcsRequest
 
 	private  $ownerId;
 
-	private  $deleteWithInstance;
+    private $deleteWithInstance;
 
 	public function getDiskName() {
 		return $this->diskName;
@@ -56,23 +56,27 @@ class ModifyDiskAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["DiskName"]=$diskName;
 	}
 
-	public function getDeleteAutoSnapshot() {
-		return $this->deleteAutoSnapshot;
-	}
+    public function getDeleteAutoSnapshot()
+    {
+        return $this->deleteAutoSnapshot;
+    }
 
-	public function setDeleteAutoSnapshot($deleteAutoSnapshot) {
-		$this->deleteAutoSnapshot = $deleteAutoSnapshot;
-		$this->queryParameters["DeleteAutoSnapshot"]=$deleteAutoSnapshot;
-	}
+    public function setDeleteAutoSnapshot($deleteAutoSnapshot)
+    {
+        $this->deleteAutoSnapshot = $deleteAutoSnapshot;
+        $this->queryParameters["DeleteAutoSnapshot"] = $deleteAutoSnapshot;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
 	public function getEnableAutoSnapshot() {
 		return $this->enableAutoSnapshot;
@@ -92,14 +96,16 @@ class ModifyDiskAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
 	public function getDescription() {
 		return $this->description;
@@ -128,13 +134,15 @@ class ModifyDiskAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getDeleteWithInstance() {
-		return $this->deleteWithInstance;
-	}
+    public function getDeleteWithInstance()
+    {
+        return $this->deleteWithInstance;
+    }
 
-	public function setDeleteWithInstance($deleteWithInstance) {
-		$this->deleteWithInstance = $deleteWithInstance;
-		$this->queryParameters["DeleteWithInstance"]=$deleteWithInstance;
+    public function setDeleteWithInstance($deleteWithInstance)
+    {
+        $this->deleteWithInstance = $deleteWithInstance;
+        $this->queryParameters["DeleteWithInstance"] = $deleteWithInstance;
 	}
 	
 }

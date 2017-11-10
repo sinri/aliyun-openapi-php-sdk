@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class ListPoliciesRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "ListPolicies");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "ListPolicies");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $policyType;
+    private $policyType;
 
-	private  $marker;
+    private $marker;
 
-	private  $maxItems;
+    private $maxItems;
 
-	public function getPolicyType() {
-		return $this->policyType;
-	}
+    public function getPolicyType()
+    {
+        return $this->policyType;
+    }
 
-	public function setPolicyType($policyType) {
-		$this->policyType = $policyType;
-		$this->queryParameters["PolicyType"]=$policyType;
-	}
+    public function setPolicyType($policyType)
+    {
+        $this->policyType = $policyType;
+        $this->queryParameters["PolicyType"] = $policyType;
+    }
 
-	public function getMarker() {
-		return $this->marker;
-	}
+    public function getMarker()
+    {
+        return $this->marker;
+    }
 
-	public function setMarker($marker) {
-		$this->marker = $marker;
-		$this->queryParameters["Marker"]=$marker;
-	}
+    public function setMarker($marker)
+    {
+        $this->marker = $marker;
+        $this->queryParameters["Marker"] = $marker;
+    }
 
-	public function getMaxItems() {
-		return $this->maxItems;
-	}
+    public function getMaxItems()
+    {
+        return $this->maxItems;
+    }
 
-	public function setMaxItems($maxItems) {
-		$this->maxItems = $maxItems;
-		$this->queryParameters["MaxItems"]=$maxItems;
-	}
-	
+    public function setMaxItems($maxItems)
+    {
+        $this->maxItems = $maxItems;
+        $this->queryParameters["MaxItems"] = $maxItems;
+    }
+
 }

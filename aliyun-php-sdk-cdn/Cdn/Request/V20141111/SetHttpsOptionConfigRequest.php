@@ -17,58 +17,67 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Cdn\Request\V20141111;
 
 class SetHttpsOptionConfigRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Cdn", "2014-11-11", "SetHttpsOptionConfig");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Cdn", "2014-11-11", "SetHttpsOptionConfig");
+        $this->setMethod("POST");
+    }
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $domainName;
+    private $domainName;
 
-	private  $http2;
+    private $http2;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+    public function getDomainName()
+    {
+        return $this->domainName;
+    }
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+    public function setDomainName($domainName)
+    {
+        $this->domainName = $domainName;
+        $this->queryParameters["DomainName"] = $domainName;
+    }
 
-	public function getHttp2() {
-		return $this->http2;
-	}
+    public function getHttp2()
+    {
+        return $this->http2;
+    }
 
-	public function setHttp2($http2) {
-		$this->http2 = $http2;
-		$this->queryParameters["Http2"]=$http2;
-	}
+    public function setHttp2($http2)
+    {
+        $this->http2 = $http2;
+        $this->queryParameters["Http2"] = $http2;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-	
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
+
 }

@@ -23,27 +23,27 @@ class CreateNatGatewayRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "CreateNatGateway", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "CreateNatGateway", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
-	private  $vpcId;
+    private $vpcId;
 
-	private  $name;
+    private $name;
 
-	private  $description;
+    private $description;
 
 	private  $ownerId;
 
-	private  $BandwidthPackages;
+    private $BandwidthPackages;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -54,22 +54,26 @@ class CreateNatGatewayRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
 	}
 
 	public function getOwnerAccount() {
@@ -81,32 +85,38 @@ class CreateNatGatewayRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getVpcId() {
-		return $this->vpcId;
-	}
+    public function getVpcId()
+    {
+        return $this->vpcId;
+    }
 
-	public function setVpcId($vpcId) {
-		$this->vpcId = $vpcId;
-		$this->queryParameters["VpcId"]=$vpcId;
-	}
+    public function setVpcId($vpcId)
+    {
+        $this->vpcId = $vpcId;
+        $this->queryParameters["VpcId"] = $vpcId;
+    }
 
-	public function getName() {
-		return $this->name;
-	}
+    public function getName()
+    {
+        return $this->name;
+    }
 
-	public function setName($name) {
-		$this->name = $name;
-		$this->queryParameters["Name"]=$name;
-	}
+    public function setName($name)
+    {
+        $this->name = $name;
+        $this->queryParameters["Name"] = $name;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -117,18 +127,20 @@ class CreateNatGatewayRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getBandwidthPackages() {
-		return $this->BandwidthPackages;
-	}
+    public function getBandwidthPackages()
+    {
+        return $this->BandwidthPackages;
+    }
 
-	public function setBandwidthPackages($BandwidthPackages) {
-		$this->BandwidthPackages = $BandwidthPackages;
-		for ($i = 0; $i < count($BandwidthPackages); $i ++) {	
-			$this->queryParameters['BandwidthPackage.' . ($i + 1) . '.IpCount'] = $BandwidthPackages[$i]['IpCount'];
-			$this->queryParameters['BandwidthPackage.' . ($i + 1) . '.Bandwidth'] = $BandwidthPackages[$i]['Bandwidth'];
-			$this->queryParameters['BandwidthPackage.' . ($i + 1) . '.Zone'] = $BandwidthPackages[$i]['Zone'];
+    public function setBandwidthPackages($BandwidthPackages)
+    {
+        $this->BandwidthPackages = $BandwidthPackages;
+        for ($i = 0; $i < count($BandwidthPackages); $i++) {
+            $this->queryParameters['BandwidthPackage.' . ($i + 1) . '.IpCount'] = $BandwidthPackages[$i]['IpCount'];
+            $this->queryParameters['BandwidthPackage.' . ($i + 1) . '.Bandwidth'] = $BandwidthPackages[$i]['Bandwidth'];
+            $this->queryParameters['BandwidthPackage.' . ($i + 1) . '.Zone'] = $BandwidthPackages[$i]['Zone'];
 
-		}
-	}
+        }
+    }
 	
 }

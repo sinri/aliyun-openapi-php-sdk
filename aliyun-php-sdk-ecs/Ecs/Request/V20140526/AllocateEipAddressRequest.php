@@ -23,15 +23,15 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "AllocateEipAddress", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "AllocateEipAddress", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $bandwidth;
+    private $bandwidth;
 
 	private  $clientToken;
 
@@ -41,32 +41,38 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 
 	private  $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getBandwidth() {
-		return $this->bandwidth;
-	}
+    public function getBandwidth()
+    {
+        return $this->bandwidth;
+    }
 
-	public function setBandwidth($bandwidth) {
-		$this->bandwidth = $bandwidth;
-		$this->queryParameters["Bandwidth"]=$bandwidth;
-	}
+    public function setBandwidth($bandwidth)
+    {
+        $this->bandwidth = $bandwidth;
+        $this->queryParameters["Bandwidth"] = $bandwidth;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;

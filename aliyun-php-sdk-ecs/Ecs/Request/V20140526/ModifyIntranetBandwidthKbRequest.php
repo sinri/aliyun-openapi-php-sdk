@@ -23,19 +23,19 @@ class ModifyIntranetBandwidthKbRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyIntranetBandwidthKb", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyIntranetBandwidthKb", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $intranetMaxBandwidthOut;
+    private $intranetMaxBandwidthOut;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $intranetMaxBandwidthIn;
+    private $intranetMaxBandwidthIn;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
@@ -50,41 +50,49 @@ class ModifyIntranetBandwidthKbRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getIntranetMaxBandwidthOut() {
-		return $this->intranetMaxBandwidthOut;
-	}
+    public function getIntranetMaxBandwidthOut()
+    {
+        return $this->intranetMaxBandwidthOut;
+    }
 
-	public function setIntranetMaxBandwidthOut($intranetMaxBandwidthOut) {
-		$this->intranetMaxBandwidthOut = $intranetMaxBandwidthOut;
-		$this->queryParameters["IntranetMaxBandwidthOut"]=$intranetMaxBandwidthOut;
-	}
+    public function setIntranetMaxBandwidthOut($intranetMaxBandwidthOut)
+    {
+        $this->intranetMaxBandwidthOut = $intranetMaxBandwidthOut;
+        $this->queryParameters["IntranetMaxBandwidthOut"] = $intranetMaxBandwidthOut;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getIntranetMaxBandwidthIn() {
-		return $this->intranetMaxBandwidthIn;
-	}
+    public function getIntranetMaxBandwidthIn()
+    {
+        return $this->intranetMaxBandwidthIn;
+    }
 
-	public function setIntranetMaxBandwidthIn($intranetMaxBandwidthIn) {
-		$this->intranetMaxBandwidthIn = $intranetMaxBandwidthIn;
-		$this->queryParameters["IntranetMaxBandwidthIn"]=$intranetMaxBandwidthIn;
-	}
+    public function setIntranetMaxBandwidthIn($intranetMaxBandwidthIn)
+    {
+        $this->intranetMaxBandwidthIn = $intranetMaxBandwidthIn;
+        $this->queryParameters["IntranetMaxBandwidthIn"] = $intranetMaxBandwidthIn;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;

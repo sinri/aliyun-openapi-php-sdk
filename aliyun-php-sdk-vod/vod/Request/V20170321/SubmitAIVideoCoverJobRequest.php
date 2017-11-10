@@ -27,7 +27,7 @@ class SubmitAIVideoCoverJobRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
-	private  $userData;
+    private $userData;
 
 	private  $resourceOwnerId;
 
@@ -37,17 +37,19 @@ class SubmitAIVideoCoverJobRequest extends \RpcAcsRequest
 
 	private  $ownerId;
 
-	private  $mediaId;
+    private $mediaId;
 
 	private  $aIVideoCoverConfig;
 
-	public function getUserData() {
-		return $this->userData;
-	}
+    public function getUserData()
+    {
+        return $this->userData;
+    }
 
-	public function setUserData($userData) {
-		$this->userData = $userData;
-		$this->queryParameters["UserData"]=$userData;
+    public function setUserData($userData)
+    {
+        $this->userData = $userData;
+        $this->queryParameters["UserData"] = $userData;
 	}
 
 	public function getResourceOwnerId() {
@@ -86,14 +88,16 @@ class SubmitAIVideoCoverJobRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getMediaId() {
-		return $this->mediaId;
-	}
+    public function getMediaId()
+    {
+        return $this->mediaId;
+    }
 
-	public function setMediaId($mediaId) {
-		$this->mediaId = $mediaId;
-		$this->queryParameters["MediaId"]=$mediaId;
-	}
+    public function setMediaId($mediaId)
+    {
+        $this->mediaId = $mediaId;
+        $this->queryParameters["MediaId"] = $mediaId;
+    }
 
 	public function getAIVideoCoverConfig() {
 		return $this->aIVideoCoverConfig;

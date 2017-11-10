@@ -23,31 +23,31 @@ class AllocateReadWriteSplittingConnectionRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "AllocateReadWriteSplittingConnection", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "AllocateReadWriteSplittingConnection", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $connectionStringPrefix;
+    private $connectionStringPrefix;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $weight;
+    private $weight;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $iPType;
+    private $iPType;
 
-	private  $port;
+    private $port;
 
-	private  $distributionType;
+    private $distributionType;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $maxDelayTime;
+    private $maxDelayTime;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -58,22 +58,26 @@ class AllocateReadWriteSplittingConnectionRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getConnectionStringPrefix() {
-		return $this->connectionStringPrefix;
-	}
+    public function getConnectionStringPrefix()
+    {
+        return $this->connectionStringPrefix;
+    }
 
-	public function setConnectionStringPrefix($connectionStringPrefix) {
-		$this->connectionStringPrefix = $connectionStringPrefix;
-		$this->queryParameters["ConnectionStringPrefix"]=$connectionStringPrefix;
-	}
+    public function setConnectionStringPrefix($connectionStringPrefix)
+    {
+        $this->connectionStringPrefix = $connectionStringPrefix;
+        $this->queryParameters["ConnectionStringPrefix"] = $connectionStringPrefix;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -85,67 +89,81 @@ class AllocateReadWriteSplittingConnectionRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getWeight() {
-		return $this->weight;
-	}
+    public function getWeight()
+    {
+        return $this->weight;
+    }
 
-	public function setWeight($weight) {
-		$this->weight = $weight;
-		$this->queryParameters["Weight"]=$weight;
-	}
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+        $this->queryParameters["Weight"] = $weight;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getIPType() {
-		return $this->iPType;
-	}
+    public function getIPType()
+    {
+        return $this->iPType;
+    }
 
-	public function setIPType($iPType) {
-		$this->iPType = $iPType;
-		$this->queryParameters["IPType"]=$iPType;
-	}
+    public function setIPType($iPType)
+    {
+        $this->iPType = $iPType;
+        $this->queryParameters["IPType"] = $iPType;
+    }
 
-	public function getPort() {
-		return $this->port;
-	}
+    public function getPort()
+    {
+        return $this->port;
+    }
 
-	public function setPort($port) {
-		$this->port = $port;
-		$this->queryParameters["Port"]=$port;
-	}
+    public function setPort($port)
+    {
+        $this->port = $port;
+        $this->queryParameters["Port"] = $port;
+    }
 
-	public function getDistributionType() {
-		return $this->distributionType;
-	}
+    public function getDistributionType()
+    {
+        return $this->distributionType;
+    }
 
-	public function setDistributionType($distributionType) {
-		$this->distributionType = $distributionType;
-		$this->queryParameters["DistributionType"]=$distributionType;
-	}
+    public function setDistributionType($distributionType)
+    {
+        $this->distributionType = $distributionType;
+        $this->queryParameters["DistributionType"] = $distributionType;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getMaxDelayTime() {
-		return $this->maxDelayTime;
-	}
+    public function getMaxDelayTime()
+    {
+        return $this->maxDelayTime;
+    }
 
-	public function setMaxDelayTime($maxDelayTime) {
-		$this->maxDelayTime = $maxDelayTime;
-		$this->queryParameters["MaxDelayTime"]=$maxDelayTime;
-	}
+    public function setMaxDelayTime($maxDelayTime)
+    {
+        $this->maxDelayTime = $maxDelayTime;
+        $this->queryParameters["MaxDelayTime"] = $maxDelayTime;
+    }
 	
 }

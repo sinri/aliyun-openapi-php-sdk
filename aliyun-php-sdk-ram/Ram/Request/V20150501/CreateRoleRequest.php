@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class CreateRoleRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "CreateRole");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "CreateRole");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $roleName;
+    private $roleName;
 
-	private  $description;
+    private $description;
 
-	private  $assumeRolePolicyDocument;
+    private $assumeRolePolicyDocument;
 
-	public function getRoleName() {
-		return $this->roleName;
-	}
+    public function getRoleName()
+    {
+        return $this->roleName;
+    }
 
-	public function setRoleName($roleName) {
-		$this->roleName = $roleName;
-		$this->queryParameters["RoleName"]=$roleName;
-	}
+    public function setRoleName($roleName)
+    {
+        $this->roleName = $roleName;
+        $this->queryParameters["RoleName"] = $roleName;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getAssumeRolePolicyDocument() {
-		return $this->assumeRolePolicyDocument;
-	}
+    public function getAssumeRolePolicyDocument()
+    {
+        return $this->assumeRolePolicyDocument;
+    }
 
-	public function setAssumeRolePolicyDocument($assumeRolePolicyDocument) {
-		$this->assumeRolePolicyDocument = $assumeRolePolicyDocument;
-		$this->queryParameters["AssumeRolePolicyDocument"]=$assumeRolePolicyDocument;
-	}
-	
+    public function setAssumeRolePolicyDocument($assumeRolePolicyDocument)
+    {
+        $this->assumeRolePolicyDocument = $assumeRolePolicyDocument;
+        $this->queryParameters["AssumeRolePolicyDocument"] = $assumeRolePolicyDocument;
+    }
+
 }

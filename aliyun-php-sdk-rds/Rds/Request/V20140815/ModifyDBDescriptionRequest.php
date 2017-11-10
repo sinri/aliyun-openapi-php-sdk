@@ -23,23 +23,23 @@ class ModifyDBDescriptionRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "ModifyDBDescription", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "ModifyDBDescription", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
 	private  $dBName;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $dBDescription;
+    private $dBDescription;
 
-	private  $ownerId;
+    private $ownerId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -59,13 +59,15 @@ class ModifyDBDescriptionRequest extends \RpcAcsRequest
 		$this->queryParameters["DBName"]=$dBName;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -77,31 +79,37 @@ class ModifyDBDescriptionRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getDBDescription() {
-		return $this->dBDescription;
-	}
+    public function getDBDescription()
+    {
+        return $this->dBDescription;
+    }
 
-	public function setDBDescription($dBDescription) {
-		$this->dBDescription = $dBDescription;
-		$this->queryParameters["DBDescription"]=$dBDescription;
-	}
+    public function setDBDescription($dBDescription)
+    {
+        $this->dBDescription = $dBDescription;
+        $this->queryParameters["DBDescription"] = $dBDescription;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

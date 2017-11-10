@@ -17,135 +17,158 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Mts\Request\V20140618;
 
 class PlayInfoRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Mts", "2014-06-18", "PlayInfo", "mts", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Mts", "2014-06-18", "PlayInfo", "mts", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $playDomain;
+    private $playDomain;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $formats;
+    private $formats;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $hlsUriToken;
+    private $hlsUriToken;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $mediaId;
+    private $mediaId;
 
-	private  $rand;
+    private $rand;
 
-	private  $authTimeout;
+    private $authTimeout;
 
-	private  $authInfo;
+    private $authInfo;
 
-	public function getPlayDomain() {
-		return $this->playDomain;
-	}
+    public function getPlayDomain()
+    {
+        return $this->playDomain;
+    }
 
-	public function setPlayDomain($playDomain) {
-		$this->playDomain = $playDomain;
-		$this->queryParameters["PlayDomain"]=$playDomain;
-	}
+    public function setPlayDomain($playDomain)
+    {
+        $this->playDomain = $playDomain;
+        $this->queryParameters["PlayDomain"] = $playDomain;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getFormats() {
-		return $this->formats;
-	}
+    public function getFormats()
+    {
+        return $this->formats;
+    }
 
-	public function setFormats($formats) {
-		$this->formats = $formats;
-		$this->queryParameters["Formats"]=$formats;
-	}
+    public function setFormats($formats)
+    {
+        $this->formats = $formats;
+        $this->queryParameters["Formats"] = $formats;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getHlsUriToken() {
-		return $this->hlsUriToken;
-	}
+    public function getHlsUriToken()
+    {
+        return $this->hlsUriToken;
+    }
 
-	public function setHlsUriToken($hlsUriToken) {
-		$this->hlsUriToken = $hlsUriToken;
-		$this->queryParameters["HlsUriToken"]=$hlsUriToken;
-	}
+    public function setHlsUriToken($hlsUriToken)
+    {
+        $this->hlsUriToken = $hlsUriToken;
+        $this->queryParameters["HlsUriToken"] = $hlsUriToken;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getMediaId() {
-		return $this->mediaId;
-	}
+    public function getMediaId()
+    {
+        return $this->mediaId;
+    }
 
-	public function setMediaId($mediaId) {
-		$this->mediaId = $mediaId;
-		$this->queryParameters["MediaId"]=$mediaId;
-	}
+    public function setMediaId($mediaId)
+    {
+        $this->mediaId = $mediaId;
+        $this->queryParameters["MediaId"] = $mediaId;
+    }
 
-	public function getRand() {
-		return $this->rand;
-	}
+    public function getRand()
+    {
+        return $this->rand;
+    }
 
-	public function setRand($rand) {
-		$this->rand = $rand;
-		$this->queryParameters["Rand"]=$rand;
-	}
+    public function setRand($rand)
+    {
+        $this->rand = $rand;
+        $this->queryParameters["Rand"] = $rand;
+    }
 
-	public function getAuthTimeout() {
-		return $this->authTimeout;
-	}
+    public function getAuthTimeout()
+    {
+        return $this->authTimeout;
+    }
 
-	public function setAuthTimeout($authTimeout) {
-		$this->authTimeout = $authTimeout;
-		$this->queryParameters["AuthTimeout"]=$authTimeout;
-	}
+    public function setAuthTimeout($authTimeout)
+    {
+        $this->authTimeout = $authTimeout;
+        $this->queryParameters["AuthTimeout"] = $authTimeout;
+    }
 
-	public function getAuthInfo() {
-		return $this->authInfo;
-	}
+    public function getAuthInfo()
+    {
+        return $this->authInfo;
+    }
 
-	public function setAuthInfo($authInfo) {
-		$this->authInfo = $authInfo;
-		$this->queryParameters["AuthInfo"]=$authInfo;
-	}
-	
+    public function setAuthInfo($authInfo)
+    {
+        $this->authInfo = $authInfo;
+        $this->queryParameters["AuthInfo"] = $authInfo;
+    }
+
 }

@@ -23,17 +23,17 @@ class DeleteSecurityGroupRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteSecurityGroup", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DeleteSecurityGroup", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $securityGroupId;
+    private $securityGroupId;
 
 	private  $ownerId;
 
@@ -46,14 +46,16 @@ class DeleteSecurityGroupRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -64,14 +66,16 @@ class DeleteSecurityGroupRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getSecurityGroupId() {
-		return $this->securityGroupId;
-	}
+    public function getSecurityGroupId()
+    {
+        return $this->securityGroupId;
+    }
 
-	public function setSecurityGroupId($securityGroupId) {
-		$this->securityGroupId = $securityGroupId;
-		$this->queryParameters["SecurityGroupId"]=$securityGroupId;
-	}
+    public function setSecurityGroupId($securityGroupId)
+    {
+        $this->securityGroupId = $securityGroupId;
+        $this->queryParameters["SecurityGroupId"] = $securityGroupId;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

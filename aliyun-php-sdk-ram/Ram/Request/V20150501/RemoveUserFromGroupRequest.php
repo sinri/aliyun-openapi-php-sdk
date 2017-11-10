@@ -17,37 +17,42 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class RemoveUserFromGroupRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "RemoveUserFromGroup");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "RemoveUserFromGroup");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $groupName;
+    private $groupName;
 
-	private  $userName;
+    private $userName;
 
-	public function getGroupName() {
-		return $this->groupName;
-	}
+    public function getGroupName()
+    {
+        return $this->groupName;
+    }
 
-	public function setGroupName($groupName) {
-		$this->groupName = $groupName;
-		$this->queryParameters["GroupName"]=$groupName;
-	}
+    public function setGroupName($groupName)
+    {
+        $this->groupName = $groupName;
+        $this->queryParameters["GroupName"] = $groupName;
+    }
 
-	public function getUserName() {
-		return $this->userName;
-	}
+    public function getUserName()
+    {
+        return $this->userName;
+    }
 
-	public function setUserName($userName) {
-		$this->userName = $userName;
-		$this->queryParameters["UserName"]=$userName;
-	}
-	
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        $this->queryParameters["UserName"] = $userName;
+    }
+
 }

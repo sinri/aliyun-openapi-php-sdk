@@ -23,43 +23,43 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "CloneDBInstance", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "CloneDBInstance", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $restoreTime;
+    private $restoreTime;
 
-	private  $period;
+    private $period;
 
-	private  $dBInstanceStorage;
+    private $dBInstanceStorage;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $clientToken;
 
-	private  $backupId;
+    private $backupId;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $usedTime;
+    private $usedTime;
 
 	private  $dBInstanceClass;
 
-	private  $vSwitchId;
+    private $vSwitchId;
 
-	private  $privateIpAddress;
+    private $privateIpAddress;
 
-	private  $resourceGroupId;
+    private $resourceGroupId;
 
-	private  $vPCId;
+    private $vPCId;
 
 	private  $dBInstanceDescription;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
 	private  $payType;
 
@@ -74,41 +74,49 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getRestoreTime() {
-		return $this->restoreTime;
-	}
+    public function getRestoreTime()
+    {
+        return $this->restoreTime;
+    }
 
-	public function setRestoreTime($restoreTime) {
-		$this->restoreTime = $restoreTime;
-		$this->queryParameters["RestoreTime"]=$restoreTime;
-	}
+    public function setRestoreTime($restoreTime)
+    {
+        $this->restoreTime = $restoreTime;
+        $this->queryParameters["RestoreTime"] = $restoreTime;
+    }
 
-	public function getPeriod() {
-		return $this->period;
-	}
+    public function getPeriod()
+    {
+        return $this->period;
+    }
 
-	public function setPeriod($period) {
-		$this->period = $period;
-		$this->queryParameters["Period"]=$period;
-	}
+    public function setPeriod($period)
+    {
+        $this->period = $period;
+        $this->queryParameters["Period"] = $period;
+    }
 
-	public function getDBInstanceStorage() {
-		return $this->dBInstanceStorage;
-	}
+    public function getDBInstanceStorage()
+    {
+        return $this->dBInstanceStorage;
+    }
 
-	public function setDBInstanceStorage($dBInstanceStorage) {
-		$this->dBInstanceStorage = $dBInstanceStorage;
-		$this->queryParameters["DBInstanceStorage"]=$dBInstanceStorage;
-	}
+    public function setDBInstanceStorage($dBInstanceStorage)
+    {
+        $this->dBInstanceStorage = $dBInstanceStorage;
+        $this->queryParameters["DBInstanceStorage"] = $dBInstanceStorage;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;
@@ -119,41 +127,49 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["ClientToken"]=$clientToken;
 	}
 
-	public function getBackupId() {
-		return $this->backupId;
-	}
+    public function getBackupId()
+    {
+        return $this->backupId;
+    }
 
-	public function setBackupId($backupId) {
-		$this->backupId = $backupId;
-		$this->queryParameters["BackupId"]=$backupId;
-	}
+    public function setBackupId($backupId)
+    {
+        $this->backupId = $backupId;
+        $this->queryParameters["BackupId"] = $backupId;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getUsedTime() {
-		return $this->usedTime;
-	}
+    public function getUsedTime()
+    {
+        return $this->usedTime;
+    }
 
-	public function setUsedTime($usedTime) {
-		$this->usedTime = $usedTime;
-		$this->queryParameters["UsedTime"]=$usedTime;
-	}
+    public function setUsedTime($usedTime)
+    {
+        $this->usedTime = $usedTime;
+        $this->queryParameters["UsedTime"] = $usedTime;
+    }
 
 	public function getDBInstanceClass() {
 		return $this->dBInstanceClass;
@@ -164,40 +180,48 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceClass"]=$dBInstanceClass;
 	}
 
-	public function getVSwitchId() {
-		return $this->vSwitchId;
-	}
+    public function getVSwitchId()
+    {
+        return $this->vSwitchId;
+    }
 
-	public function setVSwitchId($vSwitchId) {
-		$this->vSwitchId = $vSwitchId;
-		$this->queryParameters["VSwitchId"]=$vSwitchId;
-	}
+    public function setVSwitchId($vSwitchId)
+    {
+        $this->vSwitchId = $vSwitchId;
+        $this->queryParameters["VSwitchId"] = $vSwitchId;
+    }
 
-	public function getPrivateIpAddress() {
-		return $this->privateIpAddress;
-	}
+    public function getPrivateIpAddress()
+    {
+        return $this->privateIpAddress;
+    }
 
-	public function setPrivateIpAddress($privateIpAddress) {
-		$this->privateIpAddress = $privateIpAddress;
-		$this->queryParameters["PrivateIpAddress"]=$privateIpAddress;
-	}
+    public function setPrivateIpAddress($privateIpAddress)
+    {
+        $this->privateIpAddress = $privateIpAddress;
+        $this->queryParameters["PrivateIpAddress"] = $privateIpAddress;
+    }
 
-	public function getResourceGroupId() {
-		return $this->resourceGroupId;
-	}
+    public function getResourceGroupId()
+    {
+        return $this->resourceGroupId;
+    }
 
-	public function setResourceGroupId($resourceGroupId) {
-		$this->resourceGroupId = $resourceGroupId;
-		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
-	}
+    public function setResourceGroupId($resourceGroupId)
+    {
+        $this->resourceGroupId = $resourceGroupId;
+        $this->queryParameters["ResourceGroupId"] = $resourceGroupId;
+    }
 
-	public function getVPCId() {
-		return $this->vPCId;
-	}
+    public function getVPCId()
+    {
+        return $this->vPCId;
+    }
 
-	public function setVPCId($vPCId) {
-		$this->vPCId = $vPCId;
-		$this->queryParameters["VPCId"]=$vPCId;
+    public function setVPCId($vPCId)
+    {
+        $this->vPCId = $vPCId;
+        $this->queryParameters["VPCId"] = $vPCId;
 	}
 
 	public function getDBInstanceDescription() {
@@ -209,14 +233,16 @@ class CloneDBInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceDescription"]=$dBInstanceDescription;
 	}
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
 	public function getPayType() {
 		return $this->payType;

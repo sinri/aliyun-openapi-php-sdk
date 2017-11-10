@@ -23,11 +23,11 @@ class DescribeDampPoliciesByCidRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "DescribeDampPoliciesByCid", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+        parent::__construct("Rds", "2014-08-15", "DescribeDampPoliciesByCid", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $securityToken;
 
@@ -37,16 +37,18 @@ class DescribeDampPoliciesByCidRequest extends \RpcAcsRequest
 
 	private  $dBInstanceId;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
 	public function getSecurityToken() {
 		return $this->securityToken;
@@ -84,13 +86,15 @@ class DescribeDampPoliciesByCidRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

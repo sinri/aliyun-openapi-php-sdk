@@ -17,146 +17,171 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ess\Request\V20140828;
 
 class CreateScheduledTaskRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ess", "2014-08-28", "CreateScheduledTask", "ess", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ess", "2014-08-28", "CreateScheduledTask", "ess", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $launchTime;
+    private $launchTime;
 
-	private  $scheduledAction;
+    private $scheduledAction;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $description;
+    private $description;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $recurrenceValue;
+    private $recurrenceValue;
 
-	private  $launchExpirationTime;
+    private $launchExpirationTime;
 
-	private  $recurrenceEndTime;
+    private $recurrenceEndTime;
 
-	private  $scheduledTaskName;
+    private $scheduledTaskName;
 
-	private  $taskEnabled;
+    private $taskEnabled;
 
-	private  $recurrenceType;
+    private $recurrenceType;
 
-	public function getLaunchTime() {
-		return $this->launchTime;
-	}
+    public function getLaunchTime()
+    {
+        return $this->launchTime;
+    }
 
-	public function setLaunchTime($launchTime) {
-		$this->launchTime = $launchTime;
-		$this->queryParameters["LaunchTime"]=$launchTime;
-	}
+    public function setLaunchTime($launchTime)
+    {
+        $this->launchTime = $launchTime;
+        $this->queryParameters["LaunchTime"] = $launchTime;
+    }
 
-	public function getScheduledAction() {
-		return $this->scheduledAction;
-	}
+    public function getScheduledAction()
+    {
+        return $this->scheduledAction;
+    }
 
-	public function setScheduledAction($scheduledAction) {
-		$this->scheduledAction = $scheduledAction;
-		$this->queryParameters["ScheduledAction"]=$scheduledAction;
-	}
+    public function setScheduledAction($scheduledAction)
+    {
+        $this->scheduledAction = $scheduledAction;
+        $this->queryParameters["ScheduledAction"] = $scheduledAction;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getRecurrenceValue() {
-		return $this->recurrenceValue;
-	}
+    public function getRecurrenceValue()
+    {
+        return $this->recurrenceValue;
+    }
 
-	public function setRecurrenceValue($recurrenceValue) {
-		$this->recurrenceValue = $recurrenceValue;
-		$this->queryParameters["RecurrenceValue"]=$recurrenceValue;
-	}
+    public function setRecurrenceValue($recurrenceValue)
+    {
+        $this->recurrenceValue = $recurrenceValue;
+        $this->queryParameters["RecurrenceValue"] = $recurrenceValue;
+    }
 
-	public function getLaunchExpirationTime() {
-		return $this->launchExpirationTime;
-	}
+    public function getLaunchExpirationTime()
+    {
+        return $this->launchExpirationTime;
+    }
 
-	public function setLaunchExpirationTime($launchExpirationTime) {
-		$this->launchExpirationTime = $launchExpirationTime;
-		$this->queryParameters["LaunchExpirationTime"]=$launchExpirationTime;
-	}
+    public function setLaunchExpirationTime($launchExpirationTime)
+    {
+        $this->launchExpirationTime = $launchExpirationTime;
+        $this->queryParameters["LaunchExpirationTime"] = $launchExpirationTime;
+    }
 
-	public function getRecurrenceEndTime() {
-		return $this->recurrenceEndTime;
-	}
+    public function getRecurrenceEndTime()
+    {
+        return $this->recurrenceEndTime;
+    }
 
-	public function setRecurrenceEndTime($recurrenceEndTime) {
-		$this->recurrenceEndTime = $recurrenceEndTime;
-		$this->queryParameters["RecurrenceEndTime"]=$recurrenceEndTime;
-	}
+    public function setRecurrenceEndTime($recurrenceEndTime)
+    {
+        $this->recurrenceEndTime = $recurrenceEndTime;
+        $this->queryParameters["RecurrenceEndTime"] = $recurrenceEndTime;
+    }
 
-	public function getScheduledTaskName() {
-		return $this->scheduledTaskName;
-	}
+    public function getScheduledTaskName()
+    {
+        return $this->scheduledTaskName;
+    }
 
-	public function setScheduledTaskName($scheduledTaskName) {
-		$this->scheduledTaskName = $scheduledTaskName;
-		$this->queryParameters["ScheduledTaskName"]=$scheduledTaskName;
-	}
+    public function setScheduledTaskName($scheduledTaskName)
+    {
+        $this->scheduledTaskName = $scheduledTaskName;
+        $this->queryParameters["ScheduledTaskName"] = $scheduledTaskName;
+    }
 
-	public function getTaskEnabled() {
-		return $this->taskEnabled;
-	}
+    public function getTaskEnabled()
+    {
+        return $this->taskEnabled;
+    }
 
-	public function setTaskEnabled($taskEnabled) {
-		$this->taskEnabled = $taskEnabled;
-		$this->queryParameters["TaskEnabled"]=$taskEnabled;
-	}
+    public function setTaskEnabled($taskEnabled)
+    {
+        $this->taskEnabled = $taskEnabled;
+        $this->queryParameters["TaskEnabled"] = $taskEnabled;
+    }
 
-	public function getRecurrenceType() {
-		return $this->recurrenceType;
-	}
+    public function getRecurrenceType()
+    {
+        return $this->recurrenceType;
+    }
 
-	public function setRecurrenceType($recurrenceType) {
-		$this->recurrenceType = $recurrenceType;
-		$this->queryParameters["RecurrenceType"]=$recurrenceType;
-	}
-	
+    public function setRecurrenceType($recurrenceType)
+    {
+        $this->recurrenceType = $recurrenceType;
+        $this->queryParameters["RecurrenceType"] = $recurrenceType;
+    }
+
 }

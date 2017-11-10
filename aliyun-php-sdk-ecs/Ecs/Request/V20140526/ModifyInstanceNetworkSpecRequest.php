@@ -23,35 +23,35 @@ class ModifyInstanceNetworkSpecRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyInstanceNetworkSpec", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyInstanceNetworkSpec", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $autoPay;
+    private $autoPay;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
-	private  $internetMaxBandwidthOut;
+    private $internetMaxBandwidthOut;
 
-	private  $endTime;
+    private $endTime;
 
-	private  $startTime;
+    private $startTime;
 
 	private  $ownerId;
 
 	private  $instanceId;
 
-	private  $networkChargeType;
+    private $networkChargeType;
 
-	private  $internetMaxBandwidthIn;
+    private $internetMaxBandwidthIn;
 
-	private  $allocatePublicIp;
+    private $allocatePublicIp;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -62,32 +62,38 @@ class ModifyInstanceNetworkSpecRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getAutoPay() {
-		return $this->autoPay;
-	}
+    public function getAutoPay()
+    {
+        return $this->autoPay;
+    }
 
-	public function setAutoPay($autoPay) {
-		$this->autoPay = $autoPay;
-		$this->queryParameters["AutoPay"]=$autoPay;
-	}
+    public function setAutoPay($autoPay)
+    {
+        $this->autoPay = $autoPay;
+        $this->queryParameters["AutoPay"] = $autoPay;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -98,32 +104,38 @@ class ModifyInstanceNetworkSpecRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getInternetMaxBandwidthOut() {
-		return $this->internetMaxBandwidthOut;
-	}
+    public function getInternetMaxBandwidthOut()
+    {
+        return $this->internetMaxBandwidthOut;
+    }
 
-	public function setInternetMaxBandwidthOut($internetMaxBandwidthOut) {
-		$this->internetMaxBandwidthOut = $internetMaxBandwidthOut;
-		$this->queryParameters["InternetMaxBandwidthOut"]=$internetMaxBandwidthOut;
-	}
+    public function setInternetMaxBandwidthOut($internetMaxBandwidthOut)
+    {
+        $this->internetMaxBandwidthOut = $internetMaxBandwidthOut;
+        $this->queryParameters["InternetMaxBandwidthOut"] = $internetMaxBandwidthOut;
+    }
 
-	public function getEndTime() {
-		return $this->endTime;
-	}
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+        $this->queryParameters["EndTime"] = $endTime;
+    }
 
-	public function getStartTime() {
-		return $this->startTime;
-	}
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
 
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
-	}
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+        $this->queryParameters["StartTime"] = $startTime;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -143,31 +155,37 @@ class ModifyInstanceNetworkSpecRequest extends \RpcAcsRequest
 		$this->queryParameters["InstanceId"]=$instanceId;
 	}
 
-	public function getNetworkChargeType() {
-		return $this->networkChargeType;
-	}
+    public function getNetworkChargeType()
+    {
+        return $this->networkChargeType;
+    }
 
-	public function setNetworkChargeType($networkChargeType) {
-		$this->networkChargeType = $networkChargeType;
-		$this->queryParameters["NetworkChargeType"]=$networkChargeType;
-	}
+    public function setNetworkChargeType($networkChargeType)
+    {
+        $this->networkChargeType = $networkChargeType;
+        $this->queryParameters["NetworkChargeType"] = $networkChargeType;
+    }
 
-	public function getInternetMaxBandwidthIn() {
-		return $this->internetMaxBandwidthIn;
-	}
+    public function getInternetMaxBandwidthIn()
+    {
+        return $this->internetMaxBandwidthIn;
+    }
 
-	public function setInternetMaxBandwidthIn($internetMaxBandwidthIn) {
-		$this->internetMaxBandwidthIn = $internetMaxBandwidthIn;
-		$this->queryParameters["InternetMaxBandwidthIn"]=$internetMaxBandwidthIn;
-	}
+    public function setInternetMaxBandwidthIn($internetMaxBandwidthIn)
+    {
+        $this->internetMaxBandwidthIn = $internetMaxBandwidthIn;
+        $this->queryParameters["InternetMaxBandwidthIn"] = $internetMaxBandwidthIn;
+    }
 
-	public function getAllocatePublicIp() {
-		return $this->allocatePublicIp;
-	}
+    public function getAllocatePublicIp()
+    {
+        return $this->allocatePublicIp;
+    }
 
-	public function setAllocatePublicIp($allocatePublicIp) {
-		$this->allocatePublicIp = $allocatePublicIp;
-		$this->queryParameters["AllocatePublicIp"]=$allocatePublicIp;
-	}
+    public function setAllocatePublicIp($allocatePublicIp)
+    {
+        $this->allocatePublicIp = $allocatePublicIp;
+        $this->queryParameters["AllocatePublicIp"] = $allocatePublicIp;
+    }
 	
 }

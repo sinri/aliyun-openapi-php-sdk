@@ -17,26 +17,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class CreateVirtualMFADeviceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "CreateVirtualMFADevice");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "CreateVirtualMFADevice");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $virtualMFADeviceName;
+    private $virtualMFADeviceName;
 
-	public function getVirtualMFADeviceName() {
-		return $this->virtualMFADeviceName;
-	}
+    public function getVirtualMFADeviceName()
+    {
+        return $this->virtualMFADeviceName;
+    }
 
-	public function setVirtualMFADeviceName($virtualMFADeviceName) {
-		$this->virtualMFADeviceName = $virtualMFADeviceName;
-		$this->queryParameters["VirtualMFADeviceName"]=$virtualMFADeviceName;
-	}
-	
+    public function setVirtualMFADeviceName($virtualMFADeviceName)
+    {
+        $this->virtualMFADeviceName = $virtualMFADeviceName;
+        $this->queryParameters["VirtualMFADeviceName"] = $virtualMFADeviceName;
+    }
+
 }

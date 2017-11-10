@@ -23,13 +23,13 @@ class CreatePolicyWithSpecifiedPolicyRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "CreatePolicyWithSpecifiedPolicy", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+        parent::__construct("Rds", "2014-08-15", "CreatePolicyWithSpecifiedPolicy", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $policyId;
+    private $policyId;
 
 	private  $securityToken;
 
@@ -39,25 +39,29 @@ class CreatePolicyWithSpecifiedPolicyRequest extends \RpcAcsRequest
 
 	private  $dBInstanceId;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getPolicyId() {
-		return $this->policyId;
-	}
+    public function getPolicyId()
+    {
+        return $this->policyId;
+    }
 
-	public function setPolicyId($policyId) {
-		$this->policyId = $policyId;
-		$this->queryParameters["PolicyId"]=$policyId;
-	}
+    public function setPolicyId($policyId)
+    {
+        $this->policyId = $policyId;
+        $this->queryParameters["PolicyId"] = $policyId;
+    }
 
 	public function getSecurityToken() {
 		return $this->securityToken;
@@ -95,13 +99,15 @@ class CreatePolicyWithSpecifiedPolicyRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
 	}
 	
 }

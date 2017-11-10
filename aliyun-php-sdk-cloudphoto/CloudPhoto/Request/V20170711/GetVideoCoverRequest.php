@@ -28,7 +28,7 @@ class GetVideoCoverRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
-	private  $libraryId;
+    private $libraryId;
 
 	private  $photoId;
 
@@ -36,14 +36,16 @@ class GetVideoCoverRequest extends \RpcAcsRequest
 
 	private  $zoomType;
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
 	public function getPhotoId() {
 		return $this->photoId;

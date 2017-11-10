@@ -29,7 +29,7 @@ class DescribeRefreshTasksRequest extends \RpcAcsRequest
 
 	private  $objectPath;
 
-	private  $domainName;
+    private $domainName;
 
 	private  $endTime;
 
@@ -39,17 +39,17 @@ class DescribeRefreshTasksRequest extends \RpcAcsRequest
 
 	private  $pageNumber;
 
-	private  $resourceGroupId;
+    private $resourceGroupId;
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $pageSize;
+    private $pageSize;
 
-	private  $objectType;
+    private $objectType;
 
-	private  $taskId;
+    private $taskId;
 
-	private  $status;
+    private $status;
 
 	public function getObjectPath() {
 		return $this->objectPath;
@@ -60,13 +60,15 @@ class DescribeRefreshTasksRequest extends \RpcAcsRequest
 		$this->queryParameters["ObjectPath"]=$objectPath;
 	}
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+    public function getDomainName()
+    {
+        return $this->domainName;
+    }
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
+    public function setDomainName($domainName)
+    {
+        $this->domainName = $domainName;
+        $this->queryParameters["DomainName"] = $domainName;
 	}
 
 	public function getEndTime() {
@@ -105,58 +107,70 @@ class DescribeRefreshTasksRequest extends \RpcAcsRequest
 		$this->queryParameters["PageNumber"]=$pageNumber;
 	}
 
-	public function getResourceGroupId() {
-		return $this->resourceGroupId;
-	}
+    public function getResourceGroupId()
+    {
+        return $this->resourceGroupId;
+    }
 
-	public function setResourceGroupId($resourceGroupId) {
-		$this->resourceGroupId = $resourceGroupId;
-		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
-	}
+    public function setResourceGroupId($resourceGroupId)
+    {
+        $this->resourceGroupId = $resourceGroupId;
+        $this->queryParameters["ResourceGroupId"] = $resourceGroupId;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
-	public function getObjectType() {
-		return $this->objectType;
-	}
+    public function getObjectType()
+    {
+        return $this->objectType;
+    }
 
-	public function setObjectType($objectType) {
-		$this->objectType = $objectType;
-		$this->queryParameters["ObjectType"]=$objectType;
-	}
+    public function setObjectType($objectType)
+    {
+        $this->objectType = $objectType;
+        $this->queryParameters["ObjectType"] = $objectType;
+    }
 
-	public function getTaskId() {
-		return $this->taskId;
-	}
+    public function getTaskId()
+    {
+        return $this->taskId;
+    }
 
-	public function setTaskId($taskId) {
-		$this->taskId = $taskId;
-		$this->queryParameters["TaskId"]=$taskId;
-	}
+    public function setTaskId($taskId)
+    {
+        $this->taskId = $taskId;
+        $this->queryParameters["TaskId"] = $taskId;
+    }
 
-	public function getStatus() {
-		return $this->status;
-	}
+    public function getStatus()
+    {
+        return $this->status;
+    }
 
-	public function setStatus($status) {
-		$this->status = $status;
-		$this->queryParameters["Status"]=$status;
-	}
+    public function setStatus($status)
+    {
+        $this->status = $status;
+        $this->queryParameters["Status"] = $status;
+    }
 	
 }

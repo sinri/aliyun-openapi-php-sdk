@@ -17,25 +17,26 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace vod\Request\V20170321;
 
 class ListAIVideoTerrorismRecogJobRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("vod", "2017-03-21", "ListAIVideoTerrorismRecogJob", "vod", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("vod", "2017-03-21", "ListAIVideoTerrorismRecogJob", "vod", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $aIVideoTerrorismRecogJobIds;
+    private $aIVideoTerrorismRecogJobIds;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -46,22 +47,26 @@ class ListAIVideoTerrorismRecogJobRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getAIVideoTerrorismRecogJobIds() {
-		return $this->aIVideoTerrorismRecogJobIds;
-	}
+    public function getAIVideoTerrorismRecogJobIds()
+    {
+        return $this->aIVideoTerrorismRecogJobIds;
+    }
 
-	public function setAIVideoTerrorismRecogJobIds($aIVideoTerrorismRecogJobIds) {
-		$this->aIVideoTerrorismRecogJobIds = $aIVideoTerrorismRecogJobIds;
-		$this->queryParameters["AIVideoTerrorismRecogJobIds"]=$aIVideoTerrorismRecogJobIds;
-	}
+    public function setAIVideoTerrorismRecogJobIds($aIVideoTerrorismRecogJobIds)
+    {
+        $this->aIVideoTerrorismRecogJobIds = $aIVideoTerrorismRecogJobIds;
+        $this->queryParameters["AIVideoTerrorismRecogJobIds"] = $aIVideoTerrorismRecogJobIds;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -73,13 +78,15 @@ class ListAIVideoTerrorismRecogJobRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

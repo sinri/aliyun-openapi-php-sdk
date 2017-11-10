@@ -23,17 +23,17 @@ class ReleasePublicIpAddressRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ReleasePublicIpAddress", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ReleasePublicIpAddress", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $publicIpAddress;
+    private $publicIpAddress;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
@@ -48,32 +48,38 @@ class ReleasePublicIpAddressRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getPublicIpAddress() {
-		return $this->publicIpAddress;
-	}
+    public function getPublicIpAddress()
+    {
+        return $this->publicIpAddress;
+    }
 
-	public function setPublicIpAddress($publicIpAddress) {
-		$this->publicIpAddress = $publicIpAddress;
-		$this->queryParameters["PublicIpAddress"]=$publicIpAddress;
-	}
+    public function setPublicIpAddress($publicIpAddress)
+    {
+        $this->publicIpAddress = $publicIpAddress;
+        $this->queryParameters["PublicIpAddress"] = $publicIpAddress;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;

@@ -23,41 +23,43 @@ class DescribePhysicalConnectionsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribePhysicalConnections", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribePhysicalConnections", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $Filters;
+    private $Filters;
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
-	private  $pageSize;
+    private $pageSize;
 
-	private  $userCidr;
+    private $userCidr;
 
 	private  $ownerId;
 
-	private  $pageNumber;
+    private $pageNumber;
 
-	public function getFilters() {
-		return $this->Filters;
-	}
+    public function getFilters()
+    {
+        return $this->Filters;
+    }
 
-	public function setFilters($Filters) {
-		$this->Filters = $Filters;
-		for ($i = 0; $i < count($Filters); $i ++) {	
-			$this->queryParameters['Filter.' . ($i + 1) . '.Key'] = $Filters[$i]['Key'];
-			for ($j = 0; $j < count($Filters[$i]['Values']); $j ++) {
-				$this->queryParameters['Filter.' . ($i + 1) . '.Value.' . ($j + 1)] = $Filters[$i]['Values'][$j];
-			}
+    public function setFilters($Filters)
+    {
+        $this->Filters = $Filters;
+        for ($i = 0; $i < count($Filters); $i++) {
+            $this->queryParameters['Filter.' . ($i + 1) . '.Key'] = $Filters[$i]['Key'];
+            for ($j = 0; $j < count($Filters[$i]['Values']); $j++) {
+                $this->queryParameters['Filter.' . ($i + 1) . '.Value.' . ($j + 1)] = $Filters[$i]['Values'][$j];
+            }
 
-		}
+        }
 	}
 
 	public function getResourceOwnerId() {
@@ -69,23 +71,27 @@ class DescribePhysicalConnectionsRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -96,23 +102,27 @@ class DescribePhysicalConnectionsRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
-	public function getUserCidr() {
-		return $this->userCidr;
-	}
+    public function getUserCidr()
+    {
+        return $this->userCidr;
+    }
 
-	public function setUserCidr($userCidr) {
-		$this->userCidr = $userCidr;
-		$this->queryParameters["UserCidr"]=$userCidr;
-	}
+    public function setUserCidr($userCidr)
+    {
+        $this->userCidr = $userCidr;
+        $this->queryParameters["UserCidr"] = $userCidr;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -123,13 +133,15 @@ class DescribePhysicalConnectionsRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
 	}
 	
 }

@@ -17,37 +17,38 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace R_kvstore\Request\V20150101;
 
 class DescribeBackupsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("R-kvstore", "2015-01-01", "DescribeBackups", "redisa", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("R-kvstore", "2015-01-01", "DescribeBackups", "redisa", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $backupId;
+    private $backupId;
 
 	private  $endTime;
 
-	private  $startTime;
+    private $startTime;
 
-	private  $ownerId;
+    private $ownerId;
 
 	private  $pageNumber;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $pageSize;
+    private $pageSize;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -58,31 +59,37 @@ class DescribeBackupsRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getBackupId() {
-		return $this->backupId;
-	}
+    public function getBackupId()
+    {
+        return $this->backupId;
+    }
 
-	public function setBackupId($backupId) {
-		$this->backupId = $backupId;
-		$this->queryParameters["BackupId"]=$backupId;
+    public function setBackupId($backupId)
+    {
+        $this->backupId = $backupId;
+        $this->queryParameters["BackupId"] = $backupId;
 	}
 
 	public function getEndTime() {
@@ -94,22 +101,26 @@ class DescribeBackupsRequest extends \RpcAcsRequest
 		$this->queryParameters["EndTime"]=$endTime;
 	}
 
-	public function getStartTime() {
-		return $this->startTime;
-	}
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
 
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
-	}
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+        $this->queryParameters["StartTime"] = $startTime;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
 	}
 
 	public function getPageNumber() {
@@ -121,31 +132,37 @@ class DescribeBackupsRequest extends \RpcAcsRequest
 		$this->queryParameters["PageNumber"]=$pageNumber;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
 	}
 	
 }

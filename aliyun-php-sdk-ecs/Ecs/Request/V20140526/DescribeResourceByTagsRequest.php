@@ -23,29 +23,29 @@ class DescribeResourceByTagsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeResourceByTags", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeResourceByTags", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $tag4Value;
+    private $tag4Value;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $tag2Key;
+    private $tag2Key;
 
 	private  $tag5Key;
 
 	private  $resourceOwnerAccount;
 
-	private  $tag3Key;
+    private $tag3Key;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $resourceType;
+    private $resourceType;
 
-	private  $tag5Value;
+    private $tag5Value;
 
-	private  $pageNumber;
+    private $pageNumber;
 
 	private  $tag1Key;
 
@@ -53,37 +53,43 @@ class DescribeResourceByTagsRequest extends \RpcAcsRequest
 
 	private  $tag2Value;
 
-	private  $pageSize;
+    private $pageSize;
 
 	private  $tag4Key;
 
-	private  $tag3Value;
+    private $tag3Value;
 
-	public function getTag4Value() {
-		return $this->tag4Value;
-	}
+    public function getTag4Value()
+    {
+        return $this->tag4Value;
+    }
 
-	public function setTag4Value($tag4Value) {
-		$this->tag4Value = $tag4Value;
-		$this->queryParameters["Tag.4.Value"]=$tag4Value;
-	}
+    public function setTag4Value($tag4Value)
+    {
+        $this->tag4Value = $tag4Value;
+        $this->queryParameters["Tag.4.Value"] = $tag4Value;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getTag2Key() {
-		return $this->tag2Key;
-	}
+    public function getTag2Key()
+    {
+        return $this->tag2Key;
+    }
 
-	public function setTag2Key($tag2Key) {
-		$this->tag2Key = $tag2Key;
-		$this->queryParameters["Tag.2.Key"]=$tag2Key;
+    public function setTag2Key($tag2Key)
+    {
+        $this->tag2Key = $tag2Key;
+        $this->queryParameters["Tag.2.Key"] = $tag2Key;
 	}
 
 	public function getTag5Key() {
@@ -104,50 +110,60 @@ class DescribeResourceByTagsRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
-	public function getTag3Key() {
-		return $this->tag3Key;
-	}
+    public function getTag3Key()
+    {
+        return $this->tag3Key;
+    }
 
-	public function setTag3Key($tag3Key) {
-		$this->tag3Key = $tag3Key;
-		$this->queryParameters["Tag.3.Key"]=$tag3Key;
-	}
+    public function setTag3Key($tag3Key)
+    {
+        $this->tag3Key = $tag3Key;
+        $this->queryParameters["Tag.3.Key"] = $tag3Key;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getResourceType() {
-		return $this->resourceType;
-	}
+    public function getResourceType()
+    {
+        return $this->resourceType;
+    }
 
-	public function setResourceType($resourceType) {
-		$this->resourceType = $resourceType;
-		$this->queryParameters["ResourceType"]=$resourceType;
-	}
+    public function setResourceType($resourceType)
+    {
+        $this->resourceType = $resourceType;
+        $this->queryParameters["ResourceType"] = $resourceType;
+    }
 
-	public function getTag5Value() {
-		return $this->tag5Value;
-	}
+    public function getTag5Value()
+    {
+        return $this->tag5Value;
+    }
 
-	public function setTag5Value($tag5Value) {
-		$this->tag5Value = $tag5Value;
-		$this->queryParameters["Tag.5.Value"]=$tag5Value;
-	}
+    public function setTag5Value($tag5Value)
+    {
+        $this->tag5Value = $tag5Value;
+        $this->queryParameters["Tag.5.Value"] = $tag5Value;
+    }
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
+    }
 
 	public function getTag1Key() {
 		return $this->tag1Key;
@@ -176,14 +192,16 @@ class DescribeResourceByTagsRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.2.Value"]=$tag2Value;
 	}
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
 	public function getTag4Key() {
 		return $this->tag4Key;
@@ -194,13 +212,15 @@ class DescribeResourceByTagsRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.4.Key"]=$tag4Key;
 	}
 
-	public function getTag3Value() {
-		return $this->tag3Value;
-	}
+    public function getTag3Value()
+    {
+        return $this->tag3Value;
+    }
 
-	public function setTag3Value($tag3Value) {
-		$this->tag3Value = $tag3Value;
-		$this->queryParameters["Tag.3.Value"]=$tag3Value;
-	}
+    public function setTag3Value($tag3Value)
+    {
+        $this->tag3Value = $tag3Value;
+        $this->queryParameters["Tag.3.Value"] = $tag3Value;
+    }
 	
 }

@@ -17,50 +17,57 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace CloudPhoto\Request\V20170711;
 
 class ActivatePhotosRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("CloudPhoto", "2017-07-11", "ActivatePhotos", "cloudphoto", "openAPI");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("CloudPhoto", "2017-07-11", "ActivatePhotos", "cloudphoto", "openAPI");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $libraryId;
+    private $libraryId;
 
-	private  $PhotoIds;
+    private $PhotoIds;
 
-	private  $storeName;
+    private $storeName;
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
-	public function getPhotoIds() {
-		return $this->PhotoIds;
-	}
+    public function getPhotoIds()
+    {
+        return $this->PhotoIds;
+    }
 
-	public function setPhotoIds($PhotoIds) {
-		$this->PhotoIds = $PhotoIds;
-		for ($i = 0; $i < count($PhotoIds); $i ++) {	
-			$this->queryParameters["PhotoId.".($i+1)] = $PhotoIds[$i];
-		}
-	}
+    public function setPhotoIds($PhotoIds)
+    {
+        $this->PhotoIds = $PhotoIds;
+        for ($i = 0; $i < count($PhotoIds); $i++) {
+            $this->queryParameters["PhotoId." . ($i + 1)] = $PhotoIds[$i];
+        }
+    }
 
-	public function getStoreName() {
-		return $this->storeName;
-	}
+    public function getStoreName()
+    {
+        return $this->storeName;
+    }
 
-	public function setStoreName($storeName) {
-		$this->storeName = $storeName;
-		$this->queryParameters["StoreName"]=$storeName;
-	}
-	
+    public function setStoreName($storeName)
+    {
+        $this->storeName = $storeName;
+        $this->queryParameters["StoreName"] = $storeName;
+    }
+
 }

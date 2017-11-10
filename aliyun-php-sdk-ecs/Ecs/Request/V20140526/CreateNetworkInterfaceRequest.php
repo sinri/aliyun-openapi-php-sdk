@@ -17,124 +17,145 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ecs\Request\V20140526;
 
 class CreateNetworkInterfaceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "CreateNetworkInterface", "ecs", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ecs", "2014-05-26", "CreateNetworkInterface", "ecs", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $clientToken;
+    private $clientToken;
 
-	private  $securityGroupId;
+    private $securityGroupId;
 
-	private  $description;
+    private $description;
 
-	private  $networkInterfaceName;
+    private $networkInterfaceName;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $vSwitchId;
+    private $vSwitchId;
 
-	private  $primaryIpAddress;
+    private $primaryIpAddress;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
-	public function getSecurityGroupId() {
-		return $this->securityGroupId;
-	}
+    public function getSecurityGroupId()
+    {
+        return $this->securityGroupId;
+    }
 
-	public function setSecurityGroupId($securityGroupId) {
-		$this->securityGroupId = $securityGroupId;
-		$this->queryParameters["SecurityGroupId"]=$securityGroupId;
-	}
+    public function setSecurityGroupId($securityGroupId)
+    {
+        $this->securityGroupId = $securityGroupId;
+        $this->queryParameters["SecurityGroupId"] = $securityGroupId;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getNetworkInterfaceName() {
-		return $this->networkInterfaceName;
-	}
+    public function getNetworkInterfaceName()
+    {
+        return $this->networkInterfaceName;
+    }
 
-	public function setNetworkInterfaceName($networkInterfaceName) {
-		$this->networkInterfaceName = $networkInterfaceName;
-		$this->queryParameters["NetworkInterfaceName"]=$networkInterfaceName;
-	}
+    public function setNetworkInterfaceName($networkInterfaceName)
+    {
+        $this->networkInterfaceName = $networkInterfaceName;
+        $this->queryParameters["NetworkInterfaceName"] = $networkInterfaceName;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getVSwitchId() {
-		return $this->vSwitchId;
-	}
+    public function getVSwitchId()
+    {
+        return $this->vSwitchId;
+    }
 
-	public function setVSwitchId($vSwitchId) {
-		$this->vSwitchId = $vSwitchId;
-		$this->queryParameters["VSwitchId"]=$vSwitchId;
-	}
+    public function setVSwitchId($vSwitchId)
+    {
+        $this->vSwitchId = $vSwitchId;
+        $this->queryParameters["VSwitchId"] = $vSwitchId;
+    }
 
-	public function getPrimaryIpAddress() {
-		return $this->primaryIpAddress;
-	}
+    public function getPrimaryIpAddress()
+    {
+        return $this->primaryIpAddress;
+    }
 
-	public function setPrimaryIpAddress($primaryIpAddress) {
-		$this->primaryIpAddress = $primaryIpAddress;
-		$this->queryParameters["PrimaryIpAddress"]=$primaryIpAddress;
-	}
-	
+    public function setPrimaryIpAddress($primaryIpAddress)
+    {
+        $this->primaryIpAddress = $primaryIpAddress;
+        $this->queryParameters["PrimaryIpAddress"] = $primaryIpAddress;
+    }
+
 }

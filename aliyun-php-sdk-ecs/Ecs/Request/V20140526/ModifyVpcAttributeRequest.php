@@ -23,7 +23,7 @@ class ModifyVpcAttributeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyVpcAttribute", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyVpcAttribute", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -31,15 +31,15 @@ class ModifyVpcAttributeRequest extends \RpcAcsRequest
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $vpcId;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $description;
+    private $description;
 
-	private  $userCidr;
+    private $userCidr;
 
 	private  $ownerId;
 
@@ -61,13 +61,15 @@ class ModifyVpcAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getVpcId() {
@@ -79,32 +81,38 @@ class ModifyVpcAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["VpcId"]=$vpcId;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getUserCidr() {
-		return $this->userCidr;
-	}
+    public function getUserCidr()
+    {
+        return $this->userCidr;
+    }
 
-	public function setUserCidr($userCidr) {
-		$this->userCidr = $userCidr;
-		$this->queryParameters["UserCidr"]=$userCidr;
-	}
+    public function setUserCidr($userCidr)
+    {
+        $this->userCidr = $userCidr;
+        $this->queryParameters["UserCidr"] = $userCidr;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

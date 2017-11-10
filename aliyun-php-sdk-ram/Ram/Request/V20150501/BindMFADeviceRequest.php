@@ -17,59 +17,68 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class BindMFADeviceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "BindMFADevice");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "BindMFADevice");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $serialNumber;
+    private $serialNumber;
 
-	private  $authenticationCode2;
+    private $authenticationCode2;
 
-	private  $authenticationCode1;
+    private $authenticationCode1;
 
-	private  $userName;
+    private $userName;
 
-	public function getSerialNumber() {
-		return $this->serialNumber;
-	}
+    public function getSerialNumber()
+    {
+        return $this->serialNumber;
+    }
 
-	public function setSerialNumber($serialNumber) {
-		$this->serialNumber = $serialNumber;
-		$this->queryParameters["SerialNumber"]=$serialNumber;
-	}
+    public function setSerialNumber($serialNumber)
+    {
+        $this->serialNumber = $serialNumber;
+        $this->queryParameters["SerialNumber"] = $serialNumber;
+    }
 
-	public function getAuthenticationCode2() {
-		return $this->authenticationCode2;
-	}
+    public function getAuthenticationCode2()
+    {
+        return $this->authenticationCode2;
+    }
 
-	public function setAuthenticationCode2($authenticationCode2) {
-		$this->authenticationCode2 = $authenticationCode2;
-		$this->queryParameters["AuthenticationCode2"]=$authenticationCode2;
-	}
+    public function setAuthenticationCode2($authenticationCode2)
+    {
+        $this->authenticationCode2 = $authenticationCode2;
+        $this->queryParameters["AuthenticationCode2"] = $authenticationCode2;
+    }
 
-	public function getAuthenticationCode1() {
-		return $this->authenticationCode1;
-	}
+    public function getAuthenticationCode1()
+    {
+        return $this->authenticationCode1;
+    }
 
-	public function setAuthenticationCode1($authenticationCode1) {
-		$this->authenticationCode1 = $authenticationCode1;
-		$this->queryParameters["AuthenticationCode1"]=$authenticationCode1;
-	}
+    public function setAuthenticationCode1($authenticationCode1)
+    {
+        $this->authenticationCode1 = $authenticationCode1;
+        $this->queryParameters["AuthenticationCode1"] = $authenticationCode1;
+    }
 
-	public function getUserName() {
-		return $this->userName;
-	}
+    public function getUserName()
+    {
+        return $this->userName;
+    }
 
-	public function setUserName($userName) {
-		$this->userName = $userName;
-		$this->queryParameters["UserName"]=$userName;
-	}
-	
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        $this->queryParameters["UserName"] = $userName;
+    }
+
 }

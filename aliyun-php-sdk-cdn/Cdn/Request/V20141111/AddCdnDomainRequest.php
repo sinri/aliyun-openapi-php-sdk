@@ -35,7 +35,7 @@ class AddCdnDomainRequest extends \RpcAcsRequest
 
 	private  $domainName;
 
-	private  $liveType;
+    private $liveType;
 
 	private  $ownerId;
 
@@ -93,14 +93,16 @@ class AddCdnDomainRequest extends \RpcAcsRequest
 		$this->queryParameters["DomainName"]=$domainName;
 	}
 
-	public function getLiveType() {
-		return $this->liveType;
-	}
+    public function getLiveType()
+    {
+        return $this->liveType;
+    }
 
-	public function setLiveType($liveType) {
-		$this->liveType = $liveType;
-		$this->queryParameters["LiveType"]=$liveType;
-	}
+    public function setLiveType($liveType)
+    {
+        $this->liveType = $liveType;
+        $this->queryParameters["LiveType"] = $liveType;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

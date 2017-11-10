@@ -17,102 +17,119 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Rds\Request\V20140815;
 
 class CheckRecoveryConditionsRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Rds", "2014-08-15", "CheckRecoveryConditions", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Rds", "2014-08-15", "CheckRecoveryConditions", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $restoreTime;
+    private $restoreTime;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $backupFile;
+    private $backupFile;
 
-	private  $backupId;
+    private $backupId;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getRestoreTime() {
-		return $this->restoreTime;
-	}
+    public function getRestoreTime()
+    {
+        return $this->restoreTime;
+    }
 
-	public function setRestoreTime($restoreTime) {
-		$this->restoreTime = $restoreTime;
-		$this->queryParameters["RestoreTime"]=$restoreTime;
-	}
+    public function setRestoreTime($restoreTime)
+    {
+        $this->restoreTime = $restoreTime;
+        $this->queryParameters["RestoreTime"] = $restoreTime;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getBackupFile() {
-		return $this->backupFile;
-	}
+    public function getBackupFile()
+    {
+        return $this->backupFile;
+    }
 
-	public function setBackupFile($backupFile) {
-		$this->backupFile = $backupFile;
-		$this->queryParameters["BackupFile"]=$backupFile;
-	}
+    public function setBackupFile($backupFile)
+    {
+        $this->backupFile = $backupFile;
+        $this->queryParameters["BackupFile"] = $backupFile;
+    }
 
-	public function getBackupId() {
-		return $this->backupId;
-	}
+    public function getBackupId()
+    {
+        return $this->backupId;
+    }
 
-	public function setBackupId($backupId) {
-		$this->backupId = $backupId;
-		$this->queryParameters["BackupId"]=$backupId;
-	}
+    public function setBackupId($backupId)
+    {
+        $this->backupId = $backupId;
+        $this->queryParameters["BackupId"] = $backupId;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-	
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
+
 }

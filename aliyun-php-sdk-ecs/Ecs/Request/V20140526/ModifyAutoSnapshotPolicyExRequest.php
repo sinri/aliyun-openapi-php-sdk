@@ -23,33 +23,35 @@ class ModifyAutoSnapshotPolicyExRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyAutoSnapshotPolicyEx", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyAutoSnapshotPolicyEx", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
 	private  $autoSnapshotPolicyId;
 
-	private  $timePoints;
+    private $timePoints;
 
 	private  $retentionDays;
 
 	private  $ownerId;
 
-	private  $repeatWeekdays;
+    private $repeatWeekdays;
 
-	private  $autoSnapshotPolicyName;
+    private $autoSnapshotPolicyName;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -70,14 +72,16 @@ class ModifyAutoSnapshotPolicyExRequest extends \RpcAcsRequest
 		$this->queryParameters["autoSnapshotPolicyId"]=$autoSnapshotPolicyId;
 	}
 
-	public function gettimePoints() {
-		return $this->timePoints;
-	}
+    public function gettimePoints()
+    {
+        return $this->timePoints;
+    }
 
-	public function settimePoints($timePoints) {
-		$this->timePoints = $timePoints;
-		$this->queryParameters["timePoints"]=$timePoints;
-	}
+    public function settimePoints($timePoints)
+    {
+        $this->timePoints = $timePoints;
+        $this->queryParameters["timePoints"] = $timePoints;
+    }
 
 	public function getretentionDays() {
 		return $this->retentionDays;
@@ -97,22 +101,26 @@ class ModifyAutoSnapshotPolicyExRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getrepeatWeekdays() {
-		return $this->repeatWeekdays;
-	}
+    public function getrepeatWeekdays()
+    {
+        return $this->repeatWeekdays;
+    }
 
-	public function setrepeatWeekdays($repeatWeekdays) {
-		$this->repeatWeekdays = $repeatWeekdays;
-		$this->queryParameters["repeatWeekdays"]=$repeatWeekdays;
-	}
+    public function setrepeatWeekdays($repeatWeekdays)
+    {
+        $this->repeatWeekdays = $repeatWeekdays;
+        $this->queryParameters["repeatWeekdays"] = $repeatWeekdays;
+    }
 
-	public function getautoSnapshotPolicyName() {
-		return $this->autoSnapshotPolicyName;
-	}
+    public function getautoSnapshotPolicyName()
+    {
+        return $this->autoSnapshotPolicyName;
+    }
 
-	public function setautoSnapshotPolicyName($autoSnapshotPolicyName) {
-		$this->autoSnapshotPolicyName = $autoSnapshotPolicyName;
-		$this->queryParameters["autoSnapshotPolicyName"]=$autoSnapshotPolicyName;
-	}
+    public function setautoSnapshotPolicyName($autoSnapshotPolicyName)
+    {
+        $this->autoSnapshotPolicyName = $autoSnapshotPolicyName;
+        $this->queryParameters["autoSnapshotPolicyName"] = $autoSnapshotPolicyName;
+    }
 	
 }

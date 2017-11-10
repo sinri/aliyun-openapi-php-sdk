@@ -23,23 +23,23 @@ class StopInstanceRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "StopInstance", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "StopInstance", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $confirmStop;
+    private $confirmStop;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
 
-	private  $forceStop;
+    private $forceStop;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -50,32 +50,38 @@ class StopInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getConfirmStop() {
-		return $this->confirmStop;
-	}
+    public function getConfirmStop()
+    {
+        return $this->confirmStop;
+    }
 
-	public function setConfirmStop($confirmStop) {
-		$this->confirmStop = $confirmStop;
-		$this->queryParameters["ConfirmStop"]=$confirmStop;
-	}
+    public function setConfirmStop($confirmStop)
+    {
+        $this->confirmStop = $confirmStop;
+        $this->queryParameters["ConfirmStop"] = $confirmStop;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -95,13 +101,15 @@ class StopInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getForceStop() {
-		return $this->forceStop;
-	}
+    public function getForceStop()
+    {
+        return $this->forceStop;
+    }
 
-	public function setForceStop($forceStop) {
-		$this->forceStop = $forceStop;
-		$this->queryParameters["ForceStop"]=$forceStop;
+    public function setForceStop($forceStop)
+    {
+        $this->forceStop = $forceStop;
+        $this->queryParameters["ForceStop"] = $forceStop;
 	}
 	
 }

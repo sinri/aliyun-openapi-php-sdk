@@ -23,21 +23,21 @@ class ResizeVolumeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ResizeVolume", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ResizeVolume", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
-	private  $volumeId;
+    private $volumeId;
 
-	private  $newSize;
+    private $newSize;
 
 	private  $ownerId;
 
@@ -50,23 +50,27 @@ class ResizeVolumeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -77,23 +81,27 @@ class ResizeVolumeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getVolumeId() {
-		return $this->volumeId;
-	}
+    public function getVolumeId()
+    {
+        return $this->volumeId;
+    }
 
-	public function setVolumeId($volumeId) {
-		$this->volumeId = $volumeId;
-		$this->queryParameters["VolumeId"]=$volumeId;
-	}
+    public function setVolumeId($volumeId)
+    {
+        $this->volumeId = $volumeId;
+        $this->queryParameters["VolumeId"] = $volumeId;
+    }
 
-	public function getNewSize() {
-		return $this->newSize;
-	}
+    public function getNewSize()
+    {
+        return $this->newSize;
+    }
 
-	public function setNewSize($newSize) {
-		$this->newSize = $newSize;
-		$this->queryParameters["NewSize"]=$newSize;
-	}
+    public function setNewSize($newSize)
+    {
+        $this->newSize = $newSize;
+        $this->queryParameters["NewSize"] = $newSize;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

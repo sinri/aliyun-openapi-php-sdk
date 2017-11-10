@@ -17,114 +17,133 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace CloudPhoto\Request\V20170711;
 
 class ListTimeLinePhotosRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("CloudPhoto", "2017-07-11", "ListTimeLinePhotos", "cloudphoto", "openAPI");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("CloudPhoto", "2017-07-11", "ListTimeLinePhotos", "cloudphoto", "openAPI");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $size;
+    private $size;
 
-	private  $libraryId;
+    private $libraryId;
 
-	private  $endTime;
+    private $endTime;
 
-	private  $storeName;
+    private $storeName;
 
-	private  $page;
+    private $page;
 
-	private  $startTime;
+    private $startTime;
 
-	private  $filterBy;
+    private $filterBy;
 
-	private  $direction;
+    private $direction;
 
-	private  $order;
+    private $order;
 
-	public function getSize() {
-		return $this->size;
-	}
+    public function getSize()
+    {
+        return $this->size;
+    }
 
-	public function setSize($size) {
-		$this->size = $size;
-		$this->queryParameters["Size"]=$size;
-	}
+    public function setSize($size)
+    {
+        $this->size = $size;
+        $this->queryParameters["Size"] = $size;
+    }
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
-	public function getEndTime() {
-		return $this->endTime;
-	}
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+        $this->queryParameters["EndTime"] = $endTime;
+    }
 
-	public function getStoreName() {
-		return $this->storeName;
-	}
+    public function getStoreName()
+    {
+        return $this->storeName;
+    }
 
-	public function setStoreName($storeName) {
-		$this->storeName = $storeName;
-		$this->queryParameters["StoreName"]=$storeName;
-	}
+    public function setStoreName($storeName)
+    {
+        $this->storeName = $storeName;
+        $this->queryParameters["StoreName"] = $storeName;
+    }
 
-	public function getPage() {
-		return $this->page;
-	}
+    public function getPage()
+    {
+        return $this->page;
+    }
 
-	public function setPage($page) {
-		$this->page = $page;
-		$this->queryParameters["Page"]=$page;
-	}
+    public function setPage($page)
+    {
+        $this->page = $page;
+        $this->queryParameters["Page"] = $page;
+    }
 
-	public function getStartTime() {
-		return $this->startTime;
-	}
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
 
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
-	}
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+        $this->queryParameters["StartTime"] = $startTime;
+    }
 
-	public function getFilterBy() {
-		return $this->filterBy;
-	}
+    public function getFilterBy()
+    {
+        return $this->filterBy;
+    }
 
-	public function setFilterBy($filterBy) {
-		$this->filterBy = $filterBy;
-		$this->queryParameters["FilterBy"]=$filterBy;
-	}
+    public function setFilterBy($filterBy)
+    {
+        $this->filterBy = $filterBy;
+        $this->queryParameters["FilterBy"] = $filterBy;
+    }
 
-	public function getDirection() {
-		return $this->direction;
-	}
+    public function getDirection()
+    {
+        return $this->direction;
+    }
 
-	public function setDirection($direction) {
-		$this->direction = $direction;
-		$this->queryParameters["Direction"]=$direction;
-	}
+    public function setDirection($direction)
+    {
+        $this->direction = $direction;
+        $this->queryParameters["Direction"] = $direction;
+    }
 
-	public function getOrder() {
-		return $this->order;
-	}
+    public function getOrder()
+    {
+        return $this->order;
+    }
 
-	public function setOrder($order) {
-		$this->order = $order;
-		$this->queryParameters["Order"]=$order;
-	}
-	
+    public function setOrder($order)
+    {
+        $this->order = $order;
+        $this->queryParameters["Order"] = $order;
+    }
+
 }

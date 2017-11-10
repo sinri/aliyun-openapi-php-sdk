@@ -23,39 +23,41 @@ class ModifyInstanceChargeTypeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyInstanceChargeType", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyInstanceChargeType", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $period;
 
-	private  $dryRun;
+    private $dryRun;
 
 	private  $autoPay;
 
 	private  $includeDataDisks;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $periodUnit;
+    private $periodUnit;
 
-	private  $instanceIds;
+    private $instanceIds;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
 	}
 
 	public function getPeriod() {
@@ -67,13 +69,15 @@ class ModifyInstanceChargeTypeRequest extends \RpcAcsRequest
 		$this->queryParameters["Period"]=$period;
 	}
 
-	public function getDryRun() {
-		return $this->dryRun;
-	}
+    public function getDryRun()
+    {
+        return $this->dryRun;
+    }
 
-	public function setDryRun($dryRun) {
-		$this->dryRun = $dryRun;
-		$this->queryParameters["DryRun"]=$dryRun;
+    public function setDryRun($dryRun)
+    {
+        $this->dryRun = $dryRun;
+        $this->queryParameters["DryRun"] = $dryRun;
 	}
 
 	public function getAutoPay() {
@@ -94,22 +98,26 @@ class ModifyInstanceChargeTypeRequest extends \RpcAcsRequest
 		$this->queryParameters["IncludeDataDisks"]=$includeDataDisks;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
 	}
 
 	public function getOwnerAccount() {
@@ -121,31 +129,37 @@ class ModifyInstanceChargeTypeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getPeriodUnit() {
-		return $this->periodUnit;
-	}
+    public function getPeriodUnit()
+    {
+        return $this->periodUnit;
+    }
 
-	public function setPeriodUnit($periodUnit) {
-		$this->periodUnit = $periodUnit;
-		$this->queryParameters["PeriodUnit"]=$periodUnit;
-	}
+    public function setPeriodUnit($periodUnit)
+    {
+        $this->periodUnit = $periodUnit;
+        $this->queryParameters["PeriodUnit"] = $periodUnit;
+    }
 
-	public function getInstanceIds() {
-		return $this->instanceIds;
-	}
+    public function getInstanceIds()
+    {
+        return $this->instanceIds;
+    }
 
-	public function setInstanceIds($instanceIds) {
-		$this->instanceIds = $instanceIds;
-		$this->queryParameters["InstanceIds"]=$instanceIds;
+    public function setInstanceIds($instanceIds)
+    {
+        $this->instanceIds = $instanceIds;
+        $this->queryParameters["InstanceIds"] = $instanceIds;
 	}
 	
 }

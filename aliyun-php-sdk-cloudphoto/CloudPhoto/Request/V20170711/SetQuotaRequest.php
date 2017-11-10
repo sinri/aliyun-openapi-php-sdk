@@ -30,7 +30,7 @@ class SetQuotaRequest extends \RpcAcsRequest
 
 	private  $totalQuota;
 
-	private  $libraryId;
+    private $libraryId;
 
 	private  $storeName;
 
@@ -43,14 +43,16 @@ class SetQuotaRequest extends \RpcAcsRequest
 		$this->queryParameters["TotalQuota"]=$totalQuota;
 	}
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
 	public function getStoreName() {
 		return $this->storeName;

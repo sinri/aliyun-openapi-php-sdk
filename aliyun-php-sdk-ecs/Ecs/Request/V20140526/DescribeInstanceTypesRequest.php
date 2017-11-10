@@ -23,17 +23,17 @@ class DescribeInstanceTypesRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeInstanceTypes", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeInstanceTypes", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $instanceTypeFamily;
+    private $instanceTypeFamily;
 
 	private  $ownerId;
 
@@ -46,14 +46,16 @@ class DescribeInstanceTypesRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -64,14 +66,16 @@ class DescribeInstanceTypesRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getInstanceTypeFamily() {
-		return $this->instanceTypeFamily;
-	}
+    public function getInstanceTypeFamily()
+    {
+        return $this->instanceTypeFamily;
+    }
 
-	public function setInstanceTypeFamily($instanceTypeFamily) {
-		$this->instanceTypeFamily = $instanceTypeFamily;
-		$this->queryParameters["InstanceTypeFamily"]=$instanceTypeFamily;
-	}
+    public function setInstanceTypeFamily($instanceTypeFamily)
+    {
+        $this->instanceTypeFamily = $instanceTypeFamily;
+        $this->queryParameters["InstanceTypeFamily"] = $instanceTypeFamily;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

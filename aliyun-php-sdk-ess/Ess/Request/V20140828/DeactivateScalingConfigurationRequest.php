@@ -17,58 +17,67 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ess\Request\V20140828;
 
 class DeactivateScalingConfigurationRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ess", "2014-08-28", "DeactivateScalingConfiguration", "ess", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ess", "2014-08-28", "DeactivateScalingConfiguration", "ess", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $scalingConfigurationId;
+    private $scalingConfigurationId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getScalingConfigurationId() {
-		return $this->scalingConfigurationId;
-	}
+    public function getScalingConfigurationId()
+    {
+        return $this->scalingConfigurationId;
+    }
 
-	public function setScalingConfigurationId($scalingConfigurationId) {
-		$this->scalingConfigurationId = $scalingConfigurationId;
-		$this->queryParameters["ScalingConfigurationId"]=$scalingConfigurationId;
-	}
+    public function setScalingConfigurationId($scalingConfigurationId)
+    {
+        $this->scalingConfigurationId = $scalingConfigurationId;
+        $this->queryParameters["ScalingConfigurationId"] = $scalingConfigurationId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-	
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
+
 }

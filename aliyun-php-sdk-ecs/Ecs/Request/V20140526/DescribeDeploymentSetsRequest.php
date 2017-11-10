@@ -23,68 +23,76 @@ class DescribeDeploymentSetsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeDeploymentSets", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeDeploymentSets", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $networkType;
+    private $networkType;
 
 	private  $deploymentSetName;
 
 	private  $ownerId;
 
-	private  $pageNumber;
+    private $pageNumber;
 
-	private  $deploymentSetIds;
+    private $deploymentSetIds;
 
 	private  $granularity;
 
 	private  $domain;
 
-	private  $pageSize;
+    private $pageSize;
 
-	private  $strategy;
+    private $strategy;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getNetworkType() {
-		return $this->networkType;
-	}
+    public function getNetworkType()
+    {
+        return $this->networkType;
+    }
 
-	public function setNetworkType($networkType) {
-		$this->networkType = $networkType;
-		$this->queryParameters["NetworkType"]=$networkType;
+    public function setNetworkType($networkType)
+    {
+        $this->networkType = $networkType;
+        $this->queryParameters["NetworkType"] = $networkType;
 	}
 
 	public function getDeploymentSetName() {
@@ -105,22 +113,26 @@ class DescribeDeploymentSetsRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
+    }
 
-	public function getDeploymentSetIds() {
-		return $this->deploymentSetIds;
-	}
+    public function getDeploymentSetIds()
+    {
+        return $this->deploymentSetIds;
+    }
 
-	public function setDeploymentSetIds($deploymentSetIds) {
-		$this->deploymentSetIds = $deploymentSetIds;
-		$this->queryParameters["DeploymentSetIds"]=$deploymentSetIds;
+    public function setDeploymentSetIds($deploymentSetIds)
+    {
+        $this->deploymentSetIds = $deploymentSetIds;
+        $this->queryParameters["DeploymentSetIds"] = $deploymentSetIds;
 	}
 
 	public function getGranularity() {
@@ -141,22 +153,26 @@ class DescribeDeploymentSetsRequest extends \RpcAcsRequest
 		$this->queryParameters["Domain"]=$domain;
 	}
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
-	public function getStrategy() {
-		return $this->strategy;
-	}
+    public function getStrategy()
+    {
+        return $this->strategy;
+    }
 
-	public function setStrategy($strategy) {
-		$this->strategy = $strategy;
-		$this->queryParameters["Strategy"]=$strategy;
+    public function setStrategy($strategy)
+    {
+        $this->strategy = $strategy;
+        $this->queryParameters["Strategy"] = $strategy;
 	}
 	
 }

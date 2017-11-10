@@ -17,15 +17,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class ClearAccountAliasRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "ClearAccountAlias");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
-	
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "ClearAccountAlias");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
+
 }

@@ -32,7 +32,7 @@ class ListAlbumPhotosRequest extends \RpcAcsRequest
 
 	private  $size;
 
-	private  $libraryId;
+    private $libraryId;
 
 	private  $albumId;
 
@@ -60,14 +60,16 @@ class ListAlbumPhotosRequest extends \RpcAcsRequest
 		$this->queryParameters["Size"]=$size;
 	}
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
 	public function getAlbumId() {
 		return $this->albumId;

@@ -23,35 +23,35 @@ class CloneDBInstanceForSecurityRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "CloneDBInstanceForSecurity", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "CloneDBInstanceForSecurity", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
 	private  $dBInstanceStorage;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
-	private  $targetAliBid;
+    private $targetAliBid;
 
-	private  $backupId;
+    private $backupId;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $dBInstanceClass;
+    private $dBInstanceClass;
 
-	private  $resourceGroupId;
+    private $resourceGroupId;
 
-	private  $targetAliUid;
+    private $targetAliUid;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $payType;
+    private $payType;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -71,40 +71,48 @@ class CloneDBInstanceForSecurityRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceStorage"]=$dBInstanceStorage;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
-	public function getTargetAliBid() {
-		return $this->targetAliBid;
-	}
+    public function getTargetAliBid()
+    {
+        return $this->targetAliBid;
+    }
 
-	public function setTargetAliBid($targetAliBid) {
-		$this->targetAliBid = $targetAliBid;
-		$this->queryParameters["TargetAliBid"]=$targetAliBid;
-	}
+    public function setTargetAliBid($targetAliBid)
+    {
+        $this->targetAliBid = $targetAliBid;
+        $this->queryParameters["TargetAliBid"] = $targetAliBid;
+    }
 
-	public function getBackupId() {
-		return $this->backupId;
-	}
+    public function getBackupId()
+    {
+        return $this->backupId;
+    }
 
-	public function setBackupId($backupId) {
-		$this->backupId = $backupId;
-		$this->queryParameters["BackupId"]=$backupId;
+    public function setBackupId($backupId)
+    {
+        $this->backupId = $backupId;
+        $this->queryParameters["BackupId"] = $backupId;
 	}
 
 	public function getOwnerAccount() {
@@ -116,58 +124,70 @@ class CloneDBInstanceForSecurityRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getDBInstanceClass() {
-		return $this->dBInstanceClass;
-	}
+    public function getDBInstanceClass()
+    {
+        return $this->dBInstanceClass;
+    }
 
-	public function setDBInstanceClass($dBInstanceClass) {
-		$this->dBInstanceClass = $dBInstanceClass;
-		$this->queryParameters["DBInstanceClass"]=$dBInstanceClass;
-	}
+    public function setDBInstanceClass($dBInstanceClass)
+    {
+        $this->dBInstanceClass = $dBInstanceClass;
+        $this->queryParameters["DBInstanceClass"] = $dBInstanceClass;
+    }
 
-	public function getResourceGroupId() {
-		return $this->resourceGroupId;
-	}
+    public function getResourceGroupId()
+    {
+        return $this->resourceGroupId;
+    }
 
-	public function setResourceGroupId($resourceGroupId) {
-		$this->resourceGroupId = $resourceGroupId;
-		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
-	}
+    public function setResourceGroupId($resourceGroupId)
+    {
+        $this->resourceGroupId = $resourceGroupId;
+        $this->queryParameters["ResourceGroupId"] = $resourceGroupId;
+    }
 
-	public function getTargetAliUid() {
-		return $this->targetAliUid;
-	}
+    public function getTargetAliUid()
+    {
+        return $this->targetAliUid;
+    }
 
-	public function setTargetAliUid($targetAliUid) {
-		$this->targetAliUid = $targetAliUid;
-		$this->queryParameters["TargetAliUid"]=$targetAliUid;
-	}
+    public function setTargetAliUid($targetAliUid)
+    {
+        $this->targetAliUid = $targetAliUid;
+        $this->queryParameters["TargetAliUid"] = $targetAliUid;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getPayType() {
-		return $this->payType;
-	}
+    public function getPayType()
+    {
+        return $this->payType;
+    }
 
-	public function setPayType($payType) {
-		$this->payType = $payType;
-		$this->queryParameters["PayType"]=$payType;
-	}
+    public function setPayType($payType)
+    {
+        $this->payType = $payType;
+        $this->queryParameters["PayType"] = $payType;
+    }
 	
 }

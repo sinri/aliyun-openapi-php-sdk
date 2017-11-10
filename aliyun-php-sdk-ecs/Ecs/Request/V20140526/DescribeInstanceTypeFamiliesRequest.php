@@ -23,27 +23,29 @@ class DescribeInstanceTypeFamiliesRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeInstanceTypeFamilies", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeInstanceTypeFamilies", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $generation;
+    private $generation;
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
 
-	public function getGeneration() {
-		return $this->generation;
-	}
+    public function getGeneration()
+    {
+        return $this->generation;
+    }
 
-	public function setGeneration($generation) {
-		$this->generation = $generation;
-		$this->queryParameters["Generation"]=$generation;
+    public function setGeneration($generation)
+    {
+        $this->generation = $generation;
+        $this->queryParameters["Generation"] = $generation;
 	}
 
 	public function getResourceOwnerId() {
@@ -55,14 +57,16 @@ class DescribeInstanceTypeFamiliesRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;

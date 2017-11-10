@@ -23,17 +23,17 @@ class ActivateRouterInterfaceRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ActivateRouterInterface", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ActivateRouterInterface", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerId;
 
-	private  $routerInterfaceId;
+    private $routerInterfaceId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -44,14 +44,16 @@ class ActivateRouterInterfaceRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -62,13 +64,15 @@ class ActivateRouterInterfaceRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getRouterInterfaceId() {
-		return $this->routerInterfaceId;
-	}
+    public function getRouterInterfaceId()
+    {
+        return $this->routerInterfaceId;
+    }
 
-	public function setRouterInterfaceId($routerInterfaceId) {
-		$this->routerInterfaceId = $routerInterfaceId;
-		$this->queryParameters["RouterInterfaceId"]=$routerInterfaceId;
-	}
+    public function setRouterInterfaceId($routerInterfaceId)
+    {
+        $this->routerInterfaceId = $routerInterfaceId;
+        $this->queryParameters["RouterInterfaceId"] = $routerInterfaceId;
+    }
 	
 }

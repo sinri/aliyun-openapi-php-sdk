@@ -17,26 +17,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class GetRoleRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "GetRole");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "GetRole");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $roleName;
+    private $roleName;
 
-	public function getRoleName() {
-		return $this->roleName;
-	}
+    public function getRoleName()
+    {
+        return $this->roleName;
+    }
 
-	public function setRoleName($roleName) {
-		$this->roleName = $roleName;
-		$this->queryParameters["RoleName"]=$roleName;
-	}
-	
+    public function setRoleName($roleName)
+    {
+        $this->roleName = $roleName;
+        $this->queryParameters["RoleName"] = $roleName;
+    }
+
 }

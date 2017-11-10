@@ -17,29 +17,30 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace vod\Request\V20170321;
 
 class SubmitAIASRJobRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("vod", "2017-03-21", "SubmitAIASRJob", "vod", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("vod", "2017-03-21", "SubmitAIASRJob", "vod", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $userData;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $aIASRConfig;
+    private $aIASRConfig;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $mediaId;
+    private $mediaId;
 
 	public function getUserData() {
 		return $this->userData;
@@ -50,22 +51,26 @@ class SubmitAIASRJobRequest extends \RpcAcsRequest
 		$this->queryParameters["UserData"]=$userData;
 	}
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -77,31 +82,37 @@ class SubmitAIASRJobRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getAIASRConfig() {
-		return $this->aIASRConfig;
-	}
+    public function getAIASRConfig()
+    {
+        return $this->aIASRConfig;
+    }
 
-	public function setAIASRConfig($aIASRConfig) {
-		$this->aIASRConfig = $aIASRConfig;
-		$this->queryParameters["AIASRConfig"]=$aIASRConfig;
-	}
+    public function setAIASRConfig($aIASRConfig)
+    {
+        $this->aIASRConfig = $aIASRConfig;
+        $this->queryParameters["AIASRConfig"] = $aIASRConfig;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getMediaId() {
-		return $this->mediaId;
-	}
+    public function getMediaId()
+    {
+        return $this->mediaId;
+    }
 
-	public function setMediaId($mediaId) {
-		$this->mediaId = $mediaId;
-		$this->queryParameters["MediaId"]=$mediaId;
-	}
+    public function setMediaId($mediaId)
+    {
+        $this->mediaId = $mediaId;
+        $this->queryParameters["MediaId"] = $mediaId;
+    }
 	
 }

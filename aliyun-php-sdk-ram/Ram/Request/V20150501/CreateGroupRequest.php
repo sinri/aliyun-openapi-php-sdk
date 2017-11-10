@@ -17,37 +17,42 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class CreateGroupRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "CreateGroup");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "CreateGroup");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $comments;
+    private $comments;
 
-	private  $groupName;
+    private $groupName;
 
-	public function getComments() {
-		return $this->comments;
-	}
+    public function getComments()
+    {
+        return $this->comments;
+    }
 
-	public function setComments($comments) {
-		$this->comments = $comments;
-		$this->queryParameters["Comments"]=$comments;
-	}
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+        $this->queryParameters["Comments"] = $comments;
+    }
 
-	public function getGroupName() {
-		return $this->groupName;
-	}
+    public function getGroupName()
+    {
+        return $this->groupName;
+    }
 
-	public function setGroupName($groupName) {
-		$this->groupName = $groupName;
-		$this->queryParameters["GroupName"]=$groupName;
-	}
-	
+    public function setGroupName($groupName)
+    {
+        $this->groupName = $groupName;
+        $this->queryParameters["GroupName"] = $groupName;
+    }
+
 }

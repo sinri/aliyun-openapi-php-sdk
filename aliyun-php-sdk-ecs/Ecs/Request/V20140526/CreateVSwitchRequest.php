@@ -23,27 +23,27 @@ class CreateVSwitchRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "CreateVSwitch", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "CreateVSwitch", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $vpcId;
 
-	private  $vSwitchName;
+    private $vSwitchName;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
 	private  $cidrBlock;
 
-	private  $zoneId;
+    private $zoneId;
 
-	private  $description;
+    private $description;
 
 	private  $ownerId;
 
@@ -56,22 +56,26 @@ class CreateVSwitchRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
 	}
 
 	public function getVpcId() {
@@ -83,23 +87,27 @@ class CreateVSwitchRequest extends \RpcAcsRequest
 		$this->queryParameters["VpcId"]=$vpcId;
 	}
 
-	public function getVSwitchName() {
-		return $this->vSwitchName;
-	}
+    public function getVSwitchName()
+    {
+        return $this->vSwitchName;
+    }
 
-	public function setVSwitchName($vSwitchName) {
-		$this->vSwitchName = $vSwitchName;
-		$this->queryParameters["VSwitchName"]=$vSwitchName;
-	}
+    public function setVSwitchName($vSwitchName)
+    {
+        $this->vSwitchName = $vSwitchName;
+        $this->queryParameters["VSwitchName"] = $vSwitchName;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
 	public function getCidrBlock() {
 		return $this->cidrBlock;
@@ -110,23 +118,27 @@ class CreateVSwitchRequest extends \RpcAcsRequest
 		$this->queryParameters["CidrBlock"]=$cidrBlock;
 	}
 
-	public function getZoneId() {
-		return $this->zoneId;
-	}
+    public function getZoneId()
+    {
+        return $this->zoneId;
+    }
 
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
+    public function setZoneId($zoneId)
+    {
+        $this->zoneId = $zoneId;
+        $this->queryParameters["ZoneId"] = $zoneId;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

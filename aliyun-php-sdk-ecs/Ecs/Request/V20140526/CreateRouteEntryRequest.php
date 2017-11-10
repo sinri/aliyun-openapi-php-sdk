@@ -23,37 +23,39 @@ class CreateRouteEntryRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "CreateRouteEntry", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "CreateRouteEntry", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
-	private  $destinationCidrBlock;
+    private $destinationCidrBlock;
 
 	private  $ownerAccount;
 
-	private  $nextHopId;
+    private $nextHopId;
 
 	private  $ownerId;
 
-	private  $nextHopType;
+    private $nextHopType;
 
-	private  $NextHopLists;
+    private $NextHopLists;
 
-	private  $routeTableId;
+    private $routeTableId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -65,59 +67,71 @@ class CreateRouteEntryRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
-	public function getDestinationCidrBlock() {
-		return $this->destinationCidrBlock;
-	}
+    public function getDestinationCidrBlock()
+    {
+        return $this->destinationCidrBlock;
+    }
 
-	public function setDestinationCidrBlock($destinationCidrBlock) {
-		$this->destinationCidrBlock = $destinationCidrBlock;
-		$this->queryParameters["DestinationCidrBlock"]=$destinationCidrBlock;
-	}
+    public function setDestinationCidrBlock($destinationCidrBlock)
+    {
+        $this->destinationCidrBlock = $destinationCidrBlock;
+        $this->queryParameters["DestinationCidrBlock"] = $destinationCidrBlock;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getNextHopId() {
-		return $this->nextHopId;
-	}
+    public function getNextHopId()
+    {
+        return $this->nextHopId;
+    }
 
-	public function setNextHopId($nextHopId) {
-		$this->nextHopId = $nextHopId;
-		$this->queryParameters["NextHopId"]=$nextHopId;
-	}
+    public function setNextHopId($nextHopId)
+    {
+        $this->nextHopId = $nextHopId;
+        $this->queryParameters["NextHopId"] = $nextHopId;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getNextHopType() {
-		return $this->nextHopType;
-	}
+    public function getNextHopType()
+    {
+        return $this->nextHopType;
+    }
 
-	public function setNextHopType($nextHopType) {
-		$this->nextHopType = $nextHopType;
-		$this->queryParameters["NextHopType"]=$nextHopType;
-	}
+    public function setNextHopType($nextHopType)
+    {
+        $this->nextHopType = $nextHopType;
+        $this->queryParameters["NextHopType"] = $nextHopType;
+    }
 
 	public function getNextHopLists() {
 		return $this->NextHopLists;

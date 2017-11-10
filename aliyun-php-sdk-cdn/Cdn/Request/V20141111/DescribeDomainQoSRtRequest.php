@@ -23,10 +23,10 @@ class DescribeDomainQoSRtRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Cdn", "2014-11-11", "DescribeDomainQoSRt");
-	}
+        parent::__construct("Cdn", "2014-11-11", "DescribeDomainQoSRt");
+    }
 
-	private  $ip;
+    private $ip;
 
 	private  $domainName;
 
@@ -40,14 +40,16 @@ class DescribeDomainQoSRtRequest extends \RpcAcsRequest
 
 	private  $securityToken;
 
-	public function getIp() {
-		return $this->ip;
-	}
+    public function getIp()
+    {
+        return $this->ip;
+    }
 
-	public function setIp($ip) {
-		$this->ip = $ip;
-		$this->queryParameters["Ip"]=$ip;
-	}
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
+        $this->queryParameters["Ip"] = $ip;
+    }
 
 	public function getDomainName() {
 		return $this->domainName;

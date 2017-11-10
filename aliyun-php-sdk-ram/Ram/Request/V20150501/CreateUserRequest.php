@@ -17,70 +17,81 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class CreateUserRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "CreateUser");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "CreateUser");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $comments;
+    private $comments;
 
-	private  $displayName;
+    private $displayName;
 
-	private  $mobilePhone;
+    private $mobilePhone;
 
-	private  $email;
+    private $email;
 
-	private  $userName;
+    private $userName;
 
-	public function getComments() {
-		return $this->comments;
-	}
+    public function getComments()
+    {
+        return $this->comments;
+    }
 
-	public function setComments($comments) {
-		$this->comments = $comments;
-		$this->queryParameters["Comments"]=$comments;
-	}
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+        $this->queryParameters["Comments"] = $comments;
+    }
 
-	public function getDisplayName() {
-		return $this->displayName;
-	}
+    public function getDisplayName()
+    {
+        return $this->displayName;
+    }
 
-	public function setDisplayName($displayName) {
-		$this->displayName = $displayName;
-		$this->queryParameters["DisplayName"]=$displayName;
-	}
+    public function setDisplayName($displayName)
+    {
+        $this->displayName = $displayName;
+        $this->queryParameters["DisplayName"] = $displayName;
+    }
 
-	public function getMobilePhone() {
-		return $this->mobilePhone;
-	}
+    public function getMobilePhone()
+    {
+        return $this->mobilePhone;
+    }
 
-	public function setMobilePhone($mobilePhone) {
-		$this->mobilePhone = $mobilePhone;
-		$this->queryParameters["MobilePhone"]=$mobilePhone;
-	}
+    public function setMobilePhone($mobilePhone)
+    {
+        $this->mobilePhone = $mobilePhone;
+        $this->queryParameters["MobilePhone"] = $mobilePhone;
+    }
 
-	public function getEmail() {
-		return $this->email;
-	}
+    public function getEmail()
+    {
+        return $this->email;
+    }
 
-	public function setEmail($email) {
-		$this->email = $email;
-		$this->queryParameters["Email"]=$email;
-	}
+    public function setEmail($email)
+    {
+        $this->email = $email;
+        $this->queryParameters["Email"] = $email;
+    }
 
-	public function getUserName() {
-		return $this->userName;
-	}
+    public function getUserName()
+    {
+        return $this->userName;
+    }
 
-	public function setUserName($userName) {
-		$this->userName = $userName;
-		$this->queryParameters["UserName"]=$userName;
-	}
-	
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        $this->queryParameters["UserName"] = $userName;
+    }
+
 }

@@ -17,157 +17,184 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Rds\Request\V20140815;
 
 class ModifyDBInstancePayTypeRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Rds", "2014-08-15", "ModifyDBInstancePayType", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Rds", "2014-08-15", "ModifyDBInstancePayType", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $period;
+    private $period;
 
-	private  $agentId;
+    private $agentId;
 
-	private  $autoPay;
+    private $autoPay;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
-	private  $resource;
+    private $resource;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $usedTime;
+    private $usedTime;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $payType;
+    private $payType;
 
-	private  $businessInfo;
+    private $businessInfo;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getPeriod() {
-		return $this->period;
-	}
+    public function getPeriod()
+    {
+        return $this->period;
+    }
 
-	public function setPeriod($period) {
-		$this->period = $period;
-		$this->queryParameters["Period"]=$period;
-	}
+    public function setPeriod($period)
+    {
+        $this->period = $period;
+        $this->queryParameters["Period"] = $period;
+    }
 
-	public function getAgentId() {
-		return $this->agentId;
-	}
+    public function getAgentId()
+    {
+        return $this->agentId;
+    }
 
-	public function setAgentId($agentId) {
-		$this->agentId = $agentId;
-		$this->queryParameters["AgentId"]=$agentId;
-	}
+    public function setAgentId($agentId)
+    {
+        $this->agentId = $agentId;
+        $this->queryParameters["AgentId"] = $agentId;
+    }
 
-	public function getAutoPay() {
-		return $this->autoPay;
-	}
+    public function getAutoPay()
+    {
+        return $this->autoPay;
+    }
 
-	public function setAutoPay($autoPay) {
-		$this->autoPay = $autoPay;
-		$this->queryParameters["AutoPay"]=$autoPay;
-	}
+    public function setAutoPay($autoPay)
+    {
+        $this->autoPay = $autoPay;
+        $this->queryParameters["AutoPay"] = $autoPay;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
-	public function getResource() {
-		return $this->resource;
-	}
+    public function getResource()
+    {
+        return $this->resource;
+    }
 
-	public function setResource($resource) {
-		$this->resource = $resource;
-		$this->queryParameters["Resource"]=$resource;
-	}
+    public function setResource($resource)
+    {
+        $this->resource = $resource;
+        $this->queryParameters["Resource"] = $resource;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getUsedTime() {
-		return $this->usedTime;
-	}
+    public function getUsedTime()
+    {
+        return $this->usedTime;
+    }
 
-	public function setUsedTime($usedTime) {
-		$this->usedTime = $usedTime;
-		$this->queryParameters["UsedTime"]=$usedTime;
-	}
+    public function setUsedTime($usedTime)
+    {
+        $this->usedTime = $usedTime;
+        $this->queryParameters["UsedTime"] = $usedTime;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getPayType() {
-		return $this->payType;
-	}
+    public function getPayType()
+    {
+        return $this->payType;
+    }
 
-	public function setPayType($payType) {
-		$this->payType = $payType;
-		$this->queryParameters["PayType"]=$payType;
-	}
+    public function setPayType($payType)
+    {
+        $this->payType = $payType;
+        $this->queryParameters["PayType"] = $payType;
+    }
 
-	public function getBusinessInfo() {
-		return $this->businessInfo;
-	}
+    public function getBusinessInfo()
+    {
+        return $this->businessInfo;
+    }
 
-	public function setBusinessInfo($businessInfo) {
-		$this->businessInfo = $businessInfo;
-		$this->queryParameters["BusinessInfo"]=$businessInfo;
-	}
-	
+    public function setBusinessInfo($businessInfo)
+    {
+        $this->businessInfo = $businessInfo;
+        $this->queryParameters["BusinessInfo"] = $businessInfo;
+    }
+
 }

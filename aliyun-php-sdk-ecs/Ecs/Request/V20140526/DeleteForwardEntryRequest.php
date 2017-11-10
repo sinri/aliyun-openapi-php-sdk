@@ -23,11 +23,11 @@ class DeleteForwardEntryRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteForwardEntry", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DeleteForwardEntry", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
@@ -35,18 +35,20 @@ class DeleteForwardEntryRequest extends \RpcAcsRequest
 
 	private  $ownerAccount;
 
-	private  $forwardTableId;
+    private $forwardTableId;
 
 	private  $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
 	public function getResourceOwnerAccount() {
 		return $this->resourceOwnerAccount;
@@ -75,14 +77,16 @@ class DeleteForwardEntryRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getForwardTableId() {
-		return $this->forwardTableId;
-	}
+    public function getForwardTableId()
+    {
+        return $this->forwardTableId;
+    }
 
-	public function setForwardTableId($forwardTableId) {
-		$this->forwardTableId = $forwardTableId;
-		$this->queryParameters["ForwardTableId"]=$forwardTableId;
-	}
+    public function setForwardTableId($forwardTableId)
+    {
+        $this->forwardTableId = $forwardTableId;
+        $this->queryParameters["ForwardTableId"] = $forwardTableId;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

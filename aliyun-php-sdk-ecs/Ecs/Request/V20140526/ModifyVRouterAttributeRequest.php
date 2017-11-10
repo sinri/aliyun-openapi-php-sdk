@@ -23,31 +23,33 @@ class ModifyVRouterAttributeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyVRouterAttribute", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyVRouterAttribute", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $vRouterName;
+    private $vRouterName;
 
 	private  $resourceOwnerId;
 
-	private  $vRouterId;
+    private $vRouterId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $description;
+    private $description;
 
 	private  $ownerId;
 
-	public function getVRouterName() {
-		return $this->vRouterName;
-	}
+    public function getVRouterName()
+    {
+        return $this->vRouterName;
+    }
 
-	public function setVRouterName($vRouterName) {
-		$this->vRouterName = $vRouterName;
-		$this->queryParameters["VRouterName"]=$vRouterName;
+    public function setVRouterName($vRouterName)
+    {
+        $this->vRouterName = $vRouterName;
+        $this->queryParameters["VRouterName"] = $vRouterName;
 	}
 
 	public function getResourceOwnerId() {
@@ -59,23 +61,27 @@ class ModifyVRouterAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getVRouterId() {
-		return $this->vRouterId;
-	}
+    public function getVRouterId()
+    {
+        return $this->vRouterId;
+    }
 
-	public function setVRouterId($vRouterId) {
-		$this->vRouterId = $vRouterId;
-		$this->queryParameters["VRouterId"]=$vRouterId;
-	}
+    public function setVRouterId($vRouterId)
+    {
+        $this->vRouterId = $vRouterId;
+        $this->queryParameters["VRouterId"] = $vRouterId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -86,14 +92,16 @@ class ModifyVRouterAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

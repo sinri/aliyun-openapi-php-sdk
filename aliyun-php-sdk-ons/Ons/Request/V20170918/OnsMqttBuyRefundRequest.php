@@ -17,58 +17,67 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ons\Request\V20170918;
 
 class OnsMqttBuyRefundRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ons", "2017-09-18", "OnsMqttBuyRefund");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ons", "2017-09-18", "OnsMqttBuyRefund");
+        $this->setMethod("POST");
+    }
 
-	private  $preventCache;
+    private $preventCache;
 
-	private  $onsRegionId;
+    private $onsRegionId;
 
-	private  $onsPlatform;
+    private $onsPlatform;
 
-	private  $data;
+    private $data;
 
-	public function getPreventCache() {
-		return $this->preventCache;
-	}
+    public function getPreventCache()
+    {
+        return $this->preventCache;
+    }
 
-	public function setPreventCache($preventCache) {
-		$this->preventCache = $preventCache;
-		$this->queryParameters["PreventCache"]=$preventCache;
-	}
+    public function setPreventCache($preventCache)
+    {
+        $this->preventCache = $preventCache;
+        $this->queryParameters["PreventCache"] = $preventCache;
+    }
 
-	public function getOnsRegionId() {
-		return $this->onsRegionId;
-	}
+    public function getOnsRegionId()
+    {
+        return $this->onsRegionId;
+    }
 
-	public function setOnsRegionId($onsRegionId) {
-		$this->onsRegionId = $onsRegionId;
-		$this->queryParameters["OnsRegionId"]=$onsRegionId;
-	}
+    public function setOnsRegionId($onsRegionId)
+    {
+        $this->onsRegionId = $onsRegionId;
+        $this->queryParameters["OnsRegionId"] = $onsRegionId;
+    }
 
-	public function getOnsPlatform() {
-		return $this->onsPlatform;
-	}
+    public function getOnsPlatform()
+    {
+        return $this->onsPlatform;
+    }
 
-	public function setOnsPlatform($onsPlatform) {
-		$this->onsPlatform = $onsPlatform;
-		$this->queryParameters["OnsPlatform"]=$onsPlatform;
-	}
+    public function setOnsPlatform($onsPlatform)
+    {
+        $this->onsPlatform = $onsPlatform;
+        $this->queryParameters["OnsPlatform"] = $onsPlatform;
+    }
 
-	public function getdata() {
-		return $this->data;
-	}
+    public function getdata()
+    {
+        return $this->data;
+    }
 
-	public function setdata($data) {
-		$this->data = $data;
-		$this->queryParameters["data"]=$data;
-	}
-	
+    public function setdata($data)
+    {
+        $this->data = $data;
+        $this->queryParameters["data"] = $data;
+    }
+
 }

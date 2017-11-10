@@ -23,33 +23,35 @@ class UnassociateHaVipRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "UnassociateHaVip", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "UnassociateHaVip", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $haVipId;
+    private $haVipId;
 
 	private  $resourceOwnerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
-	private  $force;
+    private $force;
 
 	private  $ownerId;
 
-	public function getHaVipId() {
-		return $this->haVipId;
-	}
+    public function getHaVipId()
+    {
+        return $this->haVipId;
+    }
 
-	public function setHaVipId($haVipId) {
-		$this->haVipId = $haVipId;
-		$this->queryParameters["HaVipId"]=$haVipId;
+    public function setHaVipId($haVipId)
+    {
+        $this->haVipId = $haVipId;
+        $this->queryParameters["HaVipId"] = $haVipId;
 	}
 
 	public function getResourceOwnerId() {
@@ -61,32 +63,38 @@ class UnassociateHaVipRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -97,14 +105,16 @@ class UnassociateHaVipRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getForce() {
-		return $this->force;
-	}
+    public function getForce()
+    {
+        return $this->force;
+    }
 
-	public function setForce($force) {
-		$this->force = $force;
-		$this->queryParameters["Force"]=$force;
-	}
+    public function setForce($force)
+    {
+        $this->force = $force;
+        $this->queryParameters["Force"] = $force;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

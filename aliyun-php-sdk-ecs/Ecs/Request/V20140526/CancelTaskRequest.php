@@ -23,17 +23,17 @@ class CancelTaskRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "CancelTask", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "CancelTask", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerId;
 
-	private  $taskId;
+    private $taskId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -44,14 +44,16 @@ class CancelTaskRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -62,13 +64,15 @@ class CancelTaskRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getTaskId() {
-		return $this->taskId;
-	}
+    public function getTaskId()
+    {
+        return $this->taskId;
+    }
 
-	public function setTaskId($taskId) {
-		$this->taskId = $taskId;
-		$this->queryParameters["TaskId"]=$taskId;
-	}
+    public function setTaskId($taskId)
+    {
+        $this->taskId = $taskId;
+        $this->queryParameters["TaskId"] = $taskId;
+    }
 	
 }

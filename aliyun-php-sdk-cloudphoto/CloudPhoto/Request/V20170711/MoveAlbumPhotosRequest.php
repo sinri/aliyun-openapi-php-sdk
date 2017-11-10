@@ -32,7 +32,7 @@ class MoveAlbumPhotosRequest extends \RpcAcsRequest
 
 	private  $targetAlbumId;
 
-	private  $libraryId;
+    private $libraryId;
 
 	private  $PhotoIds;
 
@@ -56,14 +56,16 @@ class MoveAlbumPhotosRequest extends \RpcAcsRequest
 		$this->queryParameters["TargetAlbumId"]=$targetAlbumId;
 	}
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
 	public function getPhotoIds() {
 		return $this->PhotoIds;

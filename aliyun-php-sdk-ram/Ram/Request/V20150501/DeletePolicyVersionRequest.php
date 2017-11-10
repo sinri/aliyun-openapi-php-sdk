@@ -17,37 +17,42 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class DeletePolicyVersionRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "DeletePolicyVersion");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "DeletePolicyVersion");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $versionId;
+    private $versionId;
 
-	private  $policyName;
+    private $policyName;
 
-	public function getVersionId() {
-		return $this->versionId;
-	}
+    public function getVersionId()
+    {
+        return $this->versionId;
+    }
 
-	public function setVersionId($versionId) {
-		$this->versionId = $versionId;
-		$this->queryParameters["VersionId"]=$versionId;
-	}
+    public function setVersionId($versionId)
+    {
+        $this->versionId = $versionId;
+        $this->queryParameters["VersionId"] = $versionId;
+    }
 
-	public function getPolicyName() {
-		return $this->policyName;
-	}
+    public function getPolicyName()
+    {
+        return $this->policyName;
+    }
 
-	public function setPolicyName($policyName) {
-		$this->policyName = $policyName;
-		$this->queryParameters["PolicyName"]=$policyName;
-	}
-	
+    public function setPolicyName($policyName)
+    {
+        $this->policyName = $policyName;
+        $this->queryParameters["PolicyName"] = $policyName;
+    }
+
 }

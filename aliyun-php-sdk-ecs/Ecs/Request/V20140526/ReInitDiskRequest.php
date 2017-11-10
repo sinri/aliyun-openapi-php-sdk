@@ -23,25 +23,25 @@ class ReInitDiskRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ReInitDisk", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ReInitDisk", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $password;
+    private $password;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $autoStartInstance;
 
 	private  $ownerAccount;
 
-	private  $diskId;
+    private $diskId;
 
-	private  $securityEnhancementStrategy;
+    private $securityEnhancementStrategy;
 
-	private  $keyPairName;
+    private $keyPairName;
 
 	private  $ownerId;
 
@@ -54,23 +54,27 @@ class ReInitDiskRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getPassword() {
-		return $this->password;
-	}
+    public function getPassword()
+    {
+        return $this->password;
+    }
 
-	public function setPassword($password) {
-		$this->password = $password;
-		$this->queryParameters["Password"]=$password;
-	}
+    public function setPassword($password)
+    {
+        $this->password = $password;
+        $this->queryParameters["Password"] = $password;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getAutoStartInstance() {
 		return $this->autoStartInstance;
@@ -90,32 +94,38 @@ class ReInitDiskRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDiskId() {
-		return $this->diskId;
-	}
+    public function getDiskId()
+    {
+        return $this->diskId;
+    }
 
-	public function setDiskId($diskId) {
-		$this->diskId = $diskId;
-		$this->queryParameters["DiskId"]=$diskId;
-	}
+    public function setDiskId($diskId)
+    {
+        $this->diskId = $diskId;
+        $this->queryParameters["DiskId"] = $diskId;
+    }
 
-	public function getSecurityEnhancementStrategy() {
-		return $this->securityEnhancementStrategy;
-	}
+    public function getSecurityEnhancementStrategy()
+    {
+        return $this->securityEnhancementStrategy;
+    }
 
-	public function setSecurityEnhancementStrategy($securityEnhancementStrategy) {
-		$this->securityEnhancementStrategy = $securityEnhancementStrategy;
-		$this->queryParameters["SecurityEnhancementStrategy"]=$securityEnhancementStrategy;
-	}
+    public function setSecurityEnhancementStrategy($securityEnhancementStrategy)
+    {
+        $this->securityEnhancementStrategy = $securityEnhancementStrategy;
+        $this->queryParameters["SecurityEnhancementStrategy"] = $securityEnhancementStrategy;
+    }
 
-	public function getKeyPairName() {
-		return $this->keyPairName;
-	}
+    public function getKeyPairName()
+    {
+        return $this->keyPairName;
+    }
 
-	public function setKeyPairName($keyPairName) {
-		$this->keyPairName = $keyPairName;
-		$this->queryParameters["KeyPairName"]=$keyPairName;
-	}
+    public function setKeyPairName($keyPairName)
+    {
+        $this->keyPairName = $keyPairName;
+        $this->queryParameters["KeyPairName"] = $keyPairName;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

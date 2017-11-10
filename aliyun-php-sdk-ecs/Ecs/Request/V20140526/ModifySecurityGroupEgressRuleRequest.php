@@ -17,212 +17,249 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ecs\Request\V20140526;
 
 class ModifySecurityGroupEgressRuleRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "ModifySecurityGroupEgressRule", "ecs", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ecs", "2014-05-26", "ModifySecurityGroupEgressRule", "ecs", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $nicType;
+    private $nicType;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $sourcePortRange;
+    private $sourcePortRange;
 
-	private  $clientToken;
+    private $clientToken;
 
-	private  $securityGroupId;
+    private $securityGroupId;
 
-	private  $description;
+    private $description;
 
-	private  $policy;
+    private $policy;
 
-	private  $portRange;
+    private $portRange;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ipProtocol;
+    private $ipProtocol;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $sourceCidrIp;
+    private $sourceCidrIp;
 
-	private  $destGroupId;
+    private $destGroupId;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $destGroupOwnerAccount;
+    private $destGroupOwnerAccount;
 
-	private  $priority;
+    private $priority;
 
-	private  $destCidrIp;
+    private $destCidrIp;
 
-	private  $destGroupOwnerId;
+    private $destGroupOwnerId;
 
-	public function getNicType() {
-		return $this->nicType;
-	}
+    public function getNicType()
+    {
+        return $this->nicType;
+    }
 
-	public function setNicType($nicType) {
-		$this->nicType = $nicType;
-		$this->queryParameters["NicType"]=$nicType;
-	}
+    public function setNicType($nicType)
+    {
+        $this->nicType = $nicType;
+        $this->queryParameters["NicType"] = $nicType;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getSourcePortRange() {
-		return $this->sourcePortRange;
-	}
+    public function getSourcePortRange()
+    {
+        return $this->sourcePortRange;
+    }
 
-	public function setSourcePortRange($sourcePortRange) {
-		$this->sourcePortRange = $sourcePortRange;
-		$this->queryParameters["SourcePortRange"]=$sourcePortRange;
-	}
+    public function setSourcePortRange($sourcePortRange)
+    {
+        $this->sourcePortRange = $sourcePortRange;
+        $this->queryParameters["SourcePortRange"] = $sourcePortRange;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
-	public function getSecurityGroupId() {
-		return $this->securityGroupId;
-	}
+    public function getSecurityGroupId()
+    {
+        return $this->securityGroupId;
+    }
 
-	public function setSecurityGroupId($securityGroupId) {
-		$this->securityGroupId = $securityGroupId;
-		$this->queryParameters["SecurityGroupId"]=$securityGroupId;
-	}
+    public function setSecurityGroupId($securityGroupId)
+    {
+        $this->securityGroupId = $securityGroupId;
+        $this->queryParameters["SecurityGroupId"] = $securityGroupId;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getPolicy() {
-		return $this->policy;
-	}
+    public function getPolicy()
+    {
+        return $this->policy;
+    }
 
-	public function setPolicy($policy) {
-		$this->policy = $policy;
-		$this->queryParameters["Policy"]=$policy;
-	}
+    public function setPolicy($policy)
+    {
+        $this->policy = $policy;
+        $this->queryParameters["Policy"] = $policy;
+    }
 
-	public function getPortRange() {
-		return $this->portRange;
-	}
+    public function getPortRange()
+    {
+        return $this->portRange;
+    }
 
-	public function setPortRange($portRange) {
-		$this->portRange = $portRange;
-		$this->queryParameters["PortRange"]=$portRange;
-	}
+    public function setPortRange($portRange)
+    {
+        $this->portRange = $portRange;
+        $this->queryParameters["PortRange"] = $portRange;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getIpProtocol() {
-		return $this->ipProtocol;
-	}
+    public function getIpProtocol()
+    {
+        return $this->ipProtocol;
+    }
 
-	public function setIpProtocol($ipProtocol) {
-		$this->ipProtocol = $ipProtocol;
-		$this->queryParameters["IpProtocol"]=$ipProtocol;
-	}
+    public function setIpProtocol($ipProtocol)
+    {
+        $this->ipProtocol = $ipProtocol;
+        $this->queryParameters["IpProtocol"] = $ipProtocol;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getSourceCidrIp() {
-		return $this->sourceCidrIp;
-	}
+    public function getSourceCidrIp()
+    {
+        return $this->sourceCidrIp;
+    }
 
-	public function setSourceCidrIp($sourceCidrIp) {
-		$this->sourceCidrIp = $sourceCidrIp;
-		$this->queryParameters["SourceCidrIp"]=$sourceCidrIp;
-	}
+    public function setSourceCidrIp($sourceCidrIp)
+    {
+        $this->sourceCidrIp = $sourceCidrIp;
+        $this->queryParameters["SourceCidrIp"] = $sourceCidrIp;
+    }
 
-	public function getDestGroupId() {
-		return $this->destGroupId;
-	}
+    public function getDestGroupId()
+    {
+        return $this->destGroupId;
+    }
 
-	public function setDestGroupId($destGroupId) {
-		$this->destGroupId = $destGroupId;
-		$this->queryParameters["DestGroupId"]=$destGroupId;
-	}
+    public function setDestGroupId($destGroupId)
+    {
+        $this->destGroupId = $destGroupId;
+        $this->queryParameters["DestGroupId"] = $destGroupId;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getDestGroupOwnerAccount() {
-		return $this->destGroupOwnerAccount;
-	}
+    public function getDestGroupOwnerAccount()
+    {
+        return $this->destGroupOwnerAccount;
+    }
 
-	public function setDestGroupOwnerAccount($destGroupOwnerAccount) {
-		$this->destGroupOwnerAccount = $destGroupOwnerAccount;
-		$this->queryParameters["DestGroupOwnerAccount"]=$destGroupOwnerAccount;
-	}
+    public function setDestGroupOwnerAccount($destGroupOwnerAccount)
+    {
+        $this->destGroupOwnerAccount = $destGroupOwnerAccount;
+        $this->queryParameters["DestGroupOwnerAccount"] = $destGroupOwnerAccount;
+    }
 
-	public function getPriority() {
-		return $this->priority;
-	}
+    public function getPriority()
+    {
+        return $this->priority;
+    }
 
-	public function setPriority($priority) {
-		$this->priority = $priority;
-		$this->queryParameters["Priority"]=$priority;
-	}
+    public function setPriority($priority)
+    {
+        $this->priority = $priority;
+        $this->queryParameters["Priority"] = $priority;
+    }
 
-	public function getDestCidrIp() {
-		return $this->destCidrIp;
-	}
+    public function getDestCidrIp()
+    {
+        return $this->destCidrIp;
+    }
 
-	public function setDestCidrIp($destCidrIp) {
-		$this->destCidrIp = $destCidrIp;
-		$this->queryParameters["DestCidrIp"]=$destCidrIp;
-	}
+    public function setDestCidrIp($destCidrIp)
+    {
+        $this->destCidrIp = $destCidrIp;
+        $this->queryParameters["DestCidrIp"] = $destCidrIp;
+    }
 
-	public function getDestGroupOwnerId() {
-		return $this->destGroupOwnerId;
-	}
+    public function getDestGroupOwnerId()
+    {
+        return $this->destGroupOwnerId;
+    }
 
-	public function setDestGroupOwnerId($destGroupOwnerId) {
-		$this->destGroupOwnerId = $destGroupOwnerId;
-		$this->queryParameters["DestGroupOwnerId"]=$destGroupOwnerId;
-	}
-	
+    public function setDestGroupOwnerId($destGroupOwnerId)
+    {
+        $this->destGroupOwnerId = $destGroupOwnerId;
+        $this->queryParameters["DestGroupOwnerId"] = $destGroupOwnerId;
+    }
+
 }

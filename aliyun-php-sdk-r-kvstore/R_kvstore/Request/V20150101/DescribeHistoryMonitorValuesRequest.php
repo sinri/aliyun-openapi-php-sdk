@@ -17,124 +17,145 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace R_kvstore\Request\V20150101;
 
 class DescribeHistoryMonitorValuesRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("R-kvstore", "2015-01-01", "DescribeHistoryMonitorValues", "redisa", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("R-kvstore", "2015-01-01", "DescribeHistoryMonitorValues", "redisa", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $endTime;
+    private $endTime;
 
-	private  $startTime;
+    private $startTime;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $intervalForHistory;
+    private $intervalForHistory;
 
-	private  $monitorKeys;
+    private $monitorKeys;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getEndTime() {
-		return $this->endTime;
-	}
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+        $this->queryParameters["EndTime"] = $endTime;
+    }
 
-	public function getStartTime() {
-		return $this->startTime;
-	}
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
 
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
-	}
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+        $this->queryParameters["StartTime"] = $startTime;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getIntervalForHistory() {
-		return $this->intervalForHistory;
-	}
+    public function getIntervalForHistory()
+    {
+        return $this->intervalForHistory;
+    }
 
-	public function setIntervalForHistory($intervalForHistory) {
-		$this->intervalForHistory = $intervalForHistory;
-		$this->queryParameters["IntervalForHistory"]=$intervalForHistory;
-	}
+    public function setIntervalForHistory($intervalForHistory)
+    {
+        $this->intervalForHistory = $intervalForHistory;
+        $this->queryParameters["IntervalForHistory"] = $intervalForHistory;
+    }
 
-	public function getMonitorKeys() {
-		return $this->monitorKeys;
-	}
+    public function getMonitorKeys()
+    {
+        return $this->monitorKeys;
+    }
 
-	public function setMonitorKeys($monitorKeys) {
-		$this->monitorKeys = $monitorKeys;
-		$this->queryParameters["MonitorKeys"]=$monitorKeys;
-	}
-	
+    public function setMonitorKeys($monitorKeys)
+    {
+        $this->monitorKeys = $monitorKeys;
+        $this->queryParameters["MonitorKeys"] = $monitorKeys;
+    }
+
 }

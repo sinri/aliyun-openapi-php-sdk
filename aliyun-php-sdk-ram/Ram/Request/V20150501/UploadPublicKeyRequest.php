@@ -17,37 +17,42 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class UploadPublicKeyRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "UploadPublicKey");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "UploadPublicKey");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $publicKeySpec;
+    private $publicKeySpec;
 
-	private  $userName;
+    private $userName;
 
-	public function getPublicKeySpec() {
-		return $this->publicKeySpec;
-	}
+    public function getPublicKeySpec()
+    {
+        return $this->publicKeySpec;
+    }
 
-	public function setPublicKeySpec($publicKeySpec) {
-		$this->publicKeySpec = $publicKeySpec;
-		$this->queryParameters["PublicKeySpec"]=$publicKeySpec;
-	}
+    public function setPublicKeySpec($publicKeySpec)
+    {
+        $this->publicKeySpec = $publicKeySpec;
+        $this->queryParameters["PublicKeySpec"] = $publicKeySpec;
+    }
 
-	public function getUserName() {
-		return $this->userName;
-	}
+    public function getUserName()
+    {
+        return $this->userName;
+    }
 
-	public function setUserName($userName) {
-		$this->userName = $userName;
-		$this->queryParameters["UserName"]=$userName;
-	}
-	
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        $this->queryParameters["UserName"] = $userName;
+    }
+
 }

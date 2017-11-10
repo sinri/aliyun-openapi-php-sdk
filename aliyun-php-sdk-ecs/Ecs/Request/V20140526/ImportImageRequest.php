@@ -23,7 +23,7 @@ class ImportImageRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ImportImage", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ImportImage", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -31,21 +31,21 @@ class ImportImageRequest extends \RpcAcsRequest
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $imageName;
 
-	private  $roleName;
+    private $roleName;
 
-	private  $description;
+    private $description;
 
-	private  $oSType;
+    private $oSType;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $platform;
+    private $platform;
 
-	private  $architecture;
+    private $architecture;
 
 	public function getDiskDeviceMappings() {
 		return $this->DiskDeviceMappings;
@@ -73,13 +73,15 @@ class ImportImageRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getImageName() {
@@ -91,58 +93,70 @@ class ImportImageRequest extends \RpcAcsRequest
 		$this->queryParameters["ImageName"]=$imageName;
 	}
 
-	public function getRoleName() {
-		return $this->roleName;
-	}
+    public function getRoleName()
+    {
+        return $this->roleName;
+    }
 
-	public function setRoleName($roleName) {
-		$this->roleName = $roleName;
-		$this->queryParameters["RoleName"]=$roleName;
-	}
+    public function setRoleName($roleName)
+    {
+        $this->roleName = $roleName;
+        $this->queryParameters["RoleName"] = $roleName;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getOSType() {
-		return $this->oSType;
-	}
+    public function getOSType()
+    {
+        return $this->oSType;
+    }
 
-	public function setOSType($oSType) {
-		$this->oSType = $oSType;
-		$this->queryParameters["OSType"]=$oSType;
-	}
+    public function setOSType($oSType)
+    {
+        $this->oSType = $oSType;
+        $this->queryParameters["OSType"] = $oSType;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getPlatform() {
-		return $this->platform;
-	}
+    public function getPlatform()
+    {
+        return $this->platform;
+    }
 
-	public function setPlatform($platform) {
-		$this->platform = $platform;
-		$this->queryParameters["Platform"]=$platform;
-	}
+    public function setPlatform($platform)
+    {
+        $this->platform = $platform;
+        $this->queryParameters["Platform"] = $platform;
+    }
 
-	public function getArchitecture() {
-		return $this->architecture;
-	}
+    public function getArchitecture()
+    {
+        return $this->architecture;
+    }
 
-	public function setArchitecture($architecture) {
-		$this->architecture = $architecture;
-		$this->queryParameters["Architecture"]=$architecture;
-	}
+    public function setArchitecture($architecture)
+    {
+        $this->architecture = $architecture;
+        $this->queryParameters["Architecture"] = $architecture;
+    }
 	
 }

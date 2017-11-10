@@ -23,19 +23,19 @@ class DescribeBackupTasksRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "DescribeBackupTasks", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+        parent::__construct("Rds", "2014-08-15", "DescribeBackupTasks", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $backupJobId;
+    private $backupJobId;
 
 	private  $resourceOwnerId;
 
 	private  $flag;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $ownerAccount;
 
@@ -43,17 +43,19 @@ class DescribeBackupTasksRequest extends \RpcAcsRequest
 
 	private  $backupMode;
 
-	private  $ownerId;
+    private $ownerId;
 
 	private  $backupJobStatus;
 
-	public function getBackupJobId() {
-		return $this->backupJobId;
-	}
+    public function getBackupJobId()
+    {
+        return $this->backupJobId;
+    }
 
-	public function setBackupJobId($backupJobId) {
-		$this->backupJobId = $backupJobId;
-		$this->queryParameters["BackupJobId"]=$backupJobId;
+    public function setBackupJobId($backupJobId)
+    {
+        $this->backupJobId = $backupJobId;
+        $this->queryParameters["BackupJobId"] = $backupJobId;
 	}
 
 	public function getResourceOwnerId() {
@@ -74,23 +76,27 @@ class DescribeBackupTasksRequest extends \RpcAcsRequest
 		$this->queryParameters["Flag"]=$flag;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -119,14 +125,16 @@ class DescribeBackupTasksRequest extends \RpcAcsRequest
 		$this->queryParameters["BackupMode"]=$backupMode;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
 	public function getBackupJobStatus() {
 		return $this->backupJobStatus;

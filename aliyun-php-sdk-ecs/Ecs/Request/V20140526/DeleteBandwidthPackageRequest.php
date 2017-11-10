@@ -23,15 +23,15 @@ class DeleteBandwidthPackageRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DeleteBandwidthPackage", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DeleteBandwidthPackage", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $bandwidthPackageId;
+    private $bandwidthPackageId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
@@ -46,23 +46,27 @@ class DeleteBandwidthPackageRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getBandwidthPackageId() {
-		return $this->bandwidthPackageId;
-	}
+    public function getBandwidthPackageId()
+    {
+        return $this->bandwidthPackageId;
+    }
 
-	public function setBandwidthPackageId($bandwidthPackageId) {
-		$this->bandwidthPackageId = $bandwidthPackageId;
-		$this->queryParameters["BandwidthPackageId"]=$bandwidthPackageId;
-	}
+    public function setBandwidthPackageId($bandwidthPackageId)
+    {
+        $this->bandwidthPackageId = $bandwidthPackageId;
+        $this->queryParameters["BandwidthPackageId"] = $bandwidthPackageId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;

@@ -17,91 +17,106 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace R_kvstore\Request\V20150101;
 
 class ModifyReplicaDescriptionRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("R-kvstore", "2015-01-01", "ModifyReplicaDescription", "redisa", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("R-kvstore", "2015-01-01", "ModifyReplicaDescription", "redisa", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $replicaDescription;
+    private $replicaDescription;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $replicaId;
+    private $replicaId;
 
-	private  $ownerId;
+    private $ownerId;
 
-	public function getReplicaDescription() {
-		return $this->replicaDescription;
-	}
+    public function getReplicaDescription()
+    {
+        return $this->replicaDescription;
+    }
 
-	public function setReplicaDescription($replicaDescription) {
-		$this->replicaDescription = $replicaDescription;
-		$this->queryParameters["ReplicaDescription"]=$replicaDescription;
-	}
+    public function setReplicaDescription($replicaDescription)
+    {
+        $this->replicaDescription = $replicaDescription;
+        $this->queryParameters["ReplicaDescription"] = $replicaDescription;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getReplicaId() {
-		return $this->replicaId;
-	}
+    public function getReplicaId()
+    {
+        return $this->replicaId;
+    }
 
-	public function setReplicaId($replicaId) {
-		$this->replicaId = $replicaId;
-		$this->queryParameters["ReplicaId"]=$replicaId;
-	}
+    public function setReplicaId($replicaId)
+    {
+        $this->replicaId = $replicaId;
+        $this->queryParameters["ReplicaId"] = $replicaId;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
-	
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
+
 }

@@ -23,21 +23,21 @@ class RebootInstanceRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "RebootInstance", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "RebootInstance", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
 
-	private  $forceStop;
+    private $forceStop;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -48,23 +48,27 @@ class RebootInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -84,13 +88,15 @@ class RebootInstanceRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getForceStop() {
-		return $this->forceStop;
-	}
+    public function getForceStop()
+    {
+        return $this->forceStop;
+    }
 
-	public function setForceStop($forceStop) {
-		$this->forceStop = $forceStop;
-		$this->queryParameters["ForceStop"]=$forceStop;
+    public function setForceStop($forceStop)
+    {
+        $this->forceStop = $forceStop;
+        $this->queryParameters["ForceStop"] = $forceStop;
 	}
 	
 }

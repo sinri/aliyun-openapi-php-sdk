@@ -17,80 +17,93 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ess\Request\V20140828;
 
 class ModifyAlertConfigRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ess", "2014-08-28", "ModifyAlertConfig", "ess", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ess", "2014-08-28", "ModifyAlertConfig", "ess", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $successConfig;
+    private $successConfig;
 
-	private  $rejectConfig;
+    private $rejectConfig;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $scalingGroupId;
+    private $scalingGroupId;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $failConfig;
+    private $failConfig;
 
-	public function getSuccessConfig() {
-		return $this->successConfig;
-	}
+    public function getSuccessConfig()
+    {
+        return $this->successConfig;
+    }
 
-	public function setSuccessConfig($successConfig) {
-		$this->successConfig = $successConfig;
-		$this->queryParameters["SuccessConfig"]=$successConfig;
-	}
+    public function setSuccessConfig($successConfig)
+    {
+        $this->successConfig = $successConfig;
+        $this->queryParameters["SuccessConfig"] = $successConfig;
+    }
 
-	public function getRejectConfig() {
-		return $this->rejectConfig;
-	}
+    public function getRejectConfig()
+    {
+        return $this->rejectConfig;
+    }
 
-	public function setRejectConfig($rejectConfig) {
-		$this->rejectConfig = $rejectConfig;
-		$this->queryParameters["RejectConfig"]=$rejectConfig;
-	}
+    public function setRejectConfig($rejectConfig)
+    {
+        $this->rejectConfig = $rejectConfig;
+        $this->queryParameters["RejectConfig"] = $rejectConfig;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getScalingGroupId() {
-		return $this->scalingGroupId;
-	}
+    public function getScalingGroupId()
+    {
+        return $this->scalingGroupId;
+    }
 
-	public function setScalingGroupId($scalingGroupId) {
-		$this->scalingGroupId = $scalingGroupId;
-		$this->queryParameters["ScalingGroupId"]=$scalingGroupId;
-	}
+    public function setScalingGroupId($scalingGroupId)
+    {
+        $this->scalingGroupId = $scalingGroupId;
+        $this->queryParameters["ScalingGroupId"] = $scalingGroupId;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getFailConfig() {
-		return $this->failConfig;
-	}
+    public function getFailConfig()
+    {
+        return $this->failConfig;
+    }
 
-	public function setFailConfig($failConfig) {
-		$this->failConfig = $failConfig;
-		$this->queryParameters["FailConfig"]=$failConfig;
-	}
-	
+    public function setFailConfig($failConfig)
+    {
+        $this->failConfig = $failConfig;
+        $this->queryParameters["FailConfig"] = $failConfig;
+    }
+
 }

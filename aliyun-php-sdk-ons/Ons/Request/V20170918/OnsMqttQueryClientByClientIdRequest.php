@@ -17,58 +17,67 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ons\Request\V20170918;
 
 class OnsMqttQueryClientByClientIdRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ons", "2017-09-18", "OnsMqttQueryClientByClientId");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ons", "2017-09-18", "OnsMqttQueryClientByClientId");
+        $this->setMethod("POST");
+    }
 
-	private  $preventCache;
+    private $preventCache;
 
-	private  $onsRegionId;
+    private $onsRegionId;
 
-	private  $clientId;
+    private $clientId;
 
-	private  $onsPlatform;
+    private $onsPlatform;
 
-	public function getPreventCache() {
-		return $this->preventCache;
-	}
+    public function getPreventCache()
+    {
+        return $this->preventCache;
+    }
 
-	public function setPreventCache($preventCache) {
-		$this->preventCache = $preventCache;
-		$this->queryParameters["PreventCache"]=$preventCache;
-	}
+    public function setPreventCache($preventCache)
+    {
+        $this->preventCache = $preventCache;
+        $this->queryParameters["PreventCache"] = $preventCache;
+    }
 
-	public function getOnsRegionId() {
-		return $this->onsRegionId;
-	}
+    public function getOnsRegionId()
+    {
+        return $this->onsRegionId;
+    }
 
-	public function setOnsRegionId($onsRegionId) {
-		$this->onsRegionId = $onsRegionId;
-		$this->queryParameters["OnsRegionId"]=$onsRegionId;
-	}
+    public function setOnsRegionId($onsRegionId)
+    {
+        $this->onsRegionId = $onsRegionId;
+        $this->queryParameters["OnsRegionId"] = $onsRegionId;
+    }
 
-	public function getClientId() {
-		return $this->clientId;
-	}
+    public function getClientId()
+    {
+        return $this->clientId;
+    }
 
-	public function setClientId($clientId) {
-		$this->clientId = $clientId;
-		$this->queryParameters["ClientId"]=$clientId;
-	}
+    public function setClientId($clientId)
+    {
+        $this->clientId = $clientId;
+        $this->queryParameters["ClientId"] = $clientId;
+    }
 
-	public function getOnsPlatform() {
-		return $this->onsPlatform;
-	}
+    public function getOnsPlatform()
+    {
+        return $this->onsPlatform;
+    }
 
-	public function setOnsPlatform($onsPlatform) {
-		$this->onsPlatform = $onsPlatform;
-		$this->queryParameters["OnsPlatform"]=$onsPlatform;
-	}
-	
+    public function setOnsPlatform($onsPlatform)
+    {
+        $this->onsPlatform = $onsPlatform;
+        $this->queryParameters["OnsPlatform"] = $onsPlatform;
+    }
+
 }

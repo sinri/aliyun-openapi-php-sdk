@@ -23,25 +23,25 @@ class ModifyDampPolicyRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "ModifyDampPolicy", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "ModifyDampPolicy", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $timeRules;
+    private $timeRules;
 
-	private  $actionRules;
+    private $actionRules;
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $handlers;
+    private $handlers;
 
 	private  $dBInstanceId;
 
@@ -58,14 +58,16 @@ class ModifyDampPolicyRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -76,50 +78,60 @@ class ModifyDampPolicyRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getTimeRules() {
-		return $this->timeRules;
-	}
+    public function getTimeRules()
+    {
+        return $this->timeRules;
+    }
 
-	public function setTimeRules($timeRules) {
-		$this->timeRules = $timeRules;
-		$this->queryParameters["TimeRules"]=$timeRules;
-	}
+    public function setTimeRules($timeRules)
+    {
+        $this->timeRules = $timeRules;
+        $this->queryParameters["TimeRules"] = $timeRules;
+    }
 
-	public function getActionRules() {
-		return $this->actionRules;
-	}
+    public function getActionRules()
+    {
+        return $this->actionRules;
+    }
 
-	public function setActionRules($actionRules) {
-		$this->actionRules = $actionRules;
-		$this->queryParameters["ActionRules"]=$actionRules;
-	}
+    public function setActionRules($actionRules)
+    {
+        $this->actionRules = $actionRules;
+        $this->queryParameters["ActionRules"] = $actionRules;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getHandlers() {
-		return $this->handlers;
-	}
+    public function getHandlers()
+    {
+        return $this->handlers;
+    }
 
-	public function setHandlers($handlers) {
-		$this->handlers = $handlers;
-		$this->queryParameters["Handlers"]=$handlers;
-	}
+    public function setHandlers($handlers)
+    {
+        $this->handlers = $handlers;
+        $this->queryParameters["Handlers"] = $handlers;
+    }
 
 	public function getDBInstanceId() {
 		return $this->dBInstanceId;

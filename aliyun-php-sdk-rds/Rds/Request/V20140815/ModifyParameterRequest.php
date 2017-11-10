@@ -23,25 +23,25 @@ class ModifyParameterRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "ModifyParameter", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "ModifyParameter", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $clientToken;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
 	private  $dBInstanceId;
 
 	private  $forcerestart;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $parameters;
+    private $parameters;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -52,14 +52,16 @@ class ModifyParameterRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;
@@ -70,14 +72,16 @@ class ModifyParameterRequest extends \RpcAcsRequest
 		$this->queryParameters["ClientToken"]=$clientToken;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
 	public function getDBInstanceId() {
 		return $this->dBInstanceId;
@@ -97,22 +101,26 @@ class ModifyParameterRequest extends \RpcAcsRequest
 		$this->queryParameters["Forcerestart"]=$forcerestart;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getParameters() {
-		return $this->parameters;
-	}
+    public function getParameters()
+    {
+        return $this->parameters;
+    }
 
-	public function setParameters($parameters) {
-		$this->parameters = $parameters;
-		$this->queryParameters["Parameters"]=$parameters;
+    public function setParameters($parameters)
+    {
+        $this->parameters = $parameters;
+        $this->queryParameters["Parameters"] = $parameters;
 	}
 	
 }

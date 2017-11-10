@@ -39,7 +39,7 @@ class SubmitAIVideoPornRecogJobRequest extends \RpcAcsRequest
 
 	private  $ownerId;
 
-	private  $mediaId;
+    private $mediaId;
 
 	public function getUserData() {
 		return $this->userData;
@@ -95,13 +95,15 @@ class SubmitAIVideoPornRecogJobRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getMediaId() {
-		return $this->mediaId;
-	}
+    public function getMediaId()
+    {
+        return $this->mediaId;
+    }
 
-	public function setMediaId($mediaId) {
-		$this->mediaId = $mediaId;
-		$this->queryParameters["MediaId"]=$mediaId;
-	}
+    public function setMediaId($mediaId)
+    {
+        $this->mediaId = $mediaId;
+        $this->queryParameters["MediaId"] = $mediaId;
+    }
 	
 }

@@ -17,26 +17,29 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Sts\Request\V20150401;
 
 class GenerateSessionAccessKeyRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Sts", "2015-04-01", "GenerateSessionAccessKey");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Sts", "2015-04-01", "GenerateSessionAccessKey");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $durationSeconds;
+    private $durationSeconds;
 
-	public function getDurationSeconds() {
-		return $this->durationSeconds;
-	}
+    public function getDurationSeconds()
+    {
+        return $this->durationSeconds;
+    }
 
-	public function setDurationSeconds($durationSeconds) {
-		$this->durationSeconds = $durationSeconds;
-		$this->queryParameters["DurationSeconds"]=$durationSeconds;
-	}
-	
+    public function setDurationSeconds($durationSeconds)
+    {
+        $this->durationSeconds = $durationSeconds;
+        $this->queryParameters["DurationSeconds"] = $durationSeconds;
+    }
+
 }

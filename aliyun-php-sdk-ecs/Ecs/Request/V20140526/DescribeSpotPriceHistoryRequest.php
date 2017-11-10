@@ -17,146 +17,171 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ecs\Request\V20140526;
 
 class DescribeSpotPriceHistoryRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeSpotPriceHistory", "ecs", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ecs", "2014-05-26", "DescribeSpotPriceHistory", "ecs", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $ioOptimized;
+    private $ioOptimized;
 
-	private  $networkType;
+    private $networkType;
 
-	private  $startTime;
+    private $startTime;
 
-	private  $instanceType;
+    private $instanceType;
 
-	private  $offset;
+    private $offset;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $endTime;
+    private $endTime;
 
-	private  $oSType;
+    private $oSType;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $zoneId;
+    private $zoneId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getIoOptimized() {
-		return $this->ioOptimized;
-	}
+    public function getIoOptimized()
+    {
+        return $this->ioOptimized;
+    }
 
-	public function setIoOptimized($ioOptimized) {
-		$this->ioOptimized = $ioOptimized;
-		$this->queryParameters["IoOptimized"]=$ioOptimized;
-	}
+    public function setIoOptimized($ioOptimized)
+    {
+        $this->ioOptimized = $ioOptimized;
+        $this->queryParameters["IoOptimized"] = $ioOptimized;
+    }
 
-	public function getNetworkType() {
-		return $this->networkType;
-	}
+    public function getNetworkType()
+    {
+        return $this->networkType;
+    }
 
-	public function setNetworkType($networkType) {
-		$this->networkType = $networkType;
-		$this->queryParameters["NetworkType"]=$networkType;
-	}
+    public function setNetworkType($networkType)
+    {
+        $this->networkType = $networkType;
+        $this->queryParameters["NetworkType"] = $networkType;
+    }
 
-	public function getStartTime() {
-		return $this->startTime;
-	}
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
 
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
-	}
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+        $this->queryParameters["StartTime"] = $startTime;
+    }
 
-	public function getInstanceType() {
-		return $this->instanceType;
-	}
+    public function getInstanceType()
+    {
+        return $this->instanceType;
+    }
 
-	public function setInstanceType($instanceType) {
-		$this->instanceType = $instanceType;
-		$this->queryParameters["InstanceType"]=$instanceType;
-	}
+    public function setInstanceType($instanceType)
+    {
+        $this->instanceType = $instanceType;
+        $this->queryParameters["InstanceType"] = $instanceType;
+    }
 
-	public function getOffset() {
-		return $this->offset;
-	}
+    public function getOffset()
+    {
+        return $this->offset;
+    }
 
-	public function setOffset($offset) {
-		$this->offset = $offset;
-		$this->queryParameters["Offset"]=$offset;
-	}
+    public function setOffset($offset)
+    {
+        $this->offset = $offset;
+        $this->queryParameters["Offset"] = $offset;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getEndTime() {
-		return $this->endTime;
-	}
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+        $this->queryParameters["EndTime"] = $endTime;
+    }
 
-	public function getOSType() {
-		return $this->oSType;
-	}
+    public function getOSType()
+    {
+        return $this->oSType;
+    }
 
-	public function setOSType($oSType) {
-		$this->oSType = $oSType;
-		$this->queryParameters["OSType"]=$oSType;
-	}
+    public function setOSType($oSType)
+    {
+        $this->oSType = $oSType;
+        $this->queryParameters["OSType"] = $oSType;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getZoneId() {
-		return $this->zoneId;
-	}
+    public function getZoneId()
+    {
+        return $this->zoneId;
+    }
 
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
-	
+    public function setZoneId($zoneId)
+    {
+        $this->zoneId = $zoneId;
+        $this->queryParameters["ZoneId"] = $zoneId;
+    }
+
 }

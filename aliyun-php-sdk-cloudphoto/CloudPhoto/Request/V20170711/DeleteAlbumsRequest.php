@@ -28,20 +28,22 @@ class DeleteAlbumsRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
-	private  $libraryId;
+    private $libraryId;
 
 	private  $AlbumIds;
 
 	private  $storeName;
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
 	public function getAlbumIds() {
 		return $this->AlbumIds;

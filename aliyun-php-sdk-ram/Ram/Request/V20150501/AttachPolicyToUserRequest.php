@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class AttachPolicyToUserRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "AttachPolicyToUser");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "AttachPolicyToUser");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $policyType;
+    private $policyType;
 
-	private  $policyName;
+    private $policyName;
 
-	private  $userName;
+    private $userName;
 
-	public function getPolicyType() {
-		return $this->policyType;
-	}
+    public function getPolicyType()
+    {
+        return $this->policyType;
+    }
 
-	public function setPolicyType($policyType) {
-		$this->policyType = $policyType;
-		$this->queryParameters["PolicyType"]=$policyType;
-	}
+    public function setPolicyType($policyType)
+    {
+        $this->policyType = $policyType;
+        $this->queryParameters["PolicyType"] = $policyType;
+    }
 
-	public function getPolicyName() {
-		return $this->policyName;
-	}
+    public function getPolicyName()
+    {
+        return $this->policyName;
+    }
 
-	public function setPolicyName($policyName) {
-		$this->policyName = $policyName;
-		$this->queryParameters["PolicyName"]=$policyName;
-	}
+    public function setPolicyName($policyName)
+    {
+        $this->policyName = $policyName;
+        $this->queryParameters["PolicyName"] = $policyName;
+    }
 
-	public function getUserName() {
-		return $this->userName;
-	}
+    public function getUserName()
+    {
+        return $this->userName;
+    }
 
-	public function setUserName($userName) {
-		$this->userName = $userName;
-		$this->queryParameters["UserName"]=$userName;
-	}
-	
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        $this->queryParameters["UserName"] = $userName;
+    }
+
 }

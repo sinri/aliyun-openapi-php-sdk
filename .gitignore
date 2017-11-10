@@ -4,3 +4,4 @@
 aliyun-php-sdk-test/
 .idea
 /aliyun-php-sdk-release-test/
+/test/

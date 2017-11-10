@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class AttachPolicyToRoleRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "AttachPolicyToRole");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "AttachPolicyToRole");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $policyType;
+    private $policyType;
 
-	private  $roleName;
+    private $roleName;
 
-	private  $policyName;
+    private $policyName;
 
-	public function getPolicyType() {
-		return $this->policyType;
-	}
+    public function getPolicyType()
+    {
+        return $this->policyType;
+    }
 
-	public function setPolicyType($policyType) {
-		$this->policyType = $policyType;
-		$this->queryParameters["PolicyType"]=$policyType;
-	}
+    public function setPolicyType($policyType)
+    {
+        $this->policyType = $policyType;
+        $this->queryParameters["PolicyType"] = $policyType;
+    }
 
-	public function getRoleName() {
-		return $this->roleName;
-	}
+    public function getRoleName()
+    {
+        return $this->roleName;
+    }
 
-	public function setRoleName($roleName) {
-		$this->roleName = $roleName;
-		$this->queryParameters["RoleName"]=$roleName;
-	}
+    public function setRoleName($roleName)
+    {
+        $this->roleName = $roleName;
+        $this->queryParameters["RoleName"] = $roleName;
+    }
 
-	public function getPolicyName() {
-		return $this->policyName;
-	}
+    public function getPolicyName()
+    {
+        return $this->policyName;
+    }
 
-	public function setPolicyName($policyName) {
-		$this->policyName = $policyName;
-		$this->queryParameters["PolicyName"]=$policyName;
-	}
-	
+    public function setPolicyName($policyName)
+    {
+        $this->policyName = $policyName;
+        $this->queryParameters["PolicyName"] = $policyName;
+    }
+
 }

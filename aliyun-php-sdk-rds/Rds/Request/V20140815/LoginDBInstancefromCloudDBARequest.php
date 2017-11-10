@@ -17,47 +17,54 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Rds\Request\V20140815;
 
 class LoginDBInstancefromCloudDBARequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Rds", "2014-08-15", "LoginDBInstancefromCloudDBA", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Rds", "2014-08-15", "LoginDBInstancefromCloudDBA", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $serviceRequestParam;
+    private $serviceRequestParam;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $serviceRequestType;
+    private $serviceRequestType;
 
-	public function getServiceRequestParam() {
-		return $this->serviceRequestParam;
-	}
+    public function getServiceRequestParam()
+    {
+        return $this->serviceRequestParam;
+    }
 
-	public function setServiceRequestParam($serviceRequestParam) {
-		$this->serviceRequestParam = $serviceRequestParam;
-		$this->queryParameters["ServiceRequestParam"]=$serviceRequestParam;
-	}
+    public function setServiceRequestParam($serviceRequestParam)
+    {
+        $this->serviceRequestParam = $serviceRequestParam;
+        $this->queryParameters["ServiceRequestParam"] = $serviceRequestParam;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getServiceRequestType() {
-		return $this->serviceRequestType;
-	}
+    public function getServiceRequestType()
+    {
+        return $this->serviceRequestType;
+    }
 
-	public function setServiceRequestType($serviceRequestType) {
-		$this->serviceRequestType = $serviceRequestType;
-		$this->queryParameters["ServiceRequestType"]=$serviceRequestType;
-	}
-	
+    public function setServiceRequestType($serviceRequestType)
+    {
+        $this->serviceRequestType = $serviceRequestType;
+        $this->queryParameters["ServiceRequestType"] = $serviceRequestType;
+    }
+
 }

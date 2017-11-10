@@ -17,91 +17,106 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Chatbot\Request\V20171011;
 
 class ChatRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Chatbot", "2017-10-11", "Chat", "beebot", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Chatbot", "2017-10-11", "Chat", "beebot", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $knowledgeId;
+    private $knowledgeId;
 
-	private  $senderId;
+    private $senderId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $senderNick;
+    private $senderNick;
 
-	private  $sessionId;
+    private $sessionId;
 
-	private  $tag;
+    private $tag;
 
-	private  $utterance;
+    private $utterance;
 
-	public function getKnowledgeId() {
-		return $this->knowledgeId;
-	}
+    public function getKnowledgeId()
+    {
+        return $this->knowledgeId;
+    }
 
-	public function setKnowledgeId($knowledgeId) {
-		$this->knowledgeId = $knowledgeId;
-		$this->queryParameters["KnowledgeId"]=$knowledgeId;
-	}
+    public function setKnowledgeId($knowledgeId)
+    {
+        $this->knowledgeId = $knowledgeId;
+        $this->queryParameters["KnowledgeId"] = $knowledgeId;
+    }
 
-	public function getSenderId() {
-		return $this->senderId;
-	}
+    public function getSenderId()
+    {
+        return $this->senderId;
+    }
 
-	public function setSenderId($senderId) {
-		$this->senderId = $senderId;
-		$this->queryParameters["SenderId"]=$senderId;
-	}
+    public function setSenderId($senderId)
+    {
+        $this->senderId = $senderId;
+        $this->queryParameters["SenderId"] = $senderId;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getSenderNick() {
-		return $this->senderNick;
-	}
+    public function getSenderNick()
+    {
+        return $this->senderNick;
+    }
 
-	public function setSenderNick($senderNick) {
-		$this->senderNick = $senderNick;
-		$this->queryParameters["SenderNick"]=$senderNick;
-	}
+    public function setSenderNick($senderNick)
+    {
+        $this->senderNick = $senderNick;
+        $this->queryParameters["SenderNick"] = $senderNick;
+    }
 
-	public function getSessionId() {
-		return $this->sessionId;
-	}
+    public function getSessionId()
+    {
+        return $this->sessionId;
+    }
 
-	public function setSessionId($sessionId) {
-		$this->sessionId = $sessionId;
-		$this->queryParameters["SessionId"]=$sessionId;
-	}
+    public function setSessionId($sessionId)
+    {
+        $this->sessionId = $sessionId;
+        $this->queryParameters["SessionId"] = $sessionId;
+    }
 
-	public function getTag() {
-		return $this->tag;
-	}
+    public function getTag()
+    {
+        return $this->tag;
+    }
 
-	public function setTag($tag) {
-		$this->tag = $tag;
-		$this->queryParameters["Tag"]=$tag;
-	}
+    public function setTag($tag)
+    {
+        $this->tag = $tag;
+        $this->queryParameters["Tag"] = $tag;
+    }
 
-	public function getUtterance() {
-		return $this->utterance;
-	}
+    public function getUtterance()
+    {
+        return $this->utterance;
+    }
 
-	public function setUtterance($utterance) {
-		$this->utterance = $utterance;
-		$this->queryParameters["Utterance"]=$utterance;
-	}
-	
+    public function setUtterance($utterance)
+    {
+        $this->utterance = $utterance;
+        $this->queryParameters["Utterance"] = $utterance;
+    }
+
 }

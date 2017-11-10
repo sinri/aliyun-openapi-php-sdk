@@ -17,59 +17,68 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class CreateLoginProfileRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "CreateLoginProfile");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "CreateLoginProfile");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $password;
+    private $password;
 
-	private  $passwordResetRequired;
+    private $passwordResetRequired;
 
-	private  $mFABindRequired;
+    private $mFABindRequired;
 
-	private  $userName;
+    private $userName;
 
-	public function getPassword() {
-		return $this->password;
-	}
+    public function getPassword()
+    {
+        return $this->password;
+    }
 
-	public function setPassword($password) {
-		$this->password = $password;
-		$this->queryParameters["Password"]=$password;
-	}
+    public function setPassword($password)
+    {
+        $this->password = $password;
+        $this->queryParameters["Password"] = $password;
+    }
 
-	public function getPasswordResetRequired() {
-		return $this->passwordResetRequired;
-	}
+    public function getPasswordResetRequired()
+    {
+        return $this->passwordResetRequired;
+    }
 
-	public function setPasswordResetRequired($passwordResetRequired) {
-		$this->passwordResetRequired = $passwordResetRequired;
-		$this->queryParameters["PasswordResetRequired"]=$passwordResetRequired;
-	}
+    public function setPasswordResetRequired($passwordResetRequired)
+    {
+        $this->passwordResetRequired = $passwordResetRequired;
+        $this->queryParameters["PasswordResetRequired"] = $passwordResetRequired;
+    }
 
-	public function getMFABindRequired() {
-		return $this->mFABindRequired;
-	}
+    public function getMFABindRequired()
+    {
+        return $this->mFABindRequired;
+    }
 
-	public function setMFABindRequired($mFABindRequired) {
-		$this->mFABindRequired = $mFABindRequired;
-		$this->queryParameters["MFABindRequired"]=$mFABindRequired;
-	}
+    public function setMFABindRequired($mFABindRequired)
+    {
+        $this->mFABindRequired = $mFABindRequired;
+        $this->queryParameters["MFABindRequired"] = $mFABindRequired;
+    }
 
-	public function getUserName() {
-		return $this->userName;
-	}
+    public function getUserName()
+    {
+        return $this->userName;
+    }
 
-	public function setUserName($userName) {
-		$this->userName = $userName;
-		$this->queryParameters["UserName"]=$userName;
-	}
-	
+    public function setUserName($userName)
+    {
+        $this->userName = $userName;
+        $this->queryParameters["UserName"] = $userName;
+    }
+
 }

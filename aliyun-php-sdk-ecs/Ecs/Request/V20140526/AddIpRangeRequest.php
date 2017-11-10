@@ -23,29 +23,31 @@ class AddIpRangeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "AddIpRange", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "AddIpRange", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $ipAddress;
+    private $ipAddress;
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $zoneId;
+    private $zoneId;
 
 	private  $ownerId;
 
-	public function getIpAddress() {
-		return $this->ipAddress;
-	}
+    public function getIpAddress()
+    {
+        return $this->ipAddress;
+    }
 
-	public function setIpAddress($ipAddress) {
-		$this->ipAddress = $ipAddress;
-		$this->queryParameters["IpAddress"]=$ipAddress;
+    public function setIpAddress($ipAddress)
+    {
+        $this->ipAddress = $ipAddress;
+        $this->queryParameters["IpAddress"] = $ipAddress;
 	}
 
 	public function getResourceOwnerId() {
@@ -57,14 +59,16 @@ class AddIpRangeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -75,13 +79,15 @@ class AddIpRangeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getZoneId() {
-		return $this->zoneId;
-	}
+    public function getZoneId()
+    {
+        return $this->zoneId;
+    }
 
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
+    public function setZoneId($zoneId)
+    {
+        $this->zoneId = $zoneId;
+        $this->queryParameters["ZoneId"] = $zoneId;
 	}
 
 	public function getOwnerId() {

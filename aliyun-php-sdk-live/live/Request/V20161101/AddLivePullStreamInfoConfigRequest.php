@@ -17,102 +17,119 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace live\Request\V20161101;
 
 class AddLivePullStreamInfoConfigRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("live", "2016-11-01", "AddLivePullStreamInfoConfig", "live", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("live", "2016-11-01", "AddLivePullStreamInfoConfig", "live", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $sourceUrl;
+    private $sourceUrl;
 
-	private  $appName;
+    private $appName;
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $domainName;
+    private $domainName;
 
-	private  $endTime;
+    private $endTime;
 
-	private  $startTime;
+    private $startTime;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $streamName;
+    private $streamName;
 
-	public function getSourceUrl() {
-		return $this->sourceUrl;
-	}
+    public function getSourceUrl()
+    {
+        return $this->sourceUrl;
+    }
 
-	public function setSourceUrl($sourceUrl) {
-		$this->sourceUrl = $sourceUrl;
-		$this->queryParameters["SourceUrl"]=$sourceUrl;
-	}
+    public function setSourceUrl($sourceUrl)
+    {
+        $this->sourceUrl = $sourceUrl;
+        $this->queryParameters["SourceUrl"] = $sourceUrl;
+    }
 
-	public function getAppName() {
-		return $this->appName;
-	}
+    public function getAppName()
+    {
+        return $this->appName;
+    }
 
-	public function setAppName($appName) {
-		$this->appName = $appName;
-		$this->queryParameters["AppName"]=$appName;
-	}
+    public function setAppName($appName)
+    {
+        $this->appName = $appName;
+        $this->queryParameters["AppName"] = $appName;
+    }
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getDomainName() {
-		return $this->domainName;
-	}
+    public function getDomainName()
+    {
+        return $this->domainName;
+    }
 
-	public function setDomainName($domainName) {
-		$this->domainName = $domainName;
-		$this->queryParameters["DomainName"]=$domainName;
-	}
+    public function setDomainName($domainName)
+    {
+        $this->domainName = $domainName;
+        $this->queryParameters["DomainName"] = $domainName;
+    }
 
-	public function getEndTime() {
-		return $this->endTime;
-	}
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+        $this->queryParameters["EndTime"] = $endTime;
+    }
 
-	public function getStartTime() {
-		return $this->startTime;
-	}
+    public function getStartTime()
+    {
+        return $this->startTime;
+    }
 
-	public function setStartTime($startTime) {
-		$this->startTime = $startTime;
-		$this->queryParameters["StartTime"]=$startTime;
-	}
+    public function setStartTime($startTime)
+    {
+        $this->startTime = $startTime;
+        $this->queryParameters["StartTime"] = $startTime;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getStreamName() {
-		return $this->streamName;
-	}
+    public function getStreamName()
+    {
+        return $this->streamName;
+    }
 
-	public function setStreamName($streamName) {
-		$this->streamName = $streamName;
-		$this->queryParameters["StreamName"]=$streamName;
-	}
-	
+    public function setStreamName($streamName)
+    {
+        $this->streamName = $streamName;
+        $this->queryParameters["StreamName"] = $streamName;
+    }
+
 }

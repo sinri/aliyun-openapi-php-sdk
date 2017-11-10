@@ -23,43 +23,43 @@ class DescribePriceRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "DescribePrice", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "DescribePrice", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $dBInstanceStorage;
+    private $dBInstanceStorage;
 
-	private  $quantity;
+    private $quantity;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $clientToken;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $commodityCode;
+    private $commodityCode;
 
 	private  $engineVersion;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $usedTime;
+    private $usedTime;
 
 	private  $dBInstanceClass;
 
-	private  $instanceUsedType;
+    private $instanceUsedType;
 
-	private  $engine;
+    private $engine;
 
-	private  $zoneId;
+    private $zoneId;
 
-	private  $timeType;
+    private $timeType;
 
 	private  $payType;
 
-	private  $orderType;
+    private $orderType;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -70,32 +70,38 @@ class DescribePriceRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getDBInstanceStorage() {
-		return $this->dBInstanceStorage;
-	}
+    public function getDBInstanceStorage()
+    {
+        return $this->dBInstanceStorage;
+    }
 
-	public function setDBInstanceStorage($dBInstanceStorage) {
-		$this->dBInstanceStorage = $dBInstanceStorage;
-		$this->queryParameters["DBInstanceStorage"]=$dBInstanceStorage;
-	}
+    public function setDBInstanceStorage($dBInstanceStorage)
+    {
+        $this->dBInstanceStorage = $dBInstanceStorage;
+        $this->queryParameters["DBInstanceStorage"] = $dBInstanceStorage;
+    }
 
-	public function getQuantity() {
-		return $this->quantity;
-	}
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
 
-	public function setQuantity($quantity) {
-		$this->quantity = $quantity;
-		$this->queryParameters["Quantity"]=$quantity;
-	}
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+        $this->queryParameters["Quantity"] = $quantity;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;
@@ -106,22 +112,26 @@ class DescribePriceRequest extends \RpcAcsRequest
 		$this->queryParameters["ClientToken"]=$clientToken;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getCommodityCode() {
-		return $this->commodityCode;
-	}
+    public function getCommodityCode()
+    {
+        return $this->commodityCode;
+    }
 
-	public function setCommodityCode($commodityCode) {
-		$this->commodityCode = $commodityCode;
-		$this->queryParameters["CommodityCode"]=$commodityCode;
+    public function setCommodityCode($commodityCode)
+    {
+        $this->commodityCode = $commodityCode;
+        $this->queryParameters["CommodityCode"] = $commodityCode;
 	}
 
 	public function getEngineVersion() {
@@ -133,23 +143,27 @@ class DescribePriceRequest extends \RpcAcsRequest
 		$this->queryParameters["EngineVersion"]=$engineVersion;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getUsedTime() {
-		return $this->usedTime;
-	}
+    public function getUsedTime()
+    {
+        return $this->usedTime;
+    }
 
-	public function setUsedTime($usedTime) {
-		$this->usedTime = $usedTime;
-		$this->queryParameters["UsedTime"]=$usedTime;
-	}
+    public function setUsedTime($usedTime)
+    {
+        $this->usedTime = $usedTime;
+        $this->queryParameters["UsedTime"] = $usedTime;
+    }
 
 	public function getDBInstanceClass() {
 		return $this->dBInstanceClass;
@@ -160,40 +174,48 @@ class DescribePriceRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceClass"]=$dBInstanceClass;
 	}
 
-	public function getInstanceUsedType() {
-		return $this->instanceUsedType;
-	}
+    public function getInstanceUsedType()
+    {
+        return $this->instanceUsedType;
+    }
 
-	public function setInstanceUsedType($instanceUsedType) {
-		$this->instanceUsedType = $instanceUsedType;
-		$this->queryParameters["InstanceUsedType"]=$instanceUsedType;
-	}
+    public function setInstanceUsedType($instanceUsedType)
+    {
+        $this->instanceUsedType = $instanceUsedType;
+        $this->queryParameters["InstanceUsedType"] = $instanceUsedType;
+    }
 
-	public function getEngine() {
-		return $this->engine;
-	}
+    public function getEngine()
+    {
+        return $this->engine;
+    }
 
-	public function setEngine($engine) {
-		$this->engine = $engine;
-		$this->queryParameters["Engine"]=$engine;
-	}
+    public function setEngine($engine)
+    {
+        $this->engine = $engine;
+        $this->queryParameters["Engine"] = $engine;
+    }
 
-	public function getZoneId() {
-		return $this->zoneId;
-	}
+    public function getZoneId()
+    {
+        return $this->zoneId;
+    }
 
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
+    public function setZoneId($zoneId)
+    {
+        $this->zoneId = $zoneId;
+        $this->queryParameters["ZoneId"] = $zoneId;
+    }
 
-	public function getTimeType() {
-		return $this->timeType;
-	}
+    public function getTimeType()
+    {
+        return $this->timeType;
+    }
 
-	public function setTimeType($timeType) {
-		$this->timeType = $timeType;
-		$this->queryParameters["TimeType"]=$timeType;
+    public function setTimeType($timeType)
+    {
+        $this->timeType = $timeType;
+        $this->queryParameters["TimeType"] = $timeType;
 	}
 
 	public function getPayType() {
@@ -205,13 +227,15 @@ class DescribePriceRequest extends \RpcAcsRequest
 		$this->queryParameters["PayType"]=$payType;
 	}
 
-	public function getOrderType() {
-		return $this->orderType;
-	}
+    public function getOrderType()
+    {
+        return $this->orderType;
+    }
 
-	public function setOrderType($orderType) {
-		$this->orderType = $orderType;
-		$this->queryParameters["OrderType"]=$orderType;
+    public function setOrderType($orderType)
+    {
+        $this->orderType = $orderType;
+        $this->queryParameters["OrderType"] = $orderType;
 	}
 	
 }

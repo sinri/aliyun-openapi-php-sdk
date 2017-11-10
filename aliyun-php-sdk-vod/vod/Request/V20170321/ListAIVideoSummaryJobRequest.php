@@ -17,25 +17,26 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace vod\Request\V20170321;
 
 class ListAIVideoSummaryJobRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("vod", "2017-03-21", "ListAIVideoSummaryJob", "vod", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("vod", "2017-03-21", "ListAIVideoSummaryJob", "vod", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $aIVideoSummaryJobIds;
+    private $aIVideoSummaryJobIds;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -46,22 +47,26 @@ class ListAIVideoSummaryJobRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getAIVideoSummaryJobIds() {
-		return $this->aIVideoSummaryJobIds;
-	}
+    public function getAIVideoSummaryJobIds()
+    {
+        return $this->aIVideoSummaryJobIds;
+    }
 
-	public function setAIVideoSummaryJobIds($aIVideoSummaryJobIds) {
-		$this->aIVideoSummaryJobIds = $aIVideoSummaryJobIds;
-		$this->queryParameters["AIVideoSummaryJobIds"]=$aIVideoSummaryJobIds;
+    public function setAIVideoSummaryJobIds($aIVideoSummaryJobIds)
+    {
+        $this->aIVideoSummaryJobIds = $aIVideoSummaryJobIds;
+        $this->queryParameters["AIVideoSummaryJobIds"] = $aIVideoSummaryJobIds;
 	}
 
 	public function getOwnerAccount() {
@@ -73,13 +78,15 @@ class ListAIVideoSummaryJobRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

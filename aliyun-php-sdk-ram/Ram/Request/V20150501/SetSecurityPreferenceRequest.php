@@ -17,70 +17,81 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class SetSecurityPreferenceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "SetSecurityPreference");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "SetSecurityPreference");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $allowUserToManageAccessKeys;
+    private $allowUserToManageAccessKeys;
 
-	private  $allowUserToManageMFADevices;
+    private $allowUserToManageMFADevices;
 
-	private  $allowUserToManagePublicKeys;
+    private $allowUserToManagePublicKeys;
 
-	private  $enableSaveMFATicket;
+    private $enableSaveMFATicket;
 
-	private  $allowUserToChangePassword;
+    private $allowUserToChangePassword;
 
-	public function getAllowUserToManageAccessKeys() {
-		return $this->allowUserToManageAccessKeys;
-	}
+    public function getAllowUserToManageAccessKeys()
+    {
+        return $this->allowUserToManageAccessKeys;
+    }
 
-	public function setAllowUserToManageAccessKeys($allowUserToManageAccessKeys) {
-		$this->allowUserToManageAccessKeys = $allowUserToManageAccessKeys;
-		$this->queryParameters["AllowUserToManageAccessKeys"]=$allowUserToManageAccessKeys;
-	}
+    public function setAllowUserToManageAccessKeys($allowUserToManageAccessKeys)
+    {
+        $this->allowUserToManageAccessKeys = $allowUserToManageAccessKeys;
+        $this->queryParameters["AllowUserToManageAccessKeys"] = $allowUserToManageAccessKeys;
+    }
 
-	public function getAllowUserToManageMFADevices() {
-		return $this->allowUserToManageMFADevices;
-	}
+    public function getAllowUserToManageMFADevices()
+    {
+        return $this->allowUserToManageMFADevices;
+    }
 
-	public function setAllowUserToManageMFADevices($allowUserToManageMFADevices) {
-		$this->allowUserToManageMFADevices = $allowUserToManageMFADevices;
-		$this->queryParameters["AllowUserToManageMFADevices"]=$allowUserToManageMFADevices;
-	}
+    public function setAllowUserToManageMFADevices($allowUserToManageMFADevices)
+    {
+        $this->allowUserToManageMFADevices = $allowUserToManageMFADevices;
+        $this->queryParameters["AllowUserToManageMFADevices"] = $allowUserToManageMFADevices;
+    }
 
-	public function getAllowUserToManagePublicKeys() {
-		return $this->allowUserToManagePublicKeys;
-	}
+    public function getAllowUserToManagePublicKeys()
+    {
+        return $this->allowUserToManagePublicKeys;
+    }
 
-	public function setAllowUserToManagePublicKeys($allowUserToManagePublicKeys) {
-		$this->allowUserToManagePublicKeys = $allowUserToManagePublicKeys;
-		$this->queryParameters["AllowUserToManagePublicKeys"]=$allowUserToManagePublicKeys;
-	}
+    public function setAllowUserToManagePublicKeys($allowUserToManagePublicKeys)
+    {
+        $this->allowUserToManagePublicKeys = $allowUserToManagePublicKeys;
+        $this->queryParameters["AllowUserToManagePublicKeys"] = $allowUserToManagePublicKeys;
+    }
 
-	public function getEnableSaveMFATicket() {
-		return $this->enableSaveMFATicket;
-	}
+    public function getEnableSaveMFATicket()
+    {
+        return $this->enableSaveMFATicket;
+    }
 
-	public function setEnableSaveMFATicket($enableSaveMFATicket) {
-		$this->enableSaveMFATicket = $enableSaveMFATicket;
-		$this->queryParameters["EnableSaveMFATicket"]=$enableSaveMFATicket;
-	}
+    public function setEnableSaveMFATicket($enableSaveMFATicket)
+    {
+        $this->enableSaveMFATicket = $enableSaveMFATicket;
+        $this->queryParameters["EnableSaveMFATicket"] = $enableSaveMFATicket;
+    }
 
-	public function getAllowUserToChangePassword() {
-		return $this->allowUserToChangePassword;
-	}
+    public function getAllowUserToChangePassword()
+    {
+        return $this->allowUserToChangePassword;
+    }
 
-	public function setAllowUserToChangePassword($allowUserToChangePassword) {
-		$this->allowUserToChangePassword = $allowUserToChangePassword;
-		$this->queryParameters["AllowUserToChangePassword"]=$allowUserToChangePassword;
-	}
-	
+    public function setAllowUserToChangePassword($allowUserToChangePassword)
+    {
+        $this->allowUserToChangePassword = $allowUserToChangePassword;
+        $this->queryParameters["AllowUserToChangePassword"] = $allowUserToChangePassword;
+    }
+
 }

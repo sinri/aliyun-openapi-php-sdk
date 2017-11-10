@@ -23,7 +23,7 @@ class DescribeTagKeysRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeTagKeys", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeTagKeys", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -31,15 +31,15 @@ class DescribeTagKeysRequest extends \RpcAcsRequest
 
 	private  $resourceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $pageSize;
+    private $pageSize;
 
 	private  $ownerId;
 
-	private  $resourceType;
+    private $resourceType;
 
-	private  $pageNumber;
+    private $pageNumber;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -59,23 +59,27 @@ class DescribeTagKeysRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceId"]=$resourceId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -86,22 +90,26 @@ class DescribeTagKeysRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getResourceType() {
-		return $this->resourceType;
-	}
+    public function getResourceType()
+    {
+        return $this->resourceType;
+    }
 
-	public function setResourceType($resourceType) {
-		$this->resourceType = $resourceType;
-		$this->queryParameters["ResourceType"]=$resourceType;
-	}
+    public function setResourceType($resourceType)
+    {
+        $this->resourceType = $resourceType;
+        $this->queryParameters["ResourceType"] = $resourceType;
+    }
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
+    }
 	
 }

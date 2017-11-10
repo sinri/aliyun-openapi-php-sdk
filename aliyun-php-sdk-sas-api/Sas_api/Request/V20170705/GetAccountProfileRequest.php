@@ -17,146 +17,171 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Sas_api\Request\V20170705;
 
 class GetAccountProfileRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Sas-api", "2017-07-05", "GetAccountProfile");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Sas-api", "2017-07-05", "GetAccountProfile");
+        $this->setMethod("POST");
+    }
 
-	private  $deviceIdMd5;
+    private $deviceIdMd5;
 
-	private  $carrier;
+    private $carrier;
 
-	private  $os;
+    private $os;
 
-	private  $phone;
+    private $phone;
 
-	private  $requestUrl;
+    private $requestUrl;
 
-	private  $ip;
+    private $ip;
 
-	private  $userAgent;
+    private $userAgent;
 
-	private  $connectionType;
+    private $connectionType;
 
-	private  $sensType;
+    private $sensType;
 
-	private  $deviceType;
+    private $deviceType;
 
-	private  $accessTimestamp;
+    private $accessTimestamp;
 
-	private  $businessType;
+    private $businessType;
 
-	public function getDeviceIdMd5() {
-		return $this->deviceIdMd5;
-	}
+    public function getDeviceIdMd5()
+    {
+        return $this->deviceIdMd5;
+    }
 
-	public function setDeviceIdMd5($deviceIdMd5) {
-		$this->deviceIdMd5 = $deviceIdMd5;
-		$this->queryParameters["DeviceIdMd5"]=$deviceIdMd5;
-	}
+    public function setDeviceIdMd5($deviceIdMd5)
+    {
+        $this->deviceIdMd5 = $deviceIdMd5;
+        $this->queryParameters["DeviceIdMd5"] = $deviceIdMd5;
+    }
 
-	public function getCarrier() {
-		return $this->carrier;
-	}
+    public function getCarrier()
+    {
+        return $this->carrier;
+    }
 
-	public function setCarrier($carrier) {
-		$this->carrier = $carrier;
-		$this->queryParameters["Carrier"]=$carrier;
-	}
+    public function setCarrier($carrier)
+    {
+        $this->carrier = $carrier;
+        $this->queryParameters["Carrier"] = $carrier;
+    }
 
-	public function getOs() {
-		return $this->os;
-	}
+    public function getOs()
+    {
+        return $this->os;
+    }
 
-	public function setOs($os) {
-		$this->os = $os;
-		$this->queryParameters["Os"]=$os;
-	}
+    public function setOs($os)
+    {
+        $this->os = $os;
+        $this->queryParameters["Os"] = $os;
+    }
 
-	public function getPhone() {
-		return $this->phone;
-	}
+    public function getPhone()
+    {
+        return $this->phone;
+    }
 
-	public function setPhone($phone) {
-		$this->phone = $phone;
-		$this->queryParameters["Phone"]=$phone;
-	}
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+        $this->queryParameters["Phone"] = $phone;
+    }
 
-	public function getRequestUrl() {
-		return $this->requestUrl;
-	}
+    public function getRequestUrl()
+    {
+        return $this->requestUrl;
+    }
 
-	public function setRequestUrl($requestUrl) {
-		$this->requestUrl = $requestUrl;
-		$this->queryParameters["RequestUrl"]=$requestUrl;
-	}
+    public function setRequestUrl($requestUrl)
+    {
+        $this->requestUrl = $requestUrl;
+        $this->queryParameters["RequestUrl"] = $requestUrl;
+    }
 
-	public function getIp() {
-		return $this->ip;
-	}
+    public function getIp()
+    {
+        return $this->ip;
+    }
 
-	public function setIp($ip) {
-		$this->ip = $ip;
-		$this->queryParameters["Ip"]=$ip;
-	}
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
+        $this->queryParameters["Ip"] = $ip;
+    }
 
-	public function getUserAgent() {
-		return $this->userAgent;
-	}
+    public function getUserAgent()
+    {
+        return $this->userAgent;
+    }
 
-	public function setUserAgent($userAgent) {
-		$this->userAgent = $userAgent;
-		$this->queryParameters["UserAgent"]=$userAgent;
-	}
+    public function setUserAgent($userAgent)
+    {
+        $this->userAgent = $userAgent;
+        $this->queryParameters["UserAgent"] = $userAgent;
+    }
 
-	public function getConnectionType() {
-		return $this->connectionType;
-	}
+    public function getConnectionType()
+    {
+        return $this->connectionType;
+    }
 
-	public function setConnectionType($connectionType) {
-		$this->connectionType = $connectionType;
-		$this->queryParameters["ConnectionType"]=$connectionType;
-	}
+    public function setConnectionType($connectionType)
+    {
+        $this->connectionType = $connectionType;
+        $this->queryParameters["ConnectionType"] = $connectionType;
+    }
 
-	public function getSensType() {
-		return $this->sensType;
-	}
+    public function getSensType()
+    {
+        return $this->sensType;
+    }
 
-	public function setSensType($sensType) {
-		$this->sensType = $sensType;
-		$this->queryParameters["SensType"]=$sensType;
-	}
+    public function setSensType($sensType)
+    {
+        $this->sensType = $sensType;
+        $this->queryParameters["SensType"] = $sensType;
+    }
 
-	public function getDeviceType() {
-		return $this->deviceType;
-	}
+    public function getDeviceType()
+    {
+        return $this->deviceType;
+    }
 
-	public function setDeviceType($deviceType) {
-		$this->deviceType = $deviceType;
-		$this->queryParameters["DeviceType"]=$deviceType;
-	}
+    public function setDeviceType($deviceType)
+    {
+        $this->deviceType = $deviceType;
+        $this->queryParameters["DeviceType"] = $deviceType;
+    }
 
-	public function getAccessTimestamp() {
-		return $this->accessTimestamp;
-	}
+    public function getAccessTimestamp()
+    {
+        return $this->accessTimestamp;
+    }
 
-	public function setAccessTimestamp($accessTimestamp) {
-		$this->accessTimestamp = $accessTimestamp;
-		$this->queryParameters["AccessTimestamp"]=$accessTimestamp;
-	}
+    public function setAccessTimestamp($accessTimestamp)
+    {
+        $this->accessTimestamp = $accessTimestamp;
+        $this->queryParameters["AccessTimestamp"] = $accessTimestamp;
+    }
 
-	public function getBusinessType() {
-		return $this->businessType;
-	}
+    public function getBusinessType()
+    {
+        return $this->businessType;
+    }
 
-	public function setBusinessType($businessType) {
-		$this->businessType = $businessType;
-		$this->queryParameters["BusinessType"]=$businessType;
-	}
-	
+    public function setBusinessType($businessType)
+    {
+        $this->businessType = $businessType;
+        $this->queryParameters["BusinessType"] = $businessType;
+    }
+
 }

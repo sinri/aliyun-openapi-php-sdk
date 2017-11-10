@@ -23,7 +23,7 @@ class ModifyVSwitchAttributeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyVSwitchAttribute", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyVSwitchAttribute", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -31,13 +31,13 @@ class ModifyVSwitchAttributeRequest extends \RpcAcsRequest
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $vSwitchName;
+    private $vSwitchName;
 
 	private  $ownerAccount;
 
-	private  $description;
+    private $description;
 
 	private  $ownerId;
 
@@ -59,23 +59,27 @@ class ModifyVSwitchAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getVSwitchName() {
-		return $this->vSwitchName;
-	}
+    public function getVSwitchName()
+    {
+        return $this->vSwitchName;
+    }
 
-	public function setVSwitchName($vSwitchName) {
-		$this->vSwitchName = $vSwitchName;
-		$this->queryParameters["VSwitchName"]=$vSwitchName;
-	}
+    public function setVSwitchName($vSwitchName)
+    {
+        $this->vSwitchName = $vSwitchName;
+        $this->queryParameters["VSwitchName"] = $vSwitchName;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -86,14 +90,16 @@ class ModifyVSwitchAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;

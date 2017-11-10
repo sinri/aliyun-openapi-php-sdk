@@ -30,9 +30,9 @@ class CreatePhotoRequest extends \RpcAcsRequest
 
 	private  $photoTitle;
 
-	private  $libraryId;
+    private $libraryId;
 
-	private  $shareExpireTime;
+    private $shareExpireTime;
 
 	private  $storeName;
 
@@ -42,7 +42,7 @@ class CreatePhotoRequest extends \RpcAcsRequest
 
 	private  $sessionId;
 
-	private  $staging;
+    private $staging;
 
 	private  $fileId;
 
@@ -55,23 +55,27 @@ class CreatePhotoRequest extends \RpcAcsRequest
 		$this->queryParameters["PhotoTitle"]=$photoTitle;
 	}
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
-	public function getShareExpireTime() {
-		return $this->shareExpireTime;
-	}
+    public function getShareExpireTime()
+    {
+        return $this->shareExpireTime;
+    }
 
-	public function setShareExpireTime($shareExpireTime) {
-		$this->shareExpireTime = $shareExpireTime;
-		$this->queryParameters["ShareExpireTime"]=$shareExpireTime;
-	}
+    public function setShareExpireTime($shareExpireTime)
+    {
+        $this->shareExpireTime = $shareExpireTime;
+        $this->queryParameters["ShareExpireTime"] = $shareExpireTime;
+    }
 
 	public function getStoreName() {
 		return $this->storeName;
@@ -109,14 +113,16 @@ class CreatePhotoRequest extends \RpcAcsRequest
 		$this->queryParameters["SessionId"]=$sessionId;
 	}
 
-	public function getStaging() {
-		return $this->staging;
-	}
+    public function getStaging()
+    {
+        return $this->staging;
+    }
 
-	public function setStaging($staging) {
-		$this->staging = $staging;
-		$this->queryParameters["Staging"]=$staging;
-	}
+    public function setStaging($staging)
+    {
+        $this->staging = $staging;
+        $this->queryParameters["Staging"] = $staging;
+    }
 
 	public function getFileId() {
 		return $this->fileId;

@@ -23,17 +23,17 @@ class CreateDampPolicyRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "CreateDampPolicy", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "CreateDampPolicy", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
 	private  $priority;
 
@@ -41,15 +41,15 @@ class CreateDampPolicyRequest extends \RpcAcsRequest
 
 	private  $actionRules;
 
-	private  $securityToken;
+    private $securityToken;
 
-	private  $handlers;
+    private $handlers;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $policyName;
+    private $policyName;
 
-	private  $sourceRules;
+    private $sourceRules;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -60,14 +60,16 @@ class CreateDampPolicyRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -78,13 +80,15 @@ class CreateDampPolicyRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
 	}
 
 	public function getPriority() {
@@ -114,49 +118,59 @@ class CreateDampPolicyRequest extends \RpcAcsRequest
 		$this->queryParameters["ActionRules"]=$actionRules;
 	}
 
-	public function getSecurityToken() {
-		return $this->securityToken;
-	}
+    public function getSecurityToken()
+    {
+        return $this->securityToken;
+    }
 
-	public function setSecurityToken($securityToken) {
-		$this->securityToken = $securityToken;
-		$this->queryParameters["SecurityToken"]=$securityToken;
-	}
+    public function setSecurityToken($securityToken)
+    {
+        $this->securityToken = $securityToken;
+        $this->queryParameters["SecurityToken"] = $securityToken;
+    }
 
-	public function getHandlers() {
-		return $this->handlers;
-	}
+    public function getHandlers()
+    {
+        return $this->handlers;
+    }
 
-	public function setHandlers($handlers) {
-		$this->handlers = $handlers;
-		$this->queryParameters["Handlers"]=$handlers;
-	}
+    public function setHandlers($handlers)
+    {
+        $this->handlers = $handlers;
+        $this->queryParameters["Handlers"] = $handlers;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getPolicyName() {
-		return $this->policyName;
-	}
+    public function getPolicyName()
+    {
+        return $this->policyName;
+    }
 
-	public function setPolicyName($policyName) {
-		$this->policyName = $policyName;
-		$this->queryParameters["PolicyName"]=$policyName;
-	}
+    public function setPolicyName($policyName)
+    {
+        $this->policyName = $policyName;
+        $this->queryParameters["PolicyName"] = $policyName;
+    }
 
-	public function getSourceRules() {
-		return $this->sourceRules;
-	}
+    public function getSourceRules()
+    {
+        return $this->sourceRules;
+    }
 
-	public function setSourceRules($sourceRules) {
-		$this->sourceRules = $sourceRules;
-		$this->queryParameters["SourceRules"]=$sourceRules;
-	}
+    public function setSourceRules($sourceRules)
+    {
+        $this->sourceRules = $sourceRules;
+        $this->queryParameters["SourceRules"] = $sourceRules;
+    }
 	
 }

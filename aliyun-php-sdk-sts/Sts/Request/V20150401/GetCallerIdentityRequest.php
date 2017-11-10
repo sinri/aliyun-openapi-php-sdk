@@ -17,15 +17,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Sts\Request\V20150401;
 
 class GetCallerIdentityRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Sts", "2015-04-01", "GetCallerIdentity");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
-	
+    function __construct()
+    {
+        parent::__construct("Sts", "2015-04-01", "GetCallerIdentity");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
+
 }

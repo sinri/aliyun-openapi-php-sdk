@@ -17,37 +17,42 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class ChangePasswordRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "ChangePassword");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "ChangePassword");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $oldPassword;
+    private $oldPassword;
 
-	private  $newPassword;
+    private $newPassword;
 
-	public function getOldPassword() {
-		return $this->oldPassword;
-	}
+    public function getOldPassword()
+    {
+        return $this->oldPassword;
+    }
 
-	public function setOldPassword($oldPassword) {
-		$this->oldPassword = $oldPassword;
-		$this->queryParameters["OldPassword"]=$oldPassword;
-	}
+    public function setOldPassword($oldPassword)
+    {
+        $this->oldPassword = $oldPassword;
+        $this->queryParameters["OldPassword"] = $oldPassword;
+    }
 
-	public function getNewPassword() {
-		return $this->newPassword;
-	}
+    public function getNewPassword()
+    {
+        return $this->newPassword;
+    }
 
-	public function setNewPassword($newPassword) {
-		$this->newPassword = $newPassword;
-		$this->queryParameters["NewPassword"]=$newPassword;
-	}
-	
+    public function setNewPassword($newPassword)
+    {
+        $this->newPassword = $newPassword;
+        $this->queryParameters["NewPassword"] = $newPassword;
+    }
+
 }

@@ -23,11 +23,11 @@ class DescribeForwardTableEntriesRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeForwardTableEntries", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeForwardTableEntries", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
@@ -35,21 +35,23 @@ class DescribeForwardTableEntriesRequest extends \RpcAcsRequest
 
 	private  $ownerAccount;
 
-	private  $forwardTableId;
+    private $forwardTableId;
 
-	private  $pageSize;
+    private $pageSize;
 
 	private  $ownerId;
 
-	private  $pageNumber;
+    private $pageNumber;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -79,23 +81,27 @@ class DescribeForwardTableEntriesRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getForwardTableId() {
-		return $this->forwardTableId;
-	}
+    public function getForwardTableId()
+    {
+        return $this->forwardTableId;
+    }
 
-	public function setForwardTableId($forwardTableId) {
-		$this->forwardTableId = $forwardTableId;
-		$this->queryParameters["ForwardTableId"]=$forwardTableId;
-	}
+    public function setForwardTableId($forwardTableId)
+    {
+        $this->forwardTableId = $forwardTableId;
+        $this->queryParameters["ForwardTableId"] = $forwardTableId;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -106,13 +112,15 @@ class DescribeForwardTableEntriesRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
+    }
 	
 }

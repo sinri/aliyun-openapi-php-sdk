@@ -23,29 +23,29 @@ class DescribeDBInstancesByExpireTimeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "DescribeDBInstancesByExpireTime", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "DescribeDBInstancesByExpireTime", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
 	private  $pageNumber;
 
 	private  $tags;
 
-	private  $expired;
+    private $expired;
 
-	private  $pageSize;
+    private $pageSize;
 
-	private  $expirePeriod;
+    private $expirePeriod;
 
-	private  $proxyId;
+    private $proxyId;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -56,31 +56,37 @@ class DescribeDBInstancesByExpireTimeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
 	}
 
 	public function getPageNumber() {
@@ -101,40 +107,48 @@ class DescribeDBInstancesByExpireTimeRequest extends \RpcAcsRequest
 		$this->queryParameters["Tags"]=$tags;
 	}
 
-	public function getExpired() {
-		return $this->expired;
-	}
+    public function getExpired()
+    {
+        return $this->expired;
+    }
 
-	public function setExpired($expired) {
-		$this->expired = $expired;
-		$this->queryParameters["Expired"]=$expired;
-	}
+    public function setExpired($expired)
+    {
+        $this->expired = $expired;
+        $this->queryParameters["Expired"] = $expired;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
-	public function getExpirePeriod() {
-		return $this->expirePeriod;
-	}
+    public function getExpirePeriod()
+    {
+        return $this->expirePeriod;
+    }
 
-	public function setExpirePeriod($expirePeriod) {
-		$this->expirePeriod = $expirePeriod;
-		$this->queryParameters["ExpirePeriod"]=$expirePeriod;
-	}
+    public function setExpirePeriod($expirePeriod)
+    {
+        $this->expirePeriod = $expirePeriod;
+        $this->queryParameters["ExpirePeriod"] = $expirePeriod;
+    }
 
-	public function getproxyId() {
-		return $this->proxyId;
-	}
+    public function getproxyId()
+    {
+        return $this->proxyId;
+    }
 
-	public function setproxyId($proxyId) {
-		$this->proxyId = $proxyId;
-		$this->queryParameters["proxyId"]=$proxyId;
+    public function setproxyId($proxyId)
+    {
+        $this->proxyId = $proxyId;
+        $this->queryParameters["proxyId"] = $proxyId;
 	}
 	
 }

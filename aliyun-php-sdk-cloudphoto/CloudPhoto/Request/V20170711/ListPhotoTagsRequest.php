@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace CloudPhoto\Request\V20170711;
 
 class ListPhotoTagsRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("CloudPhoto", "2017-07-11", "ListPhotoTags", "cloudphoto", "openAPI");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("CloudPhoto", "2017-07-11", "ListPhotoTags", "cloudphoto", "openAPI");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $libraryId;
+    private $libraryId;
 
-	private  $photoId;
+    private $photoId;
 
-	private  $storeName;
+    private $storeName;
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
-	public function getPhotoId() {
-		return $this->photoId;
-	}
+    public function getPhotoId()
+    {
+        return $this->photoId;
+    }
 
-	public function setPhotoId($photoId) {
-		$this->photoId = $photoId;
-		$this->queryParameters["PhotoId"]=$photoId;
-	}
+    public function setPhotoId($photoId)
+    {
+        $this->photoId = $photoId;
+        $this->queryParameters["PhotoId"] = $photoId;
+    }
 
-	public function getStoreName() {
-		return $this->storeName;
-	}
+    public function getStoreName()
+    {
+        return $this->storeName;
+    }
 
-	public function setStoreName($storeName) {
-		$this->storeName = $storeName;
-		$this->queryParameters["StoreName"]=$storeName;
-	}
-	
+    public function setStoreName($storeName)
+    {
+        $this->storeName = $storeName;
+        $this->queryParameters["StoreName"] = $storeName;
+    }
+
 }

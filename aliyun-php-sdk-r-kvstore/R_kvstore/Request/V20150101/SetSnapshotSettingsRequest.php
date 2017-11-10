@@ -17,135 +17,158 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace R_kvstore\Request\V20150101;
 
 class SetSnapshotSettingsRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("R-kvstore", "2015-01-01", "SetSnapshotSettings", "redisa", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("R-kvstore", "2015-01-01", "SetSnapshotSettings", "redisa", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $endHour;
+    private $endHour;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $dayList;
+    private $dayList;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $retentionDay;
+    private $retentionDay;
 
-	private  $maxManualSnapshots;
+    private $maxManualSnapshots;
 
-	private  $maxAutoSnapshots;
+    private $maxAutoSnapshots;
 
-	private  $beginHour;
+    private $beginHour;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getEndHour() {
-		return $this->endHour;
-	}
+    public function getEndHour()
+    {
+        return $this->endHour;
+    }
 
-	public function setEndHour($endHour) {
-		$this->endHour = $endHour;
-		$this->domainParameters["EndHour"]=$endHour;
-	}
+    public function setEndHour($endHour)
+    {
+        $this->endHour = $endHour;
+        $this->domainParameters["EndHour"] = $endHour;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getDayList() {
-		return $this->dayList;
-	}
+    public function getDayList()
+    {
+        return $this->dayList;
+    }
 
-	public function setDayList($dayList) {
-		$this->dayList = $dayList;
-		$this->domainParameters["DayList"]=$dayList;
-	}
+    public function setDayList($dayList)
+    {
+        $this->dayList = $dayList;
+        $this->domainParameters["DayList"] = $dayList;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->domainParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->domainParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getRetentionDay() {
-		return $this->retentionDay;
-	}
+    public function getRetentionDay()
+    {
+        return $this->retentionDay;
+    }
 
-	public function setRetentionDay($retentionDay) {
-		$this->retentionDay = $retentionDay;
-		$this->domainParameters["RetentionDay"]=$retentionDay;
-	}
+    public function setRetentionDay($retentionDay)
+    {
+        $this->retentionDay = $retentionDay;
+        $this->domainParameters["RetentionDay"] = $retentionDay;
+    }
 
-	public function getMaxManualSnapshots() {
-		return $this->maxManualSnapshots;
-	}
+    public function getMaxManualSnapshots()
+    {
+        return $this->maxManualSnapshots;
+    }
 
-	public function setMaxManualSnapshots($maxManualSnapshots) {
-		$this->maxManualSnapshots = $maxManualSnapshots;
-		$this->domainParameters["MaxManualSnapshots"]=$maxManualSnapshots;
-	}
+    public function setMaxManualSnapshots($maxManualSnapshots)
+    {
+        $this->maxManualSnapshots = $maxManualSnapshots;
+        $this->domainParameters["MaxManualSnapshots"] = $maxManualSnapshots;
+    }
 
-	public function getMaxAutoSnapshots() {
-		return $this->maxAutoSnapshots;
-	}
+    public function getMaxAutoSnapshots()
+    {
+        return $this->maxAutoSnapshots;
+    }
 
-	public function setMaxAutoSnapshots($maxAutoSnapshots) {
-		$this->maxAutoSnapshots = $maxAutoSnapshots;
-		$this->domainParameters["MaxAutoSnapshots"]=$maxAutoSnapshots;
-	}
+    public function setMaxAutoSnapshots($maxAutoSnapshots)
+    {
+        $this->maxAutoSnapshots = $maxAutoSnapshots;
+        $this->domainParameters["MaxAutoSnapshots"] = $maxAutoSnapshots;
+    }
 
-	public function getBeginHour() {
-		return $this->beginHour;
-	}
+    public function getBeginHour()
+    {
+        return $this->beginHour;
+    }
 
-	public function setBeginHour($beginHour) {
-		$this->beginHour = $beginHour;
-		$this->domainParameters["BeginHour"]=$beginHour;
-	}
-	
+    public function setBeginHour($beginHour)
+    {
+        $this->beginHour = $beginHour;
+        $this->domainParameters["BeginHour"] = $beginHour;
+    }
+
 }

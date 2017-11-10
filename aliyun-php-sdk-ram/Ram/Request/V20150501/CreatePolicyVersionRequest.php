@@ -17,48 +17,55 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class CreatePolicyVersionRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "CreatePolicyVersion");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "CreatePolicyVersion");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $setAsDefault;
+    private $setAsDefault;
 
-	private  $policyName;
+    private $policyName;
 
-	private  $policyDocument;
+    private $policyDocument;
 
-	public function getSetAsDefault() {
-		return $this->setAsDefault;
-	}
+    public function getSetAsDefault()
+    {
+        return $this->setAsDefault;
+    }
 
-	public function setSetAsDefault($setAsDefault) {
-		$this->setAsDefault = $setAsDefault;
-		$this->queryParameters["SetAsDefault"]=$setAsDefault;
-	}
+    public function setSetAsDefault($setAsDefault)
+    {
+        $this->setAsDefault = $setAsDefault;
+        $this->queryParameters["SetAsDefault"] = $setAsDefault;
+    }
 
-	public function getPolicyName() {
-		return $this->policyName;
-	}
+    public function getPolicyName()
+    {
+        return $this->policyName;
+    }
 
-	public function setPolicyName($policyName) {
-		$this->policyName = $policyName;
-		$this->queryParameters["PolicyName"]=$policyName;
-	}
+    public function setPolicyName($policyName)
+    {
+        $this->policyName = $policyName;
+        $this->queryParameters["PolicyName"] = $policyName;
+    }
 
-	public function getPolicyDocument() {
-		return $this->policyDocument;
-	}
+    public function getPolicyDocument()
+    {
+        return $this->policyDocument;
+    }
 
-	public function setPolicyDocument($policyDocument) {
-		$this->policyDocument = $policyDocument;
-		$this->queryParameters["PolicyDocument"]=$policyDocument;
-	}
-	
+    public function setPolicyDocument($policyDocument)
+    {
+        $this->policyDocument = $policyDocument;
+        $this->queryParameters["PolicyDocument"] = $policyDocument;
+    }
+
 }

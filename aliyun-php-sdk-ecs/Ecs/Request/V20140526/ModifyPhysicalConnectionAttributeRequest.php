@@ -23,39 +23,39 @@ class ModifyPhysicalConnectionAttributeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyPhysicalConnectionAttribute", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyPhysicalConnectionAttribute", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $redundantPhysicalConnectionId;
 
-	private  $peerLocation;
+    private $peerLocation;
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $portType;
+    private $portType;
 
 	private  $circuitCode;
 
-	private  $bandwidth;
+    private $bandwidth;
 
-	private  $clientToken;
+    private $clientToken;
 
 	private  $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
 	private  $description;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $lineOperator;
+    private $lineOperator;
 
-	private  $physicalConnectionId;
+    private $physicalConnectionId;
 
 	private  $name;
 
-	private  $userCidr;
+    private $userCidr;
 
 	public function getRedundantPhysicalConnectionId() {
 		return $this->redundantPhysicalConnectionId;
@@ -66,31 +66,37 @@ class ModifyPhysicalConnectionAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["RedundantPhysicalConnectionId"]=$redundantPhysicalConnectionId;
 	}
 
-	public function getPeerLocation() {
-		return $this->peerLocation;
-	}
+    public function getPeerLocation()
+    {
+        return $this->peerLocation;
+    }
 
-	public function setPeerLocation($peerLocation) {
-		$this->peerLocation = $peerLocation;
-		$this->queryParameters["PeerLocation"]=$peerLocation;
-	}
+    public function setPeerLocation($peerLocation)
+    {
+        $this->peerLocation = $peerLocation;
+        $this->queryParameters["PeerLocation"] = $peerLocation;
+    }
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getPortType() {
-		return $this->portType;
-	}
+    public function getPortType()
+    {
+        return $this->portType;
+    }
 
-	public function setPortType($portType) {
-		$this->portType = $portType;
-		$this->queryParameters["PortType"]=$portType;
+    public function setPortType($portType)
+    {
+        $this->portType = $portType;
+        $this->queryParameters["PortType"] = $portType;
 	}
 
 	public function getCircuitCode() {
@@ -102,23 +108,27 @@ class ModifyPhysicalConnectionAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["CircuitCode"]=$circuitCode;
 	}
 
-	public function getbandwidth() {
-		return $this->bandwidth;
-	}
+    public function getbandwidth()
+    {
+        return $this->bandwidth;
+    }
 
-	public function setbandwidth($bandwidth) {
-		$this->bandwidth = $bandwidth;
-		$this->queryParameters["bandwidth"]=$bandwidth;
-	}
+    public function setbandwidth($bandwidth)
+    {
+        $this->bandwidth = $bandwidth;
+        $this->queryParameters["bandwidth"] = $bandwidth;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
 	public function getResourceOwnerAccount() {
 		return $this->resourceOwnerAccount;
@@ -129,14 +139,16 @@ class ModifyPhysicalConnectionAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
 	public function getDescription() {
 		return $this->description;
@@ -147,31 +159,37 @@ class ModifyPhysicalConnectionAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["Description"]=$description;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getLineOperator() {
-		return $this->lineOperator;
-	}
+    public function getLineOperator()
+    {
+        return $this->lineOperator;
+    }
 
-	public function setLineOperator($lineOperator) {
-		$this->lineOperator = $lineOperator;
-		$this->queryParameters["LineOperator"]=$lineOperator;
-	}
+    public function setLineOperator($lineOperator)
+    {
+        $this->lineOperator = $lineOperator;
+        $this->queryParameters["LineOperator"] = $lineOperator;
+    }
 
-	public function getPhysicalConnectionId() {
-		return $this->physicalConnectionId;
-	}
+    public function getPhysicalConnectionId()
+    {
+        return $this->physicalConnectionId;
+    }
 
-	public function setPhysicalConnectionId($physicalConnectionId) {
-		$this->physicalConnectionId = $physicalConnectionId;
-		$this->queryParameters["PhysicalConnectionId"]=$physicalConnectionId;
+    public function setPhysicalConnectionId($physicalConnectionId)
+    {
+        $this->physicalConnectionId = $physicalConnectionId;
+        $this->queryParameters["PhysicalConnectionId"] = $physicalConnectionId;
 	}
 
 	public function getName() {
@@ -183,13 +201,15 @@ class ModifyPhysicalConnectionAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["Name"]=$name;
 	}
 
-	public function getUserCidr() {
-		return $this->userCidr;
-	}
+    public function getUserCidr()
+    {
+        return $this->userCidr;
+    }
 
-	public function setUserCidr($userCidr) {
-		$this->userCidr = $userCidr;
-		$this->queryParameters["UserCidr"]=$userCidr;
+    public function setUserCidr($userCidr)
+    {
+        $this->userCidr = $userCidr;
+        $this->queryParameters["UserCidr"] = $userCidr;
 	}
 	
 }

@@ -23,27 +23,27 @@ class ModifyDBInstanceSpecRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "ModifyDBInstanceSpec", "rds", "openAPI");
-		$this->setMethod("POST");
+        parent::__construct("Rds", "2014-08-15", "ModifyDBInstanceSpec", "rds", "openAPI");
+        $this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $dBInstanceStorage;
+    private $dBInstanceStorage;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $clientToken;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
 	private  $dBInstanceId;
 
-	private  $ownerId;
+    private $ownerId;
 
 	private  $payType;
 
-	private  $dBInstanceClass;
+    private $dBInstanceClass;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -54,23 +54,27 @@ class ModifyDBInstanceSpecRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getDBInstanceStorage() {
-		return $this->dBInstanceStorage;
-	}
+    public function getDBInstanceStorage()
+    {
+        return $this->dBInstanceStorage;
+    }
 
-	public function setDBInstanceStorage($dBInstanceStorage) {
-		$this->dBInstanceStorage = $dBInstanceStorage;
-		$this->queryParameters["DBInstanceStorage"]=$dBInstanceStorage;
-	}
+    public function setDBInstanceStorage($dBInstanceStorage)
+    {
+        $this->dBInstanceStorage = $dBInstanceStorage;
+        $this->queryParameters["DBInstanceStorage"] = $dBInstanceStorage;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;
@@ -81,14 +85,16 @@ class ModifyDBInstanceSpecRequest extends \RpcAcsRequest
 		$this->queryParameters["ClientToken"]=$clientToken;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
 	public function getDBInstanceId() {
 		return $this->dBInstanceId;
@@ -99,13 +105,15 @@ class ModifyDBInstanceSpecRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
 	}
 
 	public function getPayType() {
@@ -117,13 +125,15 @@ class ModifyDBInstanceSpecRequest extends \RpcAcsRequest
 		$this->queryParameters["PayType"]=$payType;
 	}
 
-	public function getDBInstanceClass() {
-		return $this->dBInstanceClass;
-	}
+    public function getDBInstanceClass()
+    {
+        return $this->dBInstanceClass;
+    }
 
-	public function setDBInstanceClass($dBInstanceClass) {
-		$this->dBInstanceClass = $dBInstanceClass;
-		$this->queryParameters["DBInstanceClass"]=$dBInstanceClass;
+    public function setDBInstanceClass($dBInstanceClass)
+    {
+        $this->dBInstanceClass = $dBInstanceClass;
+        $this->queryParameters["DBInstanceClass"] = $dBInstanceClass;
 	}
 	
 }

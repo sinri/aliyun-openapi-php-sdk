@@ -23,24 +23,26 @@ class CreateSQLDiagnosisRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "CreateSQLDiagnosis", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+        parent::__construct("Rds", "2014-08-15", "CreateSQLDiagnosis", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $endTime;
+    private $endTime;
 
 	private  $dBInstanceId;
 
 	private  $startTime;
 
-	public function getEndTime() {
-		return $this->endTime;
-	}
+    public function getEndTime()
+    {
+        return $this->endTime;
+    }
 
-	public function setEndTime($endTime) {
-		$this->endTime = $endTime;
-		$this->queryParameters["EndTime"]=$endTime;
-	}
+    public function setEndTime($endTime)
+    {
+        $this->endTime = $endTime;
+        $this->queryParameters["EndTime"] = $endTime;
+    }
 
 	public function getDBInstanceId() {
 		return $this->dBInstanceId;

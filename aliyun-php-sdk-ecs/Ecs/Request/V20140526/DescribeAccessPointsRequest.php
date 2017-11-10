@@ -23,37 +23,39 @@ class DescribeAccessPointsRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeAccessPoints", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeAccessPoints", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $Filters;
+    private $Filters;
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $pageSize;
+    private $pageSize;
 
 	private  $ownerId;
 
-	private  $type;
+    private $type;
 
-	private  $pageNumber;
+    private $pageNumber;
 
-	public function getFilters() {
-		return $this->Filters;
-	}
+    public function getFilters()
+    {
+        return $this->Filters;
+    }
 
-	public function setFilters($Filters) {
-		$this->Filters = $Filters;
-		for ($i = 0; $i < count($Filters); $i ++) {	
-			$this->queryParameters['Filter.' . ($i + 1) . '.Key'] = $Filters[$i]['Key'];
-			for ($j = 0; $j < count($Filters[$i]['Values']); $j ++) {
-				$this->queryParameters['Filter.' . ($i + 1) . '.Value.' . ($j + 1)] = $Filters[$i]['Values'][$j];
-			}
+    public function setFilters($Filters)
+    {
+        $this->Filters = $Filters;
+        for ($i = 0; $i < count($Filters); $i++) {
+            $this->queryParameters['Filter.' . ($i + 1) . '.Key'] = $Filters[$i]['Key'];
+            for ($j = 0; $j < count($Filters[$i]['Values']); $j++) {
+                $this->queryParameters['Filter.' . ($i + 1) . '.Value.' . ($j + 1)] = $Filters[$i]['Values'][$j];
+            }
 
-		}
+        }
 	}
 
 	public function getResourceOwnerId() {
@@ -65,22 +67,26 @@ class DescribeAccessPointsRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
 	}
 
 	public function getOwnerId() {
@@ -92,22 +98,26 @@ class DescribeAccessPointsRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getType() {
-		return $this->type;
-	}
+    public function getType()
+    {
+        return $this->type;
+    }
 
-	public function setType($type) {
-		$this->type = $type;
-		$this->queryParameters["Type"]=$type;
-	}
+    public function setType($type)
+    {
+        $this->type = $type;
+        $this->queryParameters["Type"] = $type;
+    }
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
 	}
 	
 }

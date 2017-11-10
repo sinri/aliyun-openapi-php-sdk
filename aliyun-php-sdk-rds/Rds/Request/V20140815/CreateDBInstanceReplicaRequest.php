@@ -23,74 +23,78 @@ class CreateDBInstanceReplicaRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Rds", "2014-08-15", "CreateDBInstanceReplica", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+        parent::__construct("Rds", "2014-08-15", "CreateDBInstanceReplica", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $connectionMode;
+    private $connectionMode;
 
-	private  $replicaDescription;
+    private $replicaDescription;
 
 	private  $resourceOwnerId;
 
-	private  $dBInstanceStorage;
+    private $dBInstanceStorage;
 
-	private  $systemDBCharset;
+    private $systemDBCharset;
 
 	private  $clientToken;
 
 	private  $engineVersion;
 
-	private  $engine;
+    private $engine;
 
 	private  $dBInstanceDescription;
 
-	private  $dBInstanceNetType;
+    private $dBInstanceNetType;
 
-	private  $period;
+    private $period;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $usedTime;
+    private $usedTime;
 
-	private  $dBInstanceClass;
+    private $dBInstanceClass;
 
-	private  $securityIPList;
+    private $securityIPList;
 
-	private  $vSwitchId;
+    private $vSwitchId;
 
-	private  $privateIpAddress;
+    private $privateIpAddress;
 
-	private  $sourceDBInstanceId;
+    private $sourceDBInstanceId;
 
-	private  $vPCId;
+    private $vPCId;
 
-	private  $zoneId;
+    private $zoneId;
 
-	private  $payType;
+    private $payType;
 
-	private  $instanceNetworkType;
+    private $instanceNetworkType;
 
-	public function getConnectionMode() {
-		return $this->connectionMode;
-	}
+    public function getConnectionMode()
+    {
+        return $this->connectionMode;
+    }
 
-	public function setConnectionMode($connectionMode) {
-		$this->connectionMode = $connectionMode;
-		$this->queryParameters["ConnectionMode"]=$connectionMode;
-	}
+    public function setConnectionMode($connectionMode)
+    {
+        $this->connectionMode = $connectionMode;
+        $this->queryParameters["ConnectionMode"] = $connectionMode;
+    }
 
-	public function getReplicaDescription() {
-		return $this->replicaDescription;
-	}
+    public function getReplicaDescription()
+    {
+        return $this->replicaDescription;
+    }
 
-	public function setReplicaDescription($replicaDescription) {
-		$this->replicaDescription = $replicaDescription;
-		$this->queryParameters["ReplicaDescription"]=$replicaDescription;
+    public function setReplicaDescription($replicaDescription)
+    {
+        $this->replicaDescription = $replicaDescription;
+        $this->queryParameters["ReplicaDescription"] = $replicaDescription;
 	}
 
 	public function getResourceOwnerId() {
@@ -102,23 +106,27 @@ class CreateDBInstanceReplicaRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getDBInstanceStorage() {
-		return $this->dBInstanceStorage;
-	}
+    public function getDBInstanceStorage()
+    {
+        return $this->dBInstanceStorage;
+    }
 
-	public function setDBInstanceStorage($dBInstanceStorage) {
-		$this->dBInstanceStorage = $dBInstanceStorage;
-		$this->queryParameters["DBInstanceStorage"]=$dBInstanceStorage;
-	}
+    public function setDBInstanceStorage($dBInstanceStorage)
+    {
+        $this->dBInstanceStorage = $dBInstanceStorage;
+        $this->queryParameters["DBInstanceStorage"] = $dBInstanceStorage;
+    }
 
-	public function getSystemDBCharset() {
-		return $this->systemDBCharset;
-	}
+    public function getSystemDBCharset()
+    {
+        return $this->systemDBCharset;
+    }
 
-	public function setSystemDBCharset($systemDBCharset) {
-		$this->systemDBCharset = $systemDBCharset;
-		$this->queryParameters["SystemDBCharset"]=$systemDBCharset;
-	}
+    public function setSystemDBCharset($systemDBCharset)
+    {
+        $this->systemDBCharset = $systemDBCharset;
+        $this->queryParameters["SystemDBCharset"] = $systemDBCharset;
+    }
 
 	public function getClientToken() {
 		return $this->clientToken;
@@ -138,13 +146,15 @@ class CreateDBInstanceReplicaRequest extends \RpcAcsRequest
 		$this->queryParameters["EngineVersion"]=$engineVersion;
 	}
 
-	public function getEngine() {
-		return $this->engine;
-	}
+    public function getEngine()
+    {
+        return $this->engine;
+    }
 
-	public function setEngine($engine) {
-		$this->engine = $engine;
-		$this->queryParameters["Engine"]=$engine;
+    public function setEngine($engine)
+    {
+        $this->engine = $engine;
+        $this->queryParameters["Engine"] = $engine;
 	}
 
 	public function getDBInstanceDescription() {
@@ -156,31 +166,37 @@ class CreateDBInstanceReplicaRequest extends \RpcAcsRequest
 		$this->queryParameters["DBInstanceDescription"]=$dBInstanceDescription;
 	}
 
-	public function getDBInstanceNetType() {
-		return $this->dBInstanceNetType;
-	}
+    public function getDBInstanceNetType()
+    {
+        return $this->dBInstanceNetType;
+    }
 
-	public function setDBInstanceNetType($dBInstanceNetType) {
-		$this->dBInstanceNetType = $dBInstanceNetType;
-		$this->queryParameters["DBInstanceNetType"]=$dBInstanceNetType;
-	}
+    public function setDBInstanceNetType($dBInstanceNetType)
+    {
+        $this->dBInstanceNetType = $dBInstanceNetType;
+        $this->queryParameters["DBInstanceNetType"] = $dBInstanceNetType;
+    }
 
-	public function getPeriod() {
-		return $this->period;
-	}
+    public function getPeriod()
+    {
+        return $this->period;
+    }
 
-	public function setPeriod($period) {
-		$this->period = $period;
-		$this->queryParameters["Period"]=$period;
-	}
+    public function setPeriod($period)
+    {
+        $this->period = $period;
+        $this->queryParameters["Period"] = $period;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getOwnerAccount() {
@@ -192,103 +208,125 @@ class CreateDBInstanceReplicaRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getUsedTime() {
-		return $this->usedTime;
-	}
+    public function getUsedTime()
+    {
+        return $this->usedTime;
+    }
 
-	public function setUsedTime($usedTime) {
-		$this->usedTime = $usedTime;
-		$this->queryParameters["UsedTime"]=$usedTime;
-	}
+    public function setUsedTime($usedTime)
+    {
+        $this->usedTime = $usedTime;
+        $this->queryParameters["UsedTime"] = $usedTime;
+    }
 
-	public function getDBInstanceClass() {
-		return $this->dBInstanceClass;
-	}
+    public function getDBInstanceClass()
+    {
+        return $this->dBInstanceClass;
+    }
 
-	public function setDBInstanceClass($dBInstanceClass) {
-		$this->dBInstanceClass = $dBInstanceClass;
-		$this->queryParameters["DBInstanceClass"]=$dBInstanceClass;
-	}
+    public function setDBInstanceClass($dBInstanceClass)
+    {
+        $this->dBInstanceClass = $dBInstanceClass;
+        $this->queryParameters["DBInstanceClass"] = $dBInstanceClass;
+    }
 
-	public function getSecurityIPList() {
-		return $this->securityIPList;
-	}
+    public function getSecurityIPList()
+    {
+        return $this->securityIPList;
+    }
 
-	public function setSecurityIPList($securityIPList) {
-		$this->securityIPList = $securityIPList;
-		$this->queryParameters["SecurityIPList"]=$securityIPList;
-	}
+    public function setSecurityIPList($securityIPList)
+    {
+        $this->securityIPList = $securityIPList;
+        $this->queryParameters["SecurityIPList"] = $securityIPList;
+    }
 
-	public function getVSwitchId() {
-		return $this->vSwitchId;
-	}
+    public function getVSwitchId()
+    {
+        return $this->vSwitchId;
+    }
 
-	public function setVSwitchId($vSwitchId) {
-		$this->vSwitchId = $vSwitchId;
-		$this->queryParameters["VSwitchId"]=$vSwitchId;
-	}
+    public function setVSwitchId($vSwitchId)
+    {
+        $this->vSwitchId = $vSwitchId;
+        $this->queryParameters["VSwitchId"] = $vSwitchId;
+    }
 
-	public function getPrivateIpAddress() {
-		return $this->privateIpAddress;
-	}
+    public function getPrivateIpAddress()
+    {
+        return $this->privateIpAddress;
+    }
 
-	public function setPrivateIpAddress($privateIpAddress) {
-		$this->privateIpAddress = $privateIpAddress;
-		$this->queryParameters["PrivateIpAddress"]=$privateIpAddress;
-	}
+    public function setPrivateIpAddress($privateIpAddress)
+    {
+        $this->privateIpAddress = $privateIpAddress;
+        $this->queryParameters["PrivateIpAddress"] = $privateIpAddress;
+    }
 
-	public function getSourceDBInstanceId() {
-		return $this->sourceDBInstanceId;
-	}
+    public function getSourceDBInstanceId()
+    {
+        return $this->sourceDBInstanceId;
+    }
 
-	public function setSourceDBInstanceId($sourceDBInstanceId) {
-		$this->sourceDBInstanceId = $sourceDBInstanceId;
-		$this->queryParameters["SourceDBInstanceId"]=$sourceDBInstanceId;
-	}
+    public function setSourceDBInstanceId($sourceDBInstanceId)
+    {
+        $this->sourceDBInstanceId = $sourceDBInstanceId;
+        $this->queryParameters["SourceDBInstanceId"] = $sourceDBInstanceId;
+    }
 
-	public function getVPCId() {
-		return $this->vPCId;
-	}
+    public function getVPCId()
+    {
+        return $this->vPCId;
+    }
 
-	public function setVPCId($vPCId) {
-		$this->vPCId = $vPCId;
-		$this->queryParameters["VPCId"]=$vPCId;
-	}
+    public function setVPCId($vPCId)
+    {
+        $this->vPCId = $vPCId;
+        $this->queryParameters["VPCId"] = $vPCId;
+    }
 
-	public function getZoneId() {
-		return $this->zoneId;
-	}
+    public function getZoneId()
+    {
+        return $this->zoneId;
+    }
 
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
+    public function setZoneId($zoneId)
+    {
+        $this->zoneId = $zoneId;
+        $this->queryParameters["ZoneId"] = $zoneId;
+    }
 
-	public function getPayType() {
-		return $this->payType;
-	}
+    public function getPayType()
+    {
+        return $this->payType;
+    }
 
-	public function setPayType($payType) {
-		$this->payType = $payType;
-		$this->queryParameters["PayType"]=$payType;
-	}
+    public function setPayType($payType)
+    {
+        $this->payType = $payType;
+        $this->queryParameters["PayType"] = $payType;
+    }
 
-	public function getInstanceNetworkType() {
-		return $this->instanceNetworkType;
-	}
+    public function getInstanceNetworkType()
+    {
+        return $this->instanceNetworkType;
+    }
 
-	public function setInstanceNetworkType($instanceNetworkType) {
-		$this->instanceNetworkType = $instanceNetworkType;
-		$this->queryParameters["InstanceNetworkType"]=$instanceNetworkType;
-	}
+    public function setInstanceNetworkType($instanceNetworkType)
+    {
+        $this->instanceNetworkType = $instanceNetworkType;
+        $this->queryParameters["InstanceNetworkType"] = $instanceNetworkType;
+    }
 	
 }

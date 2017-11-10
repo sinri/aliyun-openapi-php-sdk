@@ -17,135 +17,158 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ecs\Request\V20140526;
 
 class DescribeRecommendInstanceTypeRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeRecommendInstanceType", "ecs", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ecs", "2014-05-26", "DescribeRecommendInstanceType", "ecs", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $channel;
+    private $channel;
 
-	private  $networkType;
+    private $networkType;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $operator;
+    private $operator;
 
-	private  $token;
+    private $token;
 
-	private  $scene;
+    private $scene;
 
-	private  $instanceType;
+    private $instanceType;
 
-	private  $proxyId;
+    private $proxyId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getchannel() {
-		return $this->channel;
-	}
+    public function getchannel()
+    {
+        return $this->channel;
+    }
 
-	public function setchannel($channel) {
-		$this->channel = $channel;
-		$this->queryParameters["channel"]=$channel;
-	}
+    public function setchannel($channel)
+    {
+        $this->channel = $channel;
+        $this->queryParameters["channel"] = $channel;
+    }
 
-	public function getNetworkType() {
-		return $this->networkType;
-	}
+    public function getNetworkType()
+    {
+        return $this->networkType;
+    }
 
-	public function setNetworkType($networkType) {
-		$this->networkType = $networkType;
-		$this->queryParameters["NetworkType"]=$networkType;
-	}
+    public function setNetworkType($networkType)
+    {
+        $this->networkType = $networkType;
+        $this->queryParameters["NetworkType"] = $networkType;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getoperator() {
-		return $this->operator;
-	}
+    public function getoperator()
+    {
+        return $this->operator;
+    }
 
-	public function setoperator($operator) {
-		$this->operator = $operator;
-		$this->queryParameters["operator"]=$operator;
-	}
+    public function setoperator($operator)
+    {
+        $this->operator = $operator;
+        $this->queryParameters["operator"] = $operator;
+    }
 
-	public function gettoken() {
-		return $this->token;
-	}
+    public function gettoken()
+    {
+        return $this->token;
+    }
 
-	public function settoken($token) {
-		$this->token = $token;
-		$this->queryParameters["token"]=$token;
-	}
+    public function settoken($token)
+    {
+        $this->token = $token;
+        $this->queryParameters["token"] = $token;
+    }
 
-	public function getScene() {
-		return $this->scene;
-	}
+    public function getScene()
+    {
+        return $this->scene;
+    }
 
-	public function setScene($scene) {
-		$this->scene = $scene;
-		$this->queryParameters["Scene"]=$scene;
-	}
+    public function setScene($scene)
+    {
+        $this->scene = $scene;
+        $this->queryParameters["Scene"] = $scene;
+    }
 
-	public function getInstanceType() {
-		return $this->instanceType;
-	}
+    public function getInstanceType()
+    {
+        return $this->instanceType;
+    }
 
-	public function setInstanceType($instanceType) {
-		$this->instanceType = $instanceType;
-		$this->queryParameters["InstanceType"]=$instanceType;
-	}
+    public function setInstanceType($instanceType)
+    {
+        $this->instanceType = $instanceType;
+        $this->queryParameters["InstanceType"] = $instanceType;
+    }
 
-	public function getproxyId() {
-		return $this->proxyId;
-	}
+    public function getproxyId()
+    {
+        return $this->proxyId;
+    }
 
-	public function setproxyId($proxyId) {
-		$this->proxyId = $proxyId;
-		$this->queryParameters["proxyId"]=$proxyId;
-	}
-	
+    public function setproxyId($proxyId)
+    {
+        $this->proxyId = $proxyId;
+        $this->queryParameters["proxyId"] = $proxyId;
+    }
+
 }

@@ -17,69 +17,80 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ons\Request\V20170918;
 
 class OnsMqttQueryClientByTopicRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ons", "2017-09-18", "OnsMqttQueryClientByTopic");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ons", "2017-09-18", "OnsMqttQueryClientByTopic");
+        $this->setMethod("POST");
+    }
 
-	private  $preventCache;
+    private $preventCache;
 
-	private  $onsRegionId;
+    private $onsRegionId;
 
-	private  $onsPlatform;
+    private $onsPlatform;
 
-	private  $parentTopic;
+    private $parentTopic;
 
-	private  $subTopic;
+    private $subTopic;
 
-	public function getPreventCache() {
-		return $this->preventCache;
-	}
+    public function getPreventCache()
+    {
+        return $this->preventCache;
+    }
 
-	public function setPreventCache($preventCache) {
-		$this->preventCache = $preventCache;
-		$this->queryParameters["PreventCache"]=$preventCache;
-	}
+    public function setPreventCache($preventCache)
+    {
+        $this->preventCache = $preventCache;
+        $this->queryParameters["PreventCache"] = $preventCache;
+    }
 
-	public function getOnsRegionId() {
-		return $this->onsRegionId;
-	}
+    public function getOnsRegionId()
+    {
+        return $this->onsRegionId;
+    }
 
-	public function setOnsRegionId($onsRegionId) {
-		$this->onsRegionId = $onsRegionId;
-		$this->queryParameters["OnsRegionId"]=$onsRegionId;
-	}
+    public function setOnsRegionId($onsRegionId)
+    {
+        $this->onsRegionId = $onsRegionId;
+        $this->queryParameters["OnsRegionId"] = $onsRegionId;
+    }
 
-	public function getOnsPlatform() {
-		return $this->onsPlatform;
-	}
+    public function getOnsPlatform()
+    {
+        return $this->onsPlatform;
+    }
 
-	public function setOnsPlatform($onsPlatform) {
-		$this->onsPlatform = $onsPlatform;
-		$this->queryParameters["OnsPlatform"]=$onsPlatform;
-	}
+    public function setOnsPlatform($onsPlatform)
+    {
+        $this->onsPlatform = $onsPlatform;
+        $this->queryParameters["OnsPlatform"] = $onsPlatform;
+    }
 
-	public function getParentTopic() {
-		return $this->parentTopic;
-	}
+    public function getParentTopic()
+    {
+        return $this->parentTopic;
+    }
 
-	public function setParentTopic($parentTopic) {
-		$this->parentTopic = $parentTopic;
-		$this->queryParameters["ParentTopic"]=$parentTopic;
-	}
+    public function setParentTopic($parentTopic)
+    {
+        $this->parentTopic = $parentTopic;
+        $this->queryParameters["ParentTopic"] = $parentTopic;
+    }
 
-	public function getSubTopic() {
-		return $this->subTopic;
-	}
+    public function getSubTopic()
+    {
+        return $this->subTopic;
+    }
 
-	public function setSubTopic($subTopic) {
-		$this->subTopic = $subTopic;
-		$this->queryParameters["SubTopic"]=$subTopic;
-	}
-	
+    public function setSubTopic($subTopic)
+    {
+        $this->subTopic = $subTopic;
+        $this->queryParameters["SubTopic"] = $subTopic;
+    }
+
 }

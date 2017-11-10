@@ -17,69 +17,80 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ons\Request\V20170918;
 
 class OnsTopicDeleteRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ons", "2017-09-18", "OnsTopicDelete");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ons", "2017-09-18", "OnsTopicDelete");
+        $this->setMethod("POST");
+    }
 
-	private  $preventCache;
+    private $preventCache;
 
-	private  $cluster;
+    private $cluster;
 
-	private  $onsRegionId;
+    private $onsRegionId;
 
-	private  $onsPlatform;
+    private $onsPlatform;
 
-	private  $topic;
+    private $topic;
 
-	public function getPreventCache() {
-		return $this->preventCache;
-	}
+    public function getPreventCache()
+    {
+        return $this->preventCache;
+    }
 
-	public function setPreventCache($preventCache) {
-		$this->preventCache = $preventCache;
-		$this->queryParameters["PreventCache"]=$preventCache;
-	}
+    public function setPreventCache($preventCache)
+    {
+        $this->preventCache = $preventCache;
+        $this->queryParameters["PreventCache"] = $preventCache;
+    }
 
-	public function getCluster() {
-		return $this->cluster;
-	}
+    public function getCluster()
+    {
+        return $this->cluster;
+    }
 
-	public function setCluster($cluster) {
-		$this->cluster = $cluster;
-		$this->queryParameters["Cluster"]=$cluster;
-	}
+    public function setCluster($cluster)
+    {
+        $this->cluster = $cluster;
+        $this->queryParameters["Cluster"] = $cluster;
+    }
 
-	public function getOnsRegionId() {
-		return $this->onsRegionId;
-	}
+    public function getOnsRegionId()
+    {
+        return $this->onsRegionId;
+    }
 
-	public function setOnsRegionId($onsRegionId) {
-		$this->onsRegionId = $onsRegionId;
-		$this->queryParameters["OnsRegionId"]=$onsRegionId;
-	}
+    public function setOnsRegionId($onsRegionId)
+    {
+        $this->onsRegionId = $onsRegionId;
+        $this->queryParameters["OnsRegionId"] = $onsRegionId;
+    }
 
-	public function getOnsPlatform() {
-		return $this->onsPlatform;
-	}
+    public function getOnsPlatform()
+    {
+        return $this->onsPlatform;
+    }
 
-	public function setOnsPlatform($onsPlatform) {
-		$this->onsPlatform = $onsPlatform;
-		$this->queryParameters["OnsPlatform"]=$onsPlatform;
-	}
+    public function setOnsPlatform($onsPlatform)
+    {
+        $this->onsPlatform = $onsPlatform;
+        $this->queryParameters["OnsPlatform"] = $onsPlatform;
+    }
 
-	public function getTopic() {
-		return $this->topic;
-	}
+    public function getTopic()
+    {
+        return $this->topic;
+    }
 
-	public function setTopic($topic) {
-		$this->topic = $topic;
-		$this->queryParameters["Topic"]=$topic;
-	}
-	
+    public function setTopic($topic)
+    {
+        $this->topic = $topic;
+        $this->queryParameters["Topic"] = $topic;
+    }
+
 }

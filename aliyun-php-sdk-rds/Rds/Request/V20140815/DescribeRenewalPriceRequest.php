@@ -17,179 +17,210 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Rds\Request\V20140815;
 
 class DescribeRenewalPriceRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Rds", "2014-08-15", "DescribeRenewalPrice", "rds", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Rds", "2014-08-15", "DescribeRenewalPrice", "rds", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $quantity;
+    private $quantity;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $clientToken;
+    private $clientToken;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $commodityCode;
+    private $commodityCode;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $usedTime;
+    private $usedTime;
 
-	private  $dBInstanceClass;
+    private $dBInstanceClass;
 
-	private  $promotionCode;
+    private $promotionCode;
 
-	private  $dBInstanceId;
+    private $dBInstanceId;
 
-	private  $timeType;
+    private $timeType;
 
-	private  $payType;
+    private $payType;
 
-	private  $businessInfo;
+    private $businessInfo;
 
-	private  $orderType;
+    private $orderType;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getQuantity() {
-		return $this->quantity;
-	}
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
 
-	public function setQuantity($quantity) {
-		$this->quantity = $quantity;
-		$this->queryParameters["Quantity"]=$quantity;
-	}
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+        $this->queryParameters["Quantity"] = $quantity;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getClientToken() {
-		return $this->clientToken;
-	}
+    public function getClientToken()
+    {
+        return $this->clientToken;
+    }
 
-	public function setClientToken($clientToken) {
-		$this->clientToken = $clientToken;
-		$this->queryParameters["ClientToken"]=$clientToken;
-	}
+    public function setClientToken($clientToken)
+    {
+        $this->clientToken = $clientToken;
+        $this->queryParameters["ClientToken"] = $clientToken;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getCommodityCode() {
-		return $this->commodityCode;
-	}
+    public function getCommodityCode()
+    {
+        return $this->commodityCode;
+    }
 
-	public function setCommodityCode($commodityCode) {
-		$this->commodityCode = $commodityCode;
-		$this->queryParameters["CommodityCode"]=$commodityCode;
-	}
+    public function setCommodityCode($commodityCode)
+    {
+        $this->commodityCode = $commodityCode;
+        $this->queryParameters["CommodityCode"] = $commodityCode;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getUsedTime() {
-		return $this->usedTime;
-	}
+    public function getUsedTime()
+    {
+        return $this->usedTime;
+    }
 
-	public function setUsedTime($usedTime) {
-		$this->usedTime = $usedTime;
-		$this->queryParameters["UsedTime"]=$usedTime;
-	}
+    public function setUsedTime($usedTime)
+    {
+        $this->usedTime = $usedTime;
+        $this->queryParameters["UsedTime"] = $usedTime;
+    }
 
-	public function getDBInstanceClass() {
-		return $this->dBInstanceClass;
-	}
+    public function getDBInstanceClass()
+    {
+        return $this->dBInstanceClass;
+    }
 
-	public function setDBInstanceClass($dBInstanceClass) {
-		$this->dBInstanceClass = $dBInstanceClass;
-		$this->queryParameters["DBInstanceClass"]=$dBInstanceClass;
-	}
+    public function setDBInstanceClass($dBInstanceClass)
+    {
+        $this->dBInstanceClass = $dBInstanceClass;
+        $this->queryParameters["DBInstanceClass"] = $dBInstanceClass;
+    }
 
-	public function getPromotionCode() {
-		return $this->promotionCode;
-	}
+    public function getPromotionCode()
+    {
+        return $this->promotionCode;
+    }
 
-	public function setPromotionCode($promotionCode) {
-		$this->promotionCode = $promotionCode;
-		$this->queryParameters["PromotionCode"]=$promotionCode;
-	}
+    public function setPromotionCode($promotionCode)
+    {
+        $this->promotionCode = $promotionCode;
+        $this->queryParameters["PromotionCode"] = $promotionCode;
+    }
 
-	public function getDBInstanceId() {
-		return $this->dBInstanceId;
-	}
+    public function getDBInstanceId()
+    {
+        return $this->dBInstanceId;
+    }
 
-	public function setDBInstanceId($dBInstanceId) {
-		$this->dBInstanceId = $dBInstanceId;
-		$this->queryParameters["DBInstanceId"]=$dBInstanceId;
-	}
+    public function setDBInstanceId($dBInstanceId)
+    {
+        $this->dBInstanceId = $dBInstanceId;
+        $this->queryParameters["DBInstanceId"] = $dBInstanceId;
+    }
 
-	public function getTimeType() {
-		return $this->timeType;
-	}
+    public function getTimeType()
+    {
+        return $this->timeType;
+    }
 
-	public function setTimeType($timeType) {
-		$this->timeType = $timeType;
-		$this->queryParameters["TimeType"]=$timeType;
-	}
+    public function setTimeType($timeType)
+    {
+        $this->timeType = $timeType;
+        $this->queryParameters["TimeType"] = $timeType;
+    }
 
-	public function getPayType() {
-		return $this->payType;
-	}
+    public function getPayType()
+    {
+        return $this->payType;
+    }
 
-	public function setPayType($payType) {
-		$this->payType = $payType;
-		$this->queryParameters["PayType"]=$payType;
-	}
+    public function setPayType($payType)
+    {
+        $this->payType = $payType;
+        $this->queryParameters["PayType"] = $payType;
+    }
 
-	public function getBusinessInfo() {
-		return $this->businessInfo;
-	}
+    public function getBusinessInfo()
+    {
+        return $this->businessInfo;
+    }
 
-	public function setBusinessInfo($businessInfo) {
-		$this->businessInfo = $businessInfo;
-		$this->queryParameters["BusinessInfo"]=$businessInfo;
-	}
+    public function setBusinessInfo($businessInfo)
+    {
+        $this->businessInfo = $businessInfo;
+        $this->queryParameters["BusinessInfo"] = $businessInfo;
+    }
 
-	public function getOrderType() {
-		return $this->orderType;
-	}
+    public function getOrderType()
+    {
+        return $this->orderType;
+    }
 
-	public function setOrderType($orderType) {
-		$this->orderType = $orderType;
-		$this->queryParameters["OrderType"]=$orderType;
-	}
-	
+    public function setOrderType($orderType)
+    {
+        $this->orderType = $orderType;
+        $this->queryParameters["OrderType"] = $orderType;
+    }
+
 }

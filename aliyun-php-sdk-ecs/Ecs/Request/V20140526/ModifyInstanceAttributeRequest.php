@@ -23,7 +23,7 @@ class ModifyInstanceAttributeRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ModifyInstanceAttribute", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ModifyInstanceAttribute", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -33,21 +33,21 @@ class ModifyInstanceAttributeRequest extends \RpcAcsRequest
 
 	private  $password;
 
-	private  $hostName;
+    private $hostName;
 
 	private  $instanceId;
 
-	private  $instanceName;
+    private $instanceName;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $recyclable;
+    private $recyclable;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $description;
+    private $description;
 
-	private  $ownerId;
+    private $ownerId;
 
 	public function getUserData() {
 		return $this->userData;
@@ -76,14 +76,16 @@ class ModifyInstanceAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["Password"]=$password;
 	}
 
-	public function getHostName() {
-		return $this->hostName;
-	}
+    public function getHostName()
+    {
+        return $this->hostName;
+    }
 
-	public function setHostName($hostName) {
-		$this->hostName = $hostName;
-		$this->queryParameters["HostName"]=$hostName;
-	}
+    public function setHostName($hostName)
+    {
+        $this->hostName = $hostName;
+        $this->queryParameters["HostName"] = $hostName;
+    }
 
 	public function getInstanceId() {
 		return $this->instanceId;
@@ -94,58 +96,70 @@ class ModifyInstanceAttributeRequest extends \RpcAcsRequest
 		$this->queryParameters["InstanceId"]=$instanceId;
 	}
 
-	public function getInstanceName() {
-		return $this->instanceName;
-	}
+    public function getInstanceName()
+    {
+        return $this->instanceName;
+    }
 
-	public function setInstanceName($instanceName) {
-		$this->instanceName = $instanceName;
-		$this->queryParameters["InstanceName"]=$instanceName;
-	}
+    public function setInstanceName($instanceName)
+    {
+        $this->instanceName = $instanceName;
+        $this->queryParameters["InstanceName"] = $instanceName;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getRecyclable() {
-		return $this->recyclable;
-	}
+    public function getRecyclable()
+    {
+        return $this->recyclable;
+    }
 
-	public function setRecyclable($recyclable) {
-		$this->recyclable = $recyclable;
-		$this->queryParameters["Recyclable"]=$recyclable;
-	}
+    public function setRecyclable($recyclable)
+    {
+        $this->recyclable = $recyclable;
+        $this->queryParameters["Recyclable"] = $recyclable;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getDescription() {
-		return $this->description;
-	}
+    public function getDescription()
+    {
+        return $this->description;
+    }
 
-	public function setDescription($description) {
-		$this->description = $description;
-		$this->queryParameters["Description"]=$description;
-	}
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        $this->queryParameters["Description"] = $description;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 	
 }

@@ -23,27 +23,29 @@ class ApplyAutoSnapshotPolicyRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "ApplyAutoSnapshotPolicy", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "ApplyAutoSnapshotPolicy", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
 
 	private  $autoSnapshotPolicyId;
 
-	private  $diskIds;
+    private $diskIds;
 
 	private  $ownerId;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -64,13 +66,15 @@ class ApplyAutoSnapshotPolicyRequest extends \RpcAcsRequest
 		$this->queryParameters["autoSnapshotPolicyId"]=$autoSnapshotPolicyId;
 	}
 
-	public function getdiskIds() {
-		return $this->diskIds;
-	}
+    public function getdiskIds()
+    {
+        return $this->diskIds;
+    }
 
-	public function setdiskIds($diskIds) {
-		$this->diskIds = $diskIds;
-		$this->queryParameters["diskIds"]=$diskIds;
+    public function setdiskIds($diskIds)
+    {
+        $this->diskIds = $diskIds;
+        $this->queryParameters["diskIds"] = $diskIds;
 	}
 
 	public function getOwnerId() {

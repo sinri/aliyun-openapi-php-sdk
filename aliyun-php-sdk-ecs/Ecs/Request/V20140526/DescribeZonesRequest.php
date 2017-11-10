@@ -23,31 +23,33 @@ class DescribeZonesRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeZones", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeZones", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
-	private  $spotStrategy;
+    private $spotStrategy;
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
 
-	private  $instanceChargeType;
+    private $instanceChargeType;
 
-	private  $verbose;
+    private $verbose;
 
-	public function getSpotStrategy() {
-		return $this->spotStrategy;
-	}
+    public function getSpotStrategy()
+    {
+        return $this->spotStrategy;
+    }
 
-	public function setSpotStrategy($spotStrategy) {
-		$this->spotStrategy = $spotStrategy;
-		$this->queryParameters["SpotStrategy"]=$spotStrategy;
+    public function setSpotStrategy($spotStrategy)
+    {
+        $this->spotStrategy = $spotStrategy;
+        $this->queryParameters["SpotStrategy"] = $spotStrategy;
 	}
 
 	public function getResourceOwnerId() {
@@ -59,14 +61,16 @@ class DescribeZonesRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -86,22 +90,26 @@ class DescribeZonesRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getInstanceChargeType() {
-		return $this->instanceChargeType;
-	}
+    public function getInstanceChargeType()
+    {
+        return $this->instanceChargeType;
+    }
 
-	public function setInstanceChargeType($instanceChargeType) {
-		$this->instanceChargeType = $instanceChargeType;
-		$this->queryParameters["InstanceChargeType"]=$instanceChargeType;
-	}
+    public function setInstanceChargeType($instanceChargeType)
+    {
+        $this->instanceChargeType = $instanceChargeType;
+        $this->queryParameters["InstanceChargeType"] = $instanceChargeType;
+    }
 
-	public function getVerbose() {
-		return $this->verbose;
-	}
+    public function getVerbose()
+    {
+        return $this->verbose;
+    }
 
-	public function setVerbose($verbose) {
-		$this->verbose = $verbose;
-		$this->queryParameters["Verbose"]=$verbose;
-	}
+    public function setVerbose($verbose)
+    {
+        $this->verbose = $verbose;
+        $this->queryParameters["Verbose"] = $verbose;
+    }
 	
 }

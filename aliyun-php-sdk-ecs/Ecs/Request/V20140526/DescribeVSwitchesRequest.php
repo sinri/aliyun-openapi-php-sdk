@@ -23,7 +23,7 @@ class DescribeVSwitchesRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "DescribeVSwitches", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "DescribeVSwitches", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
@@ -31,21 +31,21 @@ class DescribeVSwitchesRequest extends \RpcAcsRequest
 
 	private  $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $vpcId;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $pageSize;
+    private $pageSize;
 
-	private  $zoneId;
+    private $zoneId;
 
-	private  $isDefault;
+    private $isDefault;
 
 	private  $ownerId;
 
-	private  $pageNumber;
+    private $pageNumber;
 
 	public function getVSwitchId() {
 		return $this->vSwitchId;
@@ -65,13 +65,15 @@ class DescribeVSwitchesRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
 	}
 
 	public function getVpcId() {
@@ -83,41 +85,49 @@ class DescribeVSwitchesRequest extends \RpcAcsRequest
 		$this->queryParameters["VpcId"]=$vpcId;
 	}
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getPageSize() {
-		return $this->pageSize;
-	}
+    public function getPageSize()
+    {
+        return $this->pageSize;
+    }
 
-	public function setPageSize($pageSize) {
-		$this->pageSize = $pageSize;
-		$this->queryParameters["PageSize"]=$pageSize;
-	}
+    public function setPageSize($pageSize)
+    {
+        $this->pageSize = $pageSize;
+        $this->queryParameters["PageSize"] = $pageSize;
+    }
 
-	public function getZoneId() {
-		return $this->zoneId;
-	}
+    public function getZoneId()
+    {
+        return $this->zoneId;
+    }
 
-	public function setZoneId($zoneId) {
-		$this->zoneId = $zoneId;
-		$this->queryParameters["ZoneId"]=$zoneId;
-	}
+    public function setZoneId($zoneId)
+    {
+        $this->zoneId = $zoneId;
+        $this->queryParameters["ZoneId"] = $zoneId;
+    }
 
-	public function getIsDefault() {
-		return $this->isDefault;
-	}
+    public function getIsDefault()
+    {
+        return $this->isDefault;
+    }
 
-	public function setIsDefault($isDefault) {
-		$this->isDefault = $isDefault;
-		$this->queryParameters["IsDefault"]=$isDefault;
-	}
+    public function setIsDefault($isDefault)
+    {
+        $this->isDefault = $isDefault;
+        $this->queryParameters["IsDefault"] = $isDefault;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -128,13 +138,15 @@ class DescribeVSwitchesRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getPageNumber() {
-		return $this->pageNumber;
-	}
+    public function getPageNumber()
+    {
+        return $this->pageNumber;
+    }
 
-	public function setPageNumber($pageNumber) {
-		$this->pageNumber = $pageNumber;
-		$this->queryParameters["PageNumber"]=$pageNumber;
-	}
+    public function setPageNumber($pageNumber)
+    {
+        $this->pageNumber = $pageNumber;
+        $this->queryParameters["PageNumber"] = $pageNumber;
+    }
 	
 }

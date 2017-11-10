@@ -23,25 +23,25 @@ class AttachDiskRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Ecs", "2014-05-26", "AttachDisk", "ecs", "openAPI");
+        parent::__construct("Ecs", "2014-05-26", "AttachDisk", "ecs", "openAPI");
 		$this->setMethod("POST");
 	}
 
 	private  $resourceOwnerId;
 
-	private  $instanceId;
+    private $instanceId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
 	private  $ownerAccount;
 
-	private  $diskId;
+    private $diskId;
 
 	private  $ownerId;
 
-	private  $device;
+    private $device;
 
-	private  $deleteWithInstance;
+    private $deleteWithInstance;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -52,23 +52,27 @@ class AttachDiskRequest extends \RpcAcsRequest
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
 	}
 
-	public function getInstanceId() {
-		return $this->instanceId;
-	}
+    public function getInstanceId()
+    {
+        return $this->instanceId;
+    }
 
-	public function setInstanceId($instanceId) {
-		$this->instanceId = $instanceId;
-		$this->queryParameters["InstanceId"]=$instanceId;
-	}
+    public function setInstanceId($instanceId)
+    {
+        $this->instanceId = $instanceId;
+        $this->queryParameters["InstanceId"] = $instanceId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
@@ -79,14 +83,16 @@ class AttachDiskRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
-	public function getDiskId() {
-		return $this->diskId;
-	}
+    public function getDiskId()
+    {
+        return $this->diskId;
+    }
 
-	public function setDiskId($diskId) {
-		$this->diskId = $diskId;
-		$this->queryParameters["DiskId"]=$diskId;
-	}
+    public function setDiskId($diskId)
+    {
+        $this->diskId = $diskId;
+        $this->queryParameters["DiskId"] = $diskId;
+    }
 
 	public function getOwnerId() {
 		return $this->ownerId;
@@ -97,22 +103,26 @@ class AttachDiskRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerId"]=$ownerId;
 	}
 
-	public function getDevice() {
-		return $this->device;
-	}
+    public function getDevice()
+    {
+        return $this->device;
+    }
 
-	public function setDevice($device) {
-		$this->device = $device;
-		$this->queryParameters["Device"]=$device;
-	}
+    public function setDevice($device)
+    {
+        $this->device = $device;
+        $this->queryParameters["Device"] = $device;
+    }
 
-	public function getDeleteWithInstance() {
-		return $this->deleteWithInstance;
-	}
+    public function getDeleteWithInstance()
+    {
+        return $this->deleteWithInstance;
+    }
 
-	public function setDeleteWithInstance($deleteWithInstance) {
-		$this->deleteWithInstance = $deleteWithInstance;
-		$this->queryParameters["DeleteWithInstance"]=$deleteWithInstance;
+    public function setDeleteWithInstance($deleteWithInstance)
+    {
+        $this->deleteWithInstance = $deleteWithInstance;
+        $this->queryParameters["DeleteWithInstance"] = $deleteWithInstance;
 	}
 	
 }

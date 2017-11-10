@@ -17,37 +17,42 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ram\Request\V20150501;
 
 class UpdateRoleRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ram", "2015-05-01", "UpdateRole");
-		$this->setProtocol("https");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ram", "2015-05-01", "UpdateRole");
+        $this->setProtocol("https");
+        $this->setMethod("POST");
+    }
 
-	private  $newAssumeRolePolicyDocument;
+    private $newAssumeRolePolicyDocument;
 
-	private  $roleName;
+    private $roleName;
 
-	public function getNewAssumeRolePolicyDocument() {
-		return $this->newAssumeRolePolicyDocument;
-	}
+    public function getNewAssumeRolePolicyDocument()
+    {
+        return $this->newAssumeRolePolicyDocument;
+    }
 
-	public function setNewAssumeRolePolicyDocument($newAssumeRolePolicyDocument) {
-		$this->newAssumeRolePolicyDocument = $newAssumeRolePolicyDocument;
-		$this->queryParameters["NewAssumeRolePolicyDocument"]=$newAssumeRolePolicyDocument;
-	}
+    public function setNewAssumeRolePolicyDocument($newAssumeRolePolicyDocument)
+    {
+        $this->newAssumeRolePolicyDocument = $newAssumeRolePolicyDocument;
+        $this->queryParameters["NewAssumeRolePolicyDocument"] = $newAssumeRolePolicyDocument;
+    }
 
-	public function getRoleName() {
-		return $this->roleName;
-	}
+    public function getRoleName()
+    {
+        return $this->roleName;
+    }
 
-	public function setRoleName($roleName) {
-		$this->roleName = $roleName;
-		$this->queryParameters["RoleName"]=$roleName;
-	}
-	
+    public function setRoleName($roleName)
+    {
+        $this->roleName = $roleName;
+        $this->queryParameters["RoleName"] = $roleName;
+    }
+
 }

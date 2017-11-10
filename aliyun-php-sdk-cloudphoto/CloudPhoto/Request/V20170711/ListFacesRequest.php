@@ -30,11 +30,11 @@ class ListFacesRequest extends \RpcAcsRequest
 
 	private  $cursor;
 
-	private  $hasFaceName;
+    private $hasFaceName;
 
 	private  $size;
 
-	private  $libraryId;
+    private $libraryId;
 
 	private  $storeName;
 
@@ -51,14 +51,16 @@ class ListFacesRequest extends \RpcAcsRequest
 		$this->queryParameters["Cursor"]=$cursor;
 	}
 
-	public function getHasFaceName() {
-		return $this->hasFaceName;
-	}
+    public function getHasFaceName()
+    {
+        return $this->hasFaceName;
+    }
 
-	public function setHasFaceName($hasFaceName) {
-		$this->hasFaceName = $hasFaceName;
-		$this->queryParameters["HasFaceName"]=$hasFaceName;
-	}
+    public function setHasFaceName($hasFaceName)
+    {
+        $this->hasFaceName = $hasFaceName;
+        $this->queryParameters["HasFaceName"] = $hasFaceName;
+    }
 
 	public function getSize() {
 		return $this->size;
@@ -69,14 +71,16 @@ class ListFacesRequest extends \RpcAcsRequest
 		$this->queryParameters["Size"]=$size;
 	}
 
-	public function getLibraryId() {
-		return $this->libraryId;
-	}
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
 
-	public function setLibraryId($libraryId) {
-		$this->libraryId = $libraryId;
-		$this->queryParameters["LibraryId"]=$libraryId;
-	}
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+        $this->queryParameters["LibraryId"] = $libraryId;
+    }
 
 	public function getStoreName() {
 		return $this->storeName;

@@ -17,146 +17,171 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 namespace Ess\Request\V20140828;
 
 class ModifyScalingGroupRequest extends \RpcAcsRequest
 {
-	function  __construct()
-	{
-		parent::__construct("Ess", "2014-08-28", "ModifyScalingGroup", "ess", "openAPI");
-		$this->setMethod("POST");
-	}
+    function __construct()
+    {
+        parent::__construct("Ess", "2014-08-28", "ModifyScalingGroup", "ess", "openAPI");
+        $this->setMethod("POST");
+    }
 
-	private  $resourceOwnerId;
+    private $resourceOwnerId;
 
-	private  $resourceOwnerAccount;
+    private $resourceOwnerAccount;
 
-	private  $scalingGroupName;
+    private $scalingGroupName;
 
-	private  $scalingGroupId;
+    private $scalingGroupId;
 
-	private  $ownerAccount;
+    private $ownerAccount;
 
-	private  $activeScalingConfigurationId;
+    private $activeScalingConfigurationId;
 
-	private  $minSize;
+    private $minSize;
 
-	private  $ownerId;
+    private $ownerId;
 
-	private  $maxSize;
+    private $maxSize;
 
-	private  $defaultCooldown;
+    private $defaultCooldown;
 
-	private  $removalPolicy1;
+    private $removalPolicy1;
 
-	private  $removalPolicy2;
+    private $removalPolicy2;
 
-	public function getResourceOwnerId() {
-		return $this->resourceOwnerId;
-	}
+    public function getResourceOwnerId()
+    {
+        return $this->resourceOwnerId;
+    }
 
-	public function setResourceOwnerId($resourceOwnerId) {
-		$this->resourceOwnerId = $resourceOwnerId;
-		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
-	}
+    public function setResourceOwnerId($resourceOwnerId)
+    {
+        $this->resourceOwnerId = $resourceOwnerId;
+        $this->queryParameters["ResourceOwnerId"] = $resourceOwnerId;
+    }
 
-	public function getResourceOwnerAccount() {
-		return $this->resourceOwnerAccount;
-	}
+    public function getResourceOwnerAccount()
+    {
+        return $this->resourceOwnerAccount;
+    }
 
-	public function setResourceOwnerAccount($resourceOwnerAccount) {
-		$this->resourceOwnerAccount = $resourceOwnerAccount;
-		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
+    public function setResourceOwnerAccount($resourceOwnerAccount)
+    {
+        $this->resourceOwnerAccount = $resourceOwnerAccount;
+        $this->queryParameters["ResourceOwnerAccount"] = $resourceOwnerAccount;
+    }
 
-	public function getScalingGroupName() {
-		return $this->scalingGroupName;
-	}
+    public function getScalingGroupName()
+    {
+        return $this->scalingGroupName;
+    }
 
-	public function setScalingGroupName($scalingGroupName) {
-		$this->scalingGroupName = $scalingGroupName;
-		$this->queryParameters["ScalingGroupName"]=$scalingGroupName;
-	}
+    public function setScalingGroupName($scalingGroupName)
+    {
+        $this->scalingGroupName = $scalingGroupName;
+        $this->queryParameters["ScalingGroupName"] = $scalingGroupName;
+    }
 
-	public function getScalingGroupId() {
-		return $this->scalingGroupId;
-	}
+    public function getScalingGroupId()
+    {
+        return $this->scalingGroupId;
+    }
 
-	public function setScalingGroupId($scalingGroupId) {
-		$this->scalingGroupId = $scalingGroupId;
-		$this->queryParameters["ScalingGroupId"]=$scalingGroupId;
-	}
+    public function setScalingGroupId($scalingGroupId)
+    {
+        $this->scalingGroupId = $scalingGroupId;
+        $this->queryParameters["ScalingGroupId"] = $scalingGroupId;
+    }
 
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
+    public function getOwnerAccount()
+    {
+        return $this->ownerAccount;
+    }
 
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
-	}
+    public function setOwnerAccount($ownerAccount)
+    {
+        $this->ownerAccount = $ownerAccount;
+        $this->queryParameters["OwnerAccount"] = $ownerAccount;
+    }
 
-	public function getActiveScalingConfigurationId() {
-		return $this->activeScalingConfigurationId;
-	}
+    public function getActiveScalingConfigurationId()
+    {
+        return $this->activeScalingConfigurationId;
+    }
 
-	public function setActiveScalingConfigurationId($activeScalingConfigurationId) {
-		$this->activeScalingConfigurationId = $activeScalingConfigurationId;
-		$this->queryParameters["ActiveScalingConfigurationId"]=$activeScalingConfigurationId;
-	}
+    public function setActiveScalingConfigurationId($activeScalingConfigurationId)
+    {
+        $this->activeScalingConfigurationId = $activeScalingConfigurationId;
+        $this->queryParameters["ActiveScalingConfigurationId"] = $activeScalingConfigurationId;
+    }
 
-	public function getMinSize() {
-		return $this->minSize;
-	}
+    public function getMinSize()
+    {
+        return $this->minSize;
+    }
 
-	public function setMinSize($minSize) {
-		$this->minSize = $minSize;
-		$this->queryParameters["MinSize"]=$minSize;
-	}
+    public function setMinSize($minSize)
+    {
+        $this->minSize = $minSize;
+        $this->queryParameters["MinSize"] = $minSize;
+    }
 
-	public function getOwnerId() {
-		return $this->ownerId;
-	}
+    public function getOwnerId()
+    {
+        return $this->ownerId;
+    }
 
-	public function setOwnerId($ownerId) {
-		$this->ownerId = $ownerId;
-		$this->queryParameters["OwnerId"]=$ownerId;
-	}
+    public function setOwnerId($ownerId)
+    {
+        $this->ownerId = $ownerId;
+        $this->queryParameters["OwnerId"] = $ownerId;
+    }
 
-	public function getMaxSize() {
-		return $this->maxSize;
-	}
+    public function getMaxSize()
+    {
+        return $this->maxSize;
+    }
 
-	public function setMaxSize($maxSize) {
-		$this->maxSize = $maxSize;
-		$this->queryParameters["MaxSize"]=$maxSize;
-	}
+    public function setMaxSize($maxSize)
+    {
+        $this->maxSize = $maxSize;
+        $this->queryParameters["MaxSize"] = $maxSize;
+    }
 
-	public function getDefaultCooldown() {
-		return $this->defaultCooldown;
-	}
+    public function getDefaultCooldown()
+    {
+        return $this->defaultCooldown;
+    }
 
-	public function setDefaultCooldown($defaultCooldown) {
-		$this->defaultCooldown = $defaultCooldown;
-		$this->queryParameters["DefaultCooldown"]=$defaultCooldown;
-	}
+    public function setDefaultCooldown($defaultCooldown)
+    {
+        $this->defaultCooldown = $defaultCooldown;
+        $this->queryParameters["DefaultCooldown"] = $defaultCooldown;
+    }
 
-	public function getRemovalPolicy1() {
-		return $this->removalPolicy1;
-	}
+    public function getRemovalPolicy1()
+    {
+        return $this->removalPolicy1;
+    }
 
-	public function setRemovalPolicy1($removalPolicy1) {
-		$this->removalPolicy1 = $removalPolicy1;
-		$this->queryParameters["RemovalPolicy.1"]=$removalPolicy1;
-	}
+    public function setRemovalPolicy1($removalPolicy1)
+    {
+        $this->removalPolicy1 = $removalPolicy1;
+        $this->queryParameters["RemovalPolicy.1"] = $removalPolicy1;
+    }
 
-	public function getRemovalPolicy2() {
-		return $this->removalPolicy2;
-	}
+    public function getRemovalPolicy2()
+    {
+        return $this->removalPolicy2;
+    }
 
-	public function setRemovalPolicy2($removalPolicy2) {
-		$this->removalPolicy2 = $removalPolicy2;
-		$this->queryParameters["RemovalPolicy.2"]=$removalPolicy2;
-	}
-	
+    public function setRemovalPolicy2($removalPolicy2)
+    {
+        $this->removalPolicy2 = $removalPolicy2;
+        $this->queryParameters["RemovalPolicy.2"] = $removalPolicy2;
+    }
+
 }
