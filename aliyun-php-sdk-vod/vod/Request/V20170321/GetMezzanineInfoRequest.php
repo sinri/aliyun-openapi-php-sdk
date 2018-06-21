@@ -33,6 +33,8 @@ class GetMezzanineInfoRequest extends \RpcAcsRequest
 
 	private  $videoId;
 
+	private  $previewSegment;
+
 	private  $ownerId;
 
 	private  $authTimeout;
@@ -62,6 +64,15 @@ class GetMezzanineInfoRequest extends \RpcAcsRequest
 	public function setVideoId($videoId) {
 		$this->videoId = $videoId;
 		$this->queryParameters["VideoId"]=$videoId;
+	}
+
+	public function getPreviewSegment() {
+		return $this->previewSegment;
+	}
+
+	public function setPreviewSegment($previewSegment) {
+		$this->previewSegment = $previewSegment;
+		$this->queryParameters["PreviewSegment"]=$previewSegment;
 	}
 
 	public function getOwnerId() {

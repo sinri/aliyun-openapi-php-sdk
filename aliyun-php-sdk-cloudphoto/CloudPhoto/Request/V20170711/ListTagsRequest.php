@@ -32,6 +32,8 @@ class ListTagsRequest extends \RpcAcsRequest
 
 	private  $storeName;
 
+	private  $lang;
+
 	public function getLibraryId() {
 		return $this->libraryId;
 	}
@@ -48,6 +50,15 @@ class ListTagsRequest extends \RpcAcsRequest
 	public function setStoreName($storeName) {
 		$this->storeName = $storeName;
 		$this->queryParameters["StoreName"]=$storeName;
+	}
+
+	public function getLang() {
+		return $this->lang;
+	}
+
+	public function setLang($lang) {
+		$this->lang = $lang;
+		$this->queryParameters["Lang"]=$lang;
 	}
 	
 }

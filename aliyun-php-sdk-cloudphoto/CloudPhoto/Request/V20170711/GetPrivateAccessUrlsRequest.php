@@ -36,8 +36,6 @@ class GetPrivateAccessUrlsRequest extends \RpcAcsRequest
 
 	private  $zoomType;
 
-	private  $accessMode;
-
 	public function getLibraryId() {
 		return $this->libraryId;
 	}
@@ -74,15 +72,6 @@ class GetPrivateAccessUrlsRequest extends \RpcAcsRequest
 	public function setZoomType($zoomType) {
 		$this->zoomType = $zoomType;
 		$this->queryParameters["ZoomType"]=$zoomType;
-	}
-
-	public function getAccessMode() {
-		return $this->accessMode;
-	}
-
-	public function setAccessMode($accessMode) {
-		$this->accessMode = $accessMode;
-		$this->queryParameters["AccessMode"]=$accessMode;
 	}
 	
 }

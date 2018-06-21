@@ -27,6 +27,10 @@ class DescribeVpcsRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
+	private  $vpcName;
+
+	private  $resourceGroupId;
+
 	private  $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
@@ -42,6 +46,24 @@ class DescribeVpcsRequest extends \RpcAcsRequest
 	private  $ownerId;
 
 	private  $pageNumber;
+
+	public function getVpcName() {
+		return $this->vpcName;
+	}
+
+	public function setVpcName($vpcName) {
+		$this->vpcName = $vpcName;
+		$this->queryParameters["VpcName"]=$vpcName;
+	}
+
+	public function getResourceGroupId() {
+		return $this->resourceGroupId;
+	}
+
+	public function setResourceGroupId($resourceGroupId) {
+		$this->resourceGroupId = $resourceGroupId;
+		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
+	}
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;

@@ -31,6 +31,8 @@ class DescribeRouteTablesRequest extends \RpcAcsRequest
 
 	private  $resourceOwnerId;
 
+	private  $routeTableName;
+
 	private  $vRouterId;
 
 	private  $resourceOwnerAccount;
@@ -63,6 +65,15 @@ class DescribeRouteTablesRequest extends \RpcAcsRequest
 	public function setResourceOwnerId($resourceOwnerId) {
 		$this->resourceOwnerId = $resourceOwnerId;
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
+
+	public function getRouteTableName() {
+		return $this->routeTableName;
+	}
+
+	public function setRouteTableName($routeTableName) {
+		$this->routeTableName = $routeTableName;
+		$this->queryParameters["RouteTableName"]=$routeTableName;
 	}
 
 	public function getVRouterId() {

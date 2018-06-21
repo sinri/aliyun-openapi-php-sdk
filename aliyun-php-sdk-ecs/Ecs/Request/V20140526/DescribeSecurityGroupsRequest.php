@@ -49,9 +49,13 @@ class DescribeSecurityGroupsRequest extends \RpcAcsRequest
 
 	private  $tag1Value;
 
+	private  $resourceGroupId;
+
 	private  $pageSize;
 
 	private  $tag3Value;
+
+	private  $dryRun;
 
 	private  $tag5Key;
 
@@ -172,6 +176,15 @@ class DescribeSecurityGroupsRequest extends \RpcAcsRequest
 		$this->queryParameters["Tag.1.Value"]=$tag1Value;
 	}
 
+	public function getResourceGroupId() {
+		return $this->resourceGroupId;
+	}
+
+	public function setResourceGroupId($resourceGroupId) {
+		$this->resourceGroupId = $resourceGroupId;
+		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
+	}
+
 	public function getPageSize() {
 		return $this->pageSize;
 	}
@@ -188,6 +201,15 @@ class DescribeSecurityGroupsRequest extends \RpcAcsRequest
 	public function setTag3Value($tag3Value) {
 		$this->tag3Value = $tag3Value;
 		$this->queryParameters["Tag.3.Value"]=$tag3Value;
+	}
+
+	public function getDryRun() {
+		return $this->dryRun;
+	}
+
+	public function setDryRun($dryRun) {
+		$this->dryRun = $dryRun;
+		$this->queryParameters["DryRun"]=$dryRun;
 	}
 
 	public function getTag5Key() {

@@ -29,6 +29,8 @@ class CreateVpcRequest extends \RpcAcsRequest
 
 	private  $vpcName;
 
+	private  $resourceGroupId;
+
 	private  $resourceOwnerId;
 
 	private  $resourceOwnerAccount;
@@ -52,6 +54,15 @@ class CreateVpcRequest extends \RpcAcsRequest
 	public function setVpcName($vpcName) {
 		$this->vpcName = $vpcName;
 		$this->queryParameters["VpcName"]=$vpcName;
+	}
+
+	public function getResourceGroupId() {
+		return $this->resourceGroupId;
+	}
+
+	public function setResourceGroupId($resourceGroupId) {
+		$this->resourceGroupId = $resourceGroupId;
+		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
 	}
 
 	public function getResourceOwnerId() {

@@ -30,9 +30,9 @@ class DeletePhotosRequest extends \RpcAcsRequest
 
 	private  $libraryId;
 
-	private  $PhotoIds;
-
 	private  $storeName;
+
+	private  $PhotoIds;
 
 	public function getLibraryId() {
 		return $this->libraryId;
@@ -41,6 +41,15 @@ class DeletePhotosRequest extends \RpcAcsRequest
 	public function setLibraryId($libraryId) {
 		$this->libraryId = $libraryId;
 		$this->queryParameters["LibraryId"]=$libraryId;
+	}
+
+	public function getStoreName() {
+		return $this->storeName;
+	}
+
+	public function setStoreName($storeName) {
+		$this->storeName = $storeName;
+		$this->queryParameters["StoreName"]=$storeName;
 	}
 
 	public function getPhotoIds() {
@@ -52,15 +61,6 @@ class DeletePhotosRequest extends \RpcAcsRequest
 		for ($i = 0; $i < count($PhotoIds); $i ++) {	
 			$this->queryParameters["PhotoId.".($i+1)] = $PhotoIds[$i];
 		}
-	}
-
-	public function getStoreName() {
-		return $this->storeName;
-	}
-
-	public function setStoreName($storeName) {
-		$this->storeName = $storeName;
-		$this->queryParameters["StoreName"]=$storeName;
 	}
 	
 }

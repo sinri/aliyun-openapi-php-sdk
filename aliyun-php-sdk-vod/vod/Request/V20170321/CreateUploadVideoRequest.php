@@ -45,11 +45,15 @@ class CreateUploadVideoRequest extends \RpcAcsRequest
 
 	private  $tags;
 
+	private  $storageLocation;
+
 	private  $coverURL;
 
 	private  $userData;
 
 	private  $fileName;
+
+	private  $templateGroupId;
 
 	private  $cateId;
 
@@ -134,6 +138,15 @@ class CreateUploadVideoRequest extends \RpcAcsRequest
 		$this->queryParameters["Tags"]=$tags;
 	}
 
+	public function getStorageLocation() {
+		return $this->storageLocation;
+	}
+
+	public function setStorageLocation($storageLocation) {
+		$this->storageLocation = $storageLocation;
+		$this->queryParameters["StorageLocation"]=$storageLocation;
+	}
+
 	public function getCoverURL() {
 		return $this->coverURL;
 	}
@@ -159,6 +172,15 @@ class CreateUploadVideoRequest extends \RpcAcsRequest
 	public function setFileName($fileName) {
 		$this->fileName = $fileName;
 		$this->queryParameters["FileName"]=$fileName;
+	}
+
+	public function getTemplateGroupId() {
+		return $this->templateGroupId;
+	}
+
+	public function setTemplateGroupId($templateGroupId) {
+		$this->templateGroupId = $templateGroupId;
+		$this->queryParameters["TemplateGroupId"]=$templateGroupId;
 	}
 
 	public function getCateId() {

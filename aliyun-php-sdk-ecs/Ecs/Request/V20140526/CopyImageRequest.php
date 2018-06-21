@@ -55,6 +55,8 @@ class CopyImageRequest extends \RpcAcsRequest
 
 	private  $tag1Value;
 
+	private  $encrypted;
+
 	private  $tag2Value;
 
 	private  $tag4Key;
@@ -187,6 +189,15 @@ class CopyImageRequest extends \RpcAcsRequest
 	public function setTag1Value($tag1Value) {
 		$this->tag1Value = $tag1Value;
 		$this->queryParameters["Tag.1.Value"]=$tag1Value;
+	}
+
+	public function getEncrypted() {
+		return $this->encrypted;
+	}
+
+	public function setEncrypted($encrypted) {
+		$this->encrypted = $encrypted;
+		$this->queryParameters["Encrypted"]=$encrypted;
 	}
 
 	public function getTag2Value() {

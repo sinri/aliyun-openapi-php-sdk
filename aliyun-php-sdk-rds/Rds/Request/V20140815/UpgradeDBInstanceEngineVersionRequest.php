@@ -33,6 +33,8 @@ class UpgradeDBInstanceEngineVersionRequest extends \RpcAcsRequest
 
 	private  $clientToken;
 
+	private  $effectiveTime;
+
 	private  $ownerAccount;
 
 	private  $dBInstanceId;
@@ -66,6 +68,15 @@ class UpgradeDBInstanceEngineVersionRequest extends \RpcAcsRequest
 	public function setClientToken($clientToken) {
 		$this->clientToken = $clientToken;
 		$this->queryParameters["ClientToken"]=$clientToken;
+	}
+
+	public function getEffectiveTime() {
+		return $this->effectiveTime;
+	}
+
+	public function setEffectiveTime($effectiveTime) {
+		$this->effectiveTime = $effectiveTime;
+		$this->queryParameters["EffectiveTime"]=$effectiveTime;
 	}
 
 	public function getOwnerAccount() {
