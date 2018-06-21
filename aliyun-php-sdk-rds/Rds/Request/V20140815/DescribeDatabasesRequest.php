@@ -37,9 +37,13 @@ class DescribeDatabasesRequest extends \RpcAcsRequest
 
 	private  $ownerAccount;
 
+	private  $pageSize;
+
 	private  $dBInstanceId;
 
 	private  $ownerId;
+
+	private  $pageNumber;
 
 	public function getResourceOwnerId() {
 		return $this->resourceOwnerId;
@@ -86,6 +90,15 @@ class DescribeDatabasesRequest extends \RpcAcsRequest
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
+	public function getPageSize() {
+		return $this->pageSize;
+	}
+
+	public function setPageSize($pageSize) {
+		$this->pageSize = $pageSize;
+		$this->queryParameters["PageSize"]=$pageSize;
+	}
+
 	public function getDBInstanceId() {
 		return $this->dBInstanceId;
 	}
@@ -102,6 +115,15 @@ class DescribeDatabasesRequest extends \RpcAcsRequest
 	public function setOwnerId($ownerId) {
 		$this->ownerId = $ownerId;
 		$this->queryParameters["OwnerId"]=$ownerId;
+	}
+
+	public function getPageNumber() {
+		return $this->pageNumber;
+	}
+
+	public function setPageNumber($pageNumber) {
+		$this->pageNumber = $pageNumber;
+		$this->queryParameters["PageNumber"]=$pageNumber;
 	}
 	
 }

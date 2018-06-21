@@ -31,17 +31,27 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 
 	private  $period;
 
+	private  $autoPay;
+
 	private  $resourceOwnerAccount;
 
 	private  $bandwidth;
 
 	private  $clientToken;
 
-	private  $internetChargeType;
+	private  $iSP;
 
 	private  $ownerAccount;
 
 	private  $ownerId;
+
+	private  $resourceGroupId;
+
+	private  $internetChargeType;
+
+	private  $netmode;
+
+	private  $pricingCycle;
 
 	private  $instanceChargeType;
 
@@ -61,6 +71,15 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 	public function setPeriod($period) {
 		$this->period = $period;
 		$this->queryParameters["Period"]=$period;
+	}
+
+	public function getAutoPay() {
+		return $this->autoPay;
+	}
+
+	public function setAutoPay($autoPay) {
+		$this->autoPay = $autoPay;
+		$this->queryParameters["AutoPay"]=$autoPay;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -90,13 +109,13 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 		$this->queryParameters["ClientToken"]=$clientToken;
 	}
 
-	public function getInternetChargeType() {
-		return $this->internetChargeType;
+	public function getISP() {
+		return $this->iSP;
 	}
 
-	public function setInternetChargeType($internetChargeType) {
-		$this->internetChargeType = $internetChargeType;
-		$this->queryParameters["InternetChargeType"]=$internetChargeType;
+	public function setISP($iSP) {
+		$this->iSP = $iSP;
+		$this->queryParameters["ISP"]=$iSP;
 	}
 
 	public function getOwnerAccount() {
@@ -115,6 +134,42 @@ class AllocateEipAddressRequest extends \RpcAcsRequest
 	public function setOwnerId($ownerId) {
 		$this->ownerId = $ownerId;
 		$this->queryParameters["OwnerId"]=$ownerId;
+	}
+
+	public function getResourceGroupId() {
+		return $this->resourceGroupId;
+	}
+
+	public function setResourceGroupId($resourceGroupId) {
+		$this->resourceGroupId = $resourceGroupId;
+		$this->queryParameters["ResourceGroupId"]=$resourceGroupId;
+	}
+
+	public function getInternetChargeType() {
+		return $this->internetChargeType;
+	}
+
+	public function setInternetChargeType($internetChargeType) {
+		$this->internetChargeType = $internetChargeType;
+		$this->queryParameters["InternetChargeType"]=$internetChargeType;
+	}
+
+	public function getNetmode() {
+		return $this->netmode;
+	}
+
+	public function setNetmode($netmode) {
+		$this->netmode = $netmode;
+		$this->queryParameters["Netmode"]=$netmode;
+	}
+
+	public function getPricingCycle() {
+		return $this->pricingCycle;
+	}
+
+	public function setPricingCycle($pricingCycle) {
+		$this->pricingCycle = $pricingCycle;
+		$this->queryParameters["PricingCycle"]=$pricingCycle;
 	}
 
 	public function getInstanceChargeType() {

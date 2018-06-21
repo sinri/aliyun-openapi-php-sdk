@@ -43,6 +43,8 @@ class UpdateLiveSnapshotDetectPornConfigRequest extends \RpcAcsRequest
 
 	private  $ossObject;
 
+	private  $Scenes;
+
 	public function getOssBucket() {
 		return $this->ossBucket;
 	}
@@ -113,6 +115,17 @@ class UpdateLiveSnapshotDetectPornConfigRequest extends \RpcAcsRequest
 	public function setOssObject($ossObject) {
 		$this->ossObject = $ossObject;
 		$this->queryParameters["OssObject"]=$ossObject;
+	}
+
+	public function getScenes() {
+		return $this->Scenes;
+	}
+
+	public function setScenes($Scenes) {
+		$this->Scenes = $Scenes;
+		for ($i = 0; $i < count($Scenes); $i ++) {	
+			$this->queryParameters["Scene.".($i+1)] = $Scenes[$i];
+		}
 	}
 	
 }

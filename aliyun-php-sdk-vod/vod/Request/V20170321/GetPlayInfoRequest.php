@@ -47,6 +47,10 @@ class GetPlayInfoRequest extends \RpcAcsRequest
 
 	private  $reAuthInfo;
 
+	private  $outputType;
+
+	private  $definition;
+
 	private  $authTimeout;
 
 	private  $authInfo;
@@ -139,6 +143,24 @@ class GetPlayInfoRequest extends \RpcAcsRequest
 	public function setReAuthInfo($reAuthInfo) {
 		$this->reAuthInfo = $reAuthInfo;
 		$this->queryParameters["ReAuthInfo"]=$reAuthInfo;
+	}
+
+	public function getOutputType() {
+		return $this->outputType;
+	}
+
+	public function setOutputType($outputType) {
+		$this->outputType = $outputType;
+		$this->queryParameters["OutputType"]=$outputType;
+	}
+
+	public function getDefinition() {
+		return $this->definition;
+	}
+
+	public function setDefinition($definition) {
+		$this->definition = $definition;
+		$this->queryParameters["Definition"]=$definition;
 	}
 
 	public function getAuthTimeout() {

@@ -31,11 +31,15 @@ class ProduceEditingProjectVideoRequest extends \RpcAcsRequest
 
 	private  $resourceOwnerId;
 
+	private  $mediaMetadata;
+
 	private  $resourceOwnerAccount;
 
 	private  $timeline;
 
 	private  $description;
+
+	private  $produceConfig;
 
 	private  $ownerId;
 
@@ -59,6 +63,15 @@ class ProduceEditingProjectVideoRequest extends \RpcAcsRequest
 	public function setResourceOwnerId($resourceOwnerId) {
 		$this->resourceOwnerId = $resourceOwnerId;
 		$this->queryParameters["ResourceOwnerId"]=$resourceOwnerId;
+	}
+
+	public function getMediaMetadata() {
+		return $this->mediaMetadata;
+	}
+
+	public function setMediaMetadata($mediaMetadata) {
+		$this->mediaMetadata = $mediaMetadata;
+		$this->queryParameters["MediaMetadata"]=$mediaMetadata;
 	}
 
 	public function getResourceOwnerAccount() {
@@ -86,6 +99,15 @@ class ProduceEditingProjectVideoRequest extends \RpcAcsRequest
 	public function setDescription($description) {
 		$this->description = $description;
 		$this->queryParameters["Description"]=$description;
+	}
+
+	public function getProduceConfig() {
+		return $this->produceConfig;
+	}
+
+	public function setProduceConfig($produceConfig) {
+		$this->produceConfig = $produceConfig;
+		$this->queryParameters["ProduceConfig"]=$produceConfig;
 	}
 
 	public function getOwnerId() {

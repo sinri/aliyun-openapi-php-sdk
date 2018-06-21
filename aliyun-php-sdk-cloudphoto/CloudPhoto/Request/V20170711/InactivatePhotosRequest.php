@@ -34,6 +34,8 @@ class InactivatePhotosRequest extends \RpcAcsRequest
 
 	private  $storeName;
 
+	private  $inactiveTime;
+
 	public function getLibraryId() {
 		return $this->libraryId;
 	}
@@ -61,6 +63,15 @@ class InactivatePhotosRequest extends \RpcAcsRequest
 	public function setStoreName($storeName) {
 		$this->storeName = $storeName;
 		$this->queryParameters["StoreName"]=$storeName;
+	}
+
+	public function getInactiveTime() {
+		return $this->inactiveTime;
+	}
+
+	public function setInactiveTime($inactiveTime) {
+		$this->inactiveTime = $inactiveTime;
+		$this->queryParameters["InactiveTime"]=$inactiveTime;
 	}
 	
 }

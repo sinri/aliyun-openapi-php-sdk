@@ -23,8 +23,9 @@ class DescribeKeyRequest extends \RpcAcsRequest
 {
 	function  __construct()
 	{
-		parent::__construct("Kms", "2016-01-20", "DescribeKey");
+		parent::__construct("Kms", "2016-01-20", "DescribeKey", "kms", "openAPI");
 		$this->setProtocol("https");
+		$this->setMethod("POST");
 	}
 
 	private  $keyId;

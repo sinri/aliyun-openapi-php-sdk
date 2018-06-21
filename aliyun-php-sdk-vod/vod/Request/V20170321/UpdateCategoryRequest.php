@@ -33,8 +33,6 @@ class UpdateCategoryRequest extends \RpcAcsRequest
 
 	private  $cateId;
 
-	private  $ownerAccount;
-
 	private  $ownerId;
 
 	private  $cateName;
@@ -64,15 +62,6 @@ class UpdateCategoryRequest extends \RpcAcsRequest
 	public function setCateId($cateId) {
 		$this->cateId = $cateId;
 		$this->queryParameters["CateId"]=$cateId;
-	}
-
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
 	public function getOwnerId() {

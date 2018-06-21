@@ -27,13 +27,34 @@ class DescribeLiveStreamsOnlineListRequest extends \RpcAcsRequest
 		$this->setMethod("POST");
 	}
 
+	private  $streamType;
+
 	private  $appName;
 
 	private  $securityToken;
 
 	private  $domainName;
 
+	private  $pageSize;
+
+	private  $endTime;
+
+	private  $startTime;
+
 	private  $ownerId;
+
+	private  $pageNum;
+
+	private  $queryType;
+
+	public function getStreamType() {
+		return $this->streamType;
+	}
+
+	public function setStreamType($streamType) {
+		$this->streamType = $streamType;
+		$this->queryParameters["StreamType"]=$streamType;
+	}
 
 	public function getAppName() {
 		return $this->appName;
@@ -62,6 +83,33 @@ class DescribeLiveStreamsOnlineListRequest extends \RpcAcsRequest
 		$this->queryParameters["DomainName"]=$domainName;
 	}
 
+	public function getPageSize() {
+		return $this->pageSize;
+	}
+
+	public function setPageSize($pageSize) {
+		$this->pageSize = $pageSize;
+		$this->queryParameters["PageSize"]=$pageSize;
+	}
+
+	public function getEndTime() {
+		return $this->endTime;
+	}
+
+	public function setEndTime($endTime) {
+		$this->endTime = $endTime;
+		$this->queryParameters["EndTime"]=$endTime;
+	}
+
+	public function getStartTime() {
+		return $this->startTime;
+	}
+
+	public function setStartTime($startTime) {
+		$this->startTime = $startTime;
+		$this->queryParameters["StartTime"]=$startTime;
+	}
+
 	public function getOwnerId() {
 		return $this->ownerId;
 	}
@@ -69,6 +117,24 @@ class DescribeLiveStreamsOnlineListRequest extends \RpcAcsRequest
 	public function setOwnerId($ownerId) {
 		$this->ownerId = $ownerId;
 		$this->queryParameters["OwnerId"]=$ownerId;
+	}
+
+	public function getPageNum() {
+		return $this->pageNum;
+	}
+
+	public function setPageNum($pageNum) {
+		$this->pageNum = $pageNum;
+		$this->queryParameters["PageNum"]=$pageNum;
+	}
+
+	public function getQueryType() {
+		return $this->queryType;
+	}
+
+	public function setQueryType($queryType) {
+		$this->queryType = $queryType;
+		$this->queryParameters["QueryType"]=$queryType;
 	}
 	
 }

@@ -55,8 +55,6 @@ class PushRequest extends \RpcAcsRequest
 
 	private  $iOSRemindBody;
 
-	private  $batchNumber;
-
 	private  $iOSExtParameters;
 
 	private  $androidNotifyType;
@@ -90,6 +88,8 @@ class PushRequest extends \RpcAcsRequest
 	private  $target;
 
 	private  $androidOpenUrl;
+
+	private  $androidNotificationChannel;
 
 	private  $androidRemind;
 
@@ -239,15 +239,6 @@ class PushRequest extends \RpcAcsRequest
 	public function setiOSRemindBody($iOSRemindBody) {
 		$this->iOSRemindBody = $iOSRemindBody;
 		$this->queryParameters["iOSRemindBody"]=$iOSRemindBody;
-	}
-
-	public function getBatchNumber() {
-		return $this->batchNumber;
-	}
-
-	public function setBatchNumber($batchNumber) {
-		$this->batchNumber = $batchNumber;
-		$this->queryParameters["BatchNumber"]=$batchNumber;
 	}
 
 	public function getiOSExtParameters() {
@@ -401,6 +392,15 @@ class PushRequest extends \RpcAcsRequest
 	public function setAndroidOpenUrl($androidOpenUrl) {
 		$this->androidOpenUrl = $androidOpenUrl;
 		$this->queryParameters["AndroidOpenUrl"]=$androidOpenUrl;
+	}
+
+	public function getAndroidNotificationChannel() {
+		return $this->androidNotificationChannel;
+	}
+
+	public function setAndroidNotificationChannel($androidNotificationChannel) {
+		$this->androidNotificationChannel = $androidNotificationChannel;
+		$this->queryParameters["AndroidNotificationChannel"]=$androidNotificationChannel;
 	}
 
 	public function getAndroidRemind() {

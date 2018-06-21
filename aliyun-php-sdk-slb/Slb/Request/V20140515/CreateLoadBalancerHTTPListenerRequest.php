@@ -33,6 +33,8 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 
 	private  $healthCheckTimeout;
 
+	private  $listenerForward;
+
 	private  $xForwardedFor;
 
 	private  $healthCheckURI;
@@ -41,9 +43,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 
 	private  $healthyThreshold;
 
+	private  $aclStatus;
+
 	private  $scheduler;
 
+	private  $aclType;
+
 	private  $healthCheck;
+
+	private  $forwardPort;
 
 	private  $maxConnection;
 
@@ -51,7 +59,11 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 
 	private  $stickySessionType;
 
+	private  $vpcIds;
+
 	private  $vServerGroupId;
+
+	private  $aclId;
 
 	private  $listenerPort;
 
@@ -65,6 +77,8 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 
 	private  $healthCheckDomain;
 
+	private  $requestTimeout;
+
 	private  $ownerAccount;
 
 	private  $gzip;
@@ -72,6 +86,8 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 	private  $ownerId;
 
 	private  $tags;
+
+	private  $idleTimeout;
 
 	private  $loadBalancerId;
 
@@ -116,6 +132,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 		$this->queryParameters["HealthCheckTimeout"]=$healthCheckTimeout;
 	}
 
+	public function getListenerForward() {
+		return $this->listenerForward;
+	}
+
+	public function setListenerForward($listenerForward) {
+		$this->listenerForward = $listenerForward;
+		$this->queryParameters["ListenerForward"]=$listenerForward;
+	}
+
 	public function getXForwardedFor() {
 		return $this->xForwardedFor;
 	}
@@ -152,6 +177,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 		$this->queryParameters["HealthyThreshold"]=$healthyThreshold;
 	}
 
+	public function getAclStatus() {
+		return $this->aclStatus;
+	}
+
+	public function setAclStatus($aclStatus) {
+		$this->aclStatus = $aclStatus;
+		$this->queryParameters["AclStatus"]=$aclStatus;
+	}
+
 	public function getScheduler() {
 		return $this->scheduler;
 	}
@@ -161,6 +195,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 		$this->queryParameters["Scheduler"]=$scheduler;
 	}
 
+	public function getAclType() {
+		return $this->aclType;
+	}
+
+	public function setAclType($aclType) {
+		$this->aclType = $aclType;
+		$this->queryParameters["AclType"]=$aclType;
+	}
+
 	public function getHealthCheck() {
 		return $this->healthCheck;
 	}
@@ -168,6 +211,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 	public function setHealthCheck($healthCheck) {
 		$this->healthCheck = $healthCheck;
 		$this->queryParameters["HealthCheck"]=$healthCheck;
+	}
+
+	public function getForwardPort() {
+		return $this->forwardPort;
+	}
+
+	public function setForwardPort($forwardPort) {
+		$this->forwardPort = $forwardPort;
+		$this->queryParameters["ForwardPort"]=$forwardPort;
 	}
 
 	public function getMaxConnection() {
@@ -197,6 +249,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 		$this->queryParameters["StickySessionType"]=$stickySessionType;
 	}
 
+	public function getVpcIds() {
+		return $this->vpcIds;
+	}
+
+	public function setVpcIds($vpcIds) {
+		$this->vpcIds = $vpcIds;
+		$this->queryParameters["VpcIds"]=$vpcIds;
+	}
+
 	public function getVServerGroupId() {
 		return $this->vServerGroupId;
 	}
@@ -204,6 +265,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 	public function setVServerGroupId($vServerGroupId) {
 		$this->vServerGroupId = $vServerGroupId;
 		$this->queryParameters["VServerGroupId"]=$vServerGroupId;
+	}
+
+	public function getAclId() {
+		return $this->aclId;
+	}
+
+	public function setAclId($aclId) {
+		$this->aclId = $aclId;
+		$this->queryParameters["AclId"]=$aclId;
 	}
 
 	public function getListenerPort() {
@@ -260,6 +330,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 		$this->queryParameters["HealthCheckDomain"]=$healthCheckDomain;
 	}
 
+	public function getRequestTimeout() {
+		return $this->requestTimeout;
+	}
+
+	public function setRequestTimeout($requestTimeout) {
+		$this->requestTimeout = $requestTimeout;
+		$this->queryParameters["RequestTimeout"]=$requestTimeout;
+	}
+
 	public function getOwnerAccount() {
 		return $this->ownerAccount;
 	}
@@ -294,6 +373,15 @@ class CreateLoadBalancerHTTPListenerRequest extends \RpcAcsRequest
 	public function setTags($tags) {
 		$this->tags = $tags;
 		$this->queryParameters["Tags"]=$tags;
+	}
+
+	public function getIdleTimeout() {
+		return $this->idleTimeout;
+	}
+
+	public function setIdleTimeout($idleTimeout) {
+		$this->idleTimeout = $idleTimeout;
+		$this->queryParameters["IdleTimeout"]=$idleTimeout;
 	}
 
 	public function getLoadBalancerId() {

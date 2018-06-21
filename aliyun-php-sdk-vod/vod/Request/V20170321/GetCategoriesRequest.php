@@ -35,8 +35,6 @@ class GetCategoriesRequest extends \RpcAcsRequest
 
 	private  $pageNo;
 
-	private  $ownerAccount;
-
 	private  $pageSize;
 
 	private  $ownerId;
@@ -75,15 +73,6 @@ class GetCategoriesRequest extends \RpcAcsRequest
 	public function setPageNo($pageNo) {
 		$this->pageNo = $pageNo;
 		$this->queryParameters["PageNo"]=$pageNo;
-	}
-
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
 	public function getPageSize() {

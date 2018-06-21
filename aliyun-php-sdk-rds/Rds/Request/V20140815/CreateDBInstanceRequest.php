@@ -45,6 +45,10 @@ class CreateDBInstanceRequest extends \RpcAcsRequest
 
 	private  $dBInstanceDescription;
 
+	private  $dBInstanceStorageType;
+
+	private  $businessInfo;
+
 	private  $dBInstanceNetType;
 
 	private  $period;
@@ -66,6 +70,8 @@ class CreateDBInstanceRequest extends \RpcAcsRequest
 	private  $privateIpAddress;
 
 	private  $vPCId;
+
+	private  $tunnelId;
 
 	private  $zoneId;
 
@@ -152,6 +158,24 @@ class CreateDBInstanceRequest extends \RpcAcsRequest
 	public function setDBInstanceDescription($dBInstanceDescription) {
 		$this->dBInstanceDescription = $dBInstanceDescription;
 		$this->queryParameters["DBInstanceDescription"]=$dBInstanceDescription;
+	}
+
+	public function getDBInstanceStorageType() {
+		return $this->dBInstanceStorageType;
+	}
+
+	public function setDBInstanceStorageType($dBInstanceStorageType) {
+		$this->dBInstanceStorageType = $dBInstanceStorageType;
+		$this->queryParameters["DBInstanceStorageType"]=$dBInstanceStorageType;
+	}
+
+	public function getBusinessInfo() {
+		return $this->businessInfo;
+	}
+
+	public function setBusinessInfo($businessInfo) {
+		$this->businessInfo = $businessInfo;
+		$this->queryParameters["BusinessInfo"]=$businessInfo;
 	}
 
 	public function getDBInstanceNetType() {
@@ -251,6 +275,15 @@ class CreateDBInstanceRequest extends \RpcAcsRequest
 	public function setVPCId($vPCId) {
 		$this->vPCId = $vPCId;
 		$this->queryParameters["VPCId"]=$vPCId;
+	}
+
+	public function getTunnelId() {
+		return $this->tunnelId;
+	}
+
+	public function setTunnelId($tunnelId) {
+		$this->tunnelId = $tunnelId;
+		$this->queryParameters["TunnelId"]=$tunnelId;
 	}
 
 	public function getZoneId() {

@@ -33,6 +33,8 @@ class ModifyLoadBalancerInternetSpecRequest extends \RpcAcsRequest
 
 	private  $loadBalancerId;
 
+	private  $autoPay;
+
 	private  $resourceOwnerAccount;
 
 	private  $bandwidth;
@@ -70,6 +72,15 @@ class ModifyLoadBalancerInternetSpecRequest extends \RpcAcsRequest
 	public function setLoadBalancerId($loadBalancerId) {
 		$this->loadBalancerId = $loadBalancerId;
 		$this->queryParameters["LoadBalancerId"]=$loadBalancerId;
+	}
+
+	public function getAutoPay() {
+		return $this->autoPay;
+	}
+
+	public function setAutoPay($autoPay) {
+		$this->autoPay = $autoPay;
+		$this->queryParameters["AutoPay"]=$autoPay;
 	}
 
 	public function getResourceOwnerAccount() {

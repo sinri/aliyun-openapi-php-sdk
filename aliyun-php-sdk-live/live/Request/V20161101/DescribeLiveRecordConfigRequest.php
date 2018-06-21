@@ -39,6 +39,8 @@ class DescribeLiveRecordConfigRequest extends \RpcAcsRequest
 
 	private  $pageNum;
 
+	private  $streamName;
+
 	private  $order;
 
 	public function getAppName() {
@@ -93,6 +95,15 @@ class DescribeLiveRecordConfigRequest extends \RpcAcsRequest
 	public function setPageNum($pageNum) {
 		$this->pageNum = $pageNum;
 		$this->queryParameters["PageNum"]=$pageNum;
+	}
+
+	public function getStreamName() {
+		return $this->streamName;
+	}
+
+	public function setStreamName($streamName) {
+		$this->streamName = $streamName;
+		$this->queryParameters["StreamName"]=$streamName;
 	}
 
 	public function getOrder() {

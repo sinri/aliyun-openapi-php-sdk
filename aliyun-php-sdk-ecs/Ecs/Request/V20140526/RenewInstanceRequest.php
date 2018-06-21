@@ -31,6 +31,8 @@ class RenewInstanceRequest extends \RpcAcsRequest
 
 	private  $period;
 
+	private  $periodUnit;
+
 	private  $instanceId;
 
 	private  $clientToken;
@@ -57,6 +59,15 @@ class RenewInstanceRequest extends \RpcAcsRequest
 	public function setPeriod($period) {
 		$this->period = $period;
 		$this->queryParameters["Period"]=$period;
+	}
+
+	public function getPeriodUnit() {
+		return $this->periodUnit;
+	}
+
+	public function setPeriodUnit($periodUnit) {
+		$this->periodUnit = $periodUnit;
+		$this->queryParameters["PeriodUnit"]=$periodUnit;
 	}
 
 	public function getInstanceId() {

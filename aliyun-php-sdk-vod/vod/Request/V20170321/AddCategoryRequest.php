@@ -31,8 +31,6 @@ class AddCategoryRequest extends \RpcAcsRequest
 
 	private  $resourceOwnerAccount;
 
-	private  $ownerAccount;
-
 	private  $ownerId;
 
 	private  $parentId;
@@ -55,15 +53,6 @@ class AddCategoryRequest extends \RpcAcsRequest
 	public function setResourceOwnerAccount($resourceOwnerAccount) {
 		$this->resourceOwnerAccount = $resourceOwnerAccount;
 		$this->queryParameters["ResourceOwnerAccount"]=$resourceOwnerAccount;
-	}
-
-	public function getOwnerAccount() {
-		return $this->ownerAccount;
-	}
-
-	public function setOwnerAccount($ownerAccount) {
-		$this->ownerAccount = $ownerAccount;
-		$this->queryParameters["OwnerAccount"]=$ownerAccount;
 	}
 
 	public function getOwnerId() {

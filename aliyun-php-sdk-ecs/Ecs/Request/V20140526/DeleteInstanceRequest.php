@@ -35,6 +35,8 @@ class DeleteInstanceRequest extends \RpcAcsRequest
 
 	private  $ownerAccount;
 
+	private  $terminateSubscription;
+
 	private  $force;
 
 	private  $ownerId;
@@ -73,6 +75,15 @@ class DeleteInstanceRequest extends \RpcAcsRequest
 	public function setOwnerAccount($ownerAccount) {
 		$this->ownerAccount = $ownerAccount;
 		$this->queryParameters["OwnerAccount"]=$ownerAccount;
+	}
+
+	public function getTerminateSubscription() {
+		return $this->terminateSubscription;
+	}
+
+	public function setTerminateSubscription($terminateSubscription) {
+		$this->terminateSubscription = $terminateSubscription;
+		$this->queryParameters["TerminateSubscription"]=$terminateSubscription;
 	}
 
 	public function getForce() {

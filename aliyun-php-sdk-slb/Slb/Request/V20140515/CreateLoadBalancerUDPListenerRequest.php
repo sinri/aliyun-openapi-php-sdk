@@ -37,13 +37,21 @@ class CreateLoadBalancerUDPListenerRequest extends \RpcAcsRequest
 
 	private  $healthyThreshold;
 
+	private  $aclStatus;
+
 	private  $scheduler;
+
+	private  $aclType;
 
 	private  $maxConnection;
 
 	private  $persistenceTimeout;
 
+	private  $vpcIds;
+
 	private  $vServerGroupId;
+
+	private  $aclId;
 
 	private  $listenerPort;
 
@@ -116,6 +124,15 @@ class CreateLoadBalancerUDPListenerRequest extends \RpcAcsRequest
 		$this->queryParameters["HealthyThreshold"]=$healthyThreshold;
 	}
 
+	public function getAclStatus() {
+		return $this->aclStatus;
+	}
+
+	public function setAclStatus($aclStatus) {
+		$this->aclStatus = $aclStatus;
+		$this->queryParameters["AclStatus"]=$aclStatus;
+	}
+
 	public function getScheduler() {
 		return $this->scheduler;
 	}
@@ -123,6 +140,15 @@ class CreateLoadBalancerUDPListenerRequest extends \RpcAcsRequest
 	public function setScheduler($scheduler) {
 		$this->scheduler = $scheduler;
 		$this->queryParameters["Scheduler"]=$scheduler;
+	}
+
+	public function getAclType() {
+		return $this->aclType;
+	}
+
+	public function setAclType($aclType) {
+		$this->aclType = $aclType;
+		$this->queryParameters["AclType"]=$aclType;
 	}
 
 	public function getMaxConnection() {
@@ -143,6 +169,15 @@ class CreateLoadBalancerUDPListenerRequest extends \RpcAcsRequest
 		$this->queryParameters["PersistenceTimeout"]=$persistenceTimeout;
 	}
 
+	public function getVpcIds() {
+		return $this->vpcIds;
+	}
+
+	public function setVpcIds($vpcIds) {
+		$this->vpcIds = $vpcIds;
+		$this->queryParameters["VpcIds"]=$vpcIds;
+	}
+
 	public function getVServerGroupId() {
 		return $this->vServerGroupId;
 	}
@@ -150,6 +185,15 @@ class CreateLoadBalancerUDPListenerRequest extends \RpcAcsRequest
 	public function setVServerGroupId($vServerGroupId) {
 		$this->vServerGroupId = $vServerGroupId;
 		$this->queryParameters["VServerGroupId"]=$vServerGroupId;
+	}
+
+	public function getAclId() {
+		return $this->aclId;
+	}
+
+	public function setAclId($aclId) {
+		$this->aclId = $aclId;
+		$this->queryParameters["AclId"]=$aclId;
 	}
 
 	public function getListenerPort() {
