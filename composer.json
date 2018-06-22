@@ -10,6 +10,9 @@
     }
   ],
   "autoload": {
-    "files": ["aliyun-php-sdk-core/Config.php"]
+    "files": ["aliyun-php-sdk-core/Config.php"],
+    "psr-4": {
+      "Dts\\": "Dts/"
+    }
   }
 }
