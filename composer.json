@@ -2,7 +2,7 @@
   "name": "sinri/aliyun-openapi-php-sdk",
   "description": "aliyun openapi php sdk sinri version",
   "minimum-stability": "stable",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "authors": [
     {
       "name": "Sinri Edogawa",
