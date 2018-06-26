@@ -12,7 +12,8 @@
   "autoload": {
     "files": ["aliyun-php-sdk-core/Config.php"],
     "psr-4": {
-      "Dts\\": "Dts/"
+      "Dts\\": "Dts/",
+      "R_kvstore\\": "aliyun-php-sdk-r-kvstore/R_kvstore"
     }
   }
 }
